@@ -1,0 +1,79 @@
+body {
+	font-family: "andale mono";
+}
+
+.topNav {
+	background: white;
+	height: 30px;
+	border-bottom: 1px dashed tomato;
+	line-height: 45px;
+/*	background: whitesmoke;*/
+	background-image: url(metalex.jpg);
+	background-position: 0px 0px;
+	color: whitesmoke;
+	font-size: 30px;
+}
+
+.mobileX {
+	
+}
+
+.sideNav{
+	background: url(metal.jpg);
+	position: absolute;
+	height: 100%;
+	left: 0px;
+	padding:20px;
+	float: left;
+}
+
+.navMods {
+	width: 100%;
+	border: 1px solid white;
+	height: 100px;
+	margin-bottom: 20px;
+	text-align: center;
+	line-height: 100px;
+	font-size: 12px;
+	color: dimgrey;
+}
+
+.navMods:hover {
+	background: white;
+	font-style: italic;
+	color: tomato;
+}
+
+.stamp {
+	position: absolute;
+	width: 200px;
+	height: 150px;
+	background-size: 200px 150px;
+	background-image: url(stamp.png);
+	bottom: 30px;
+	left: 15%;
+}
+
+.field {
+	height: 91%;
+	width: 75.5%;
+	border: 1px solid whitesmoke;
+/*	background: tomato;*/
+	left: 19.06%;
+	position: absolute;
+	margin-left: 60px;
+	margin-top: 20px;
+
+}
+
+.fieldT {
+	height: 91%;
+	width: 70.5% !important;
+	border: 1px solid whitesmoke;
+/*	background: cyan;*/
+	left: 19.06%;
+	position: absolute;
+	margin-left: 60px;
+	margin-top: 20px;
+
+}
