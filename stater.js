@@ -1,18 +1,13 @@
 var state = "";
 
-$(".topNav").click(function(){
-  state = "0";
+$(".topNav").mouseover(function(){
+  state = "g";
   console.log(state);
-   if( state === "0" ) {
-      document.querySelector(".template").style.display="none";
-      document.querySelector(".splash").style.display="block";
-  }
 });
 
 $(".x").mouseover(function(){
   state = "X";
   console.log(state);
-  // $(".x").addClass("navModsh");
 });
 
 $(".y").mouseover(function(){
@@ -26,19 +21,15 @@ $(".z").mouseover(function(){
 });
 
 
-//var counter = setInterval(template, 200);
-
-
 function template(){
 
-    var counter = null;
 
     for(var i = 0; i < pages.length; i++) {
         
         if(pages[i].state === state ) {
 
           document.querySelector(".template").style.display="block";
-          document.querySelector(".splash").style.display="none";
+          document.querySelector(".field").style.backgroundImage="none";
 
           document.querySelector(".title").innerHTML=pages[i].title;
           document.querySelector(".subTitle").innerHTML=pages[i].subTitle;
@@ -46,14 +37,11 @@ function template(){
           document.querySelector(".window1").style.backgroundImage=pages[i].window1;
           document.querySelector(".text1").innerHTML=pages[i].text1;
 
-
-
         }
 
     }
 
 }
-
 
 var pages = [
 
@@ -82,11 +70,13 @@ var pages = [
         'state' : "Z",
         'title' : "Actual Size",
         'subTitle' : "2012",
-        'icon' : "url(css/fafi.png)", 
-        'window1' : "url(css/still.png)",
+        'icon' : "url(css/Fafnir.png)", 
+        'window1' : "url(css/fafw.png)",
         'text1' : "Animation, printmaking, drawing"
          
       },  
 
 ];
+
+
 

@@ -11,7 +11,11 @@ body {
 	background-image: url(metalex.jpg);
 	background-position: 0px 0px;
 	color: whitesmoke;
-	font-size: 30px;
+	font-size: 25px;
+}
+
+.topNav:hover {
+	color: tomato;
 }
 
 .mobileX {
@@ -19,17 +23,20 @@ body {
 }
 
 .sideNav{
-/*	background: url(metal.jpg);*/
+	/*background: url(metal.jpg);*/
 	background: whitesmoke;
 	position: absolute;
 	height: 100%;
 	left: 0px;
-	padding:20px;
+	/*padding:20px;*/
 	float: left;
 }
 
 .navMods {
-	width: 100%;
+	width: 95%;
+	left: 10%;
+	margin-left: 20px;
+	margin-top: 20px;
 	border: 1px solid white;
 	height: 100px;
 	margin-bottom: 20px;
@@ -40,9 +47,9 @@ body {
 }
 
 .navMods:hover {
-	background: white;
-	font-style: italic;
-	color: tomato;
+	background: white !important;
+	font-style: italic !important;
+	color: tomato !important;
 }
 
 .stamp {
@@ -57,14 +64,22 @@ body {
 
 .field {
 	height: 91%;
-	width: 75.5%;
+	width: 77%;
 	border: 1px solid whitesmoke;
 /*	background: tomato;*/
 	left: 19.06%;
 	position: absolute;
-	margin-left: 60px;
+	margin-left: 20px;
 	margin-top: 20px;
+	/*background-size: 1000px 647px;*/
+	background-repeat: no-repeat;
 
+}
+
+.splash {
+	background-image:url(frame.png);
+	height: 100%;
+	background-repeat: no-repeat;
 }
 
 .fieldT {
@@ -74,7 +89,7 @@ body {
 /*	background: cyan;*/
 	left: 19.06%;
 	position: absolute;
-	margin-left: 60px;
+	margin-left: 20px;
 	margin-top: 20px;
 	padding: 20px;
 
@@ -84,12 +99,14 @@ body {
 
 .template {
 
-	width: 90%;
-	height: 85%;
+	width: 93%;
+	min-height: 85%;
+	height: auto;
 	/*margin: 20px;
 	padding: 20px;
 	border: 1px solid tomato;*/
 	color: dimgrey;
+	display: none;
 
 }
 
@@ -99,7 +116,6 @@ body {
 	top: 20px;
 	width: 100px;
 	height: 100px;
-	border: 1px solid tomato;
 }
 
 .tIcon {
@@ -108,7 +124,8 @@ body {
 	top: 20px;
 	width: 80px;
 	height: 80px;
-	border: 1px solid tomato;
+	background-size: 80px 80px;
+/*	border: 1px solid tomato;*/
 }
 
 .title {
@@ -143,6 +160,7 @@ body {
 	left: 140px;
 	top: 82px;
 	line-height: 40px;
+	font-style: italic;
 }
 
 .tSubTitle{
@@ -164,7 +182,7 @@ body {
 }
 
 .tSlideMod {
-	width: 70%;
+	width: 77%;
 	height: auto;
 	/*border: 1px solid tomato;*/
 	position: absolute;
@@ -184,17 +202,20 @@ body {
 }
 
 .window1 {
-	width: 100%;
-	height: 60%;
-	min-height: 300px;
-	border: 1px solid tomato;
+	width: auto;
+	height: auto;
+	min-height: 500px;
+	/*border: 1px solid tomato;*/
 	margin-bottom: 20px;
+	background-repeat: no-repeat;
 }
 
 .text1 {
-	width: 100%;
-	height: 30%;
-	border: 1px solid tomato;
+	width: auto;
+	height: auto;
+/*	border: 1px solid tomato;*/
+	white-space:normal;
+	word-wrap: break-word;
 }
 
 .leftButton {
