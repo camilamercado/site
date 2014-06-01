@@ -1,0 +1,3 @@
+[submodule "site/intentionjs"]
+    path = site/intentionjs
+    url = https://github.com/camilamercado/intentionjs.git
