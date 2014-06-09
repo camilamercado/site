@@ -9,10 +9,11 @@ body {
 	line-height: 45px;
 /*	background: whitesmoke;*/
 	background-image: url(metalex.jpg);
-	background-position: 0px 0px;
-	color: whitesmoke;
+	background-position: 0px 300px;
+	color: white;
 	font-size: 25px;
-}
+	text-align: left;
+	}
 
 .topNav:hover {
 	color: tomato;
@@ -24,8 +25,9 @@ body {
 
 .sideNav{
 	/*background: url(metal.jpg);*/
-	background: whitesmoke;
+	/*background: whitesmoke;*/
 	position: absolute;
+	border-right:1px dashed dimgrey; 
 	height: 100%;
 	left: 0px;
 	/*padding:20px;*/
@@ -33,23 +35,25 @@ body {
 }
 
 .navMods {
-	width: 95%;
-	left: 10%;
+	width: auto;
+	right: 5%;
 	margin-left: 20px;
-	margin-top: 20px;
-	border: 1px solid white;
-	height: 100px;
+	margin-top: 30px;
+	height: 30px;
 	margin-bottom: 20px;
-	text-align: center;
-	line-height: 100px;
+	text-align: left;
+	line-height: 30px;
 	font-size: 12px;
 	color: dimgrey;
+	border-bottom: 1px dashed dimgrey;
 }
 
 .navMods:hover {
-	background: white !important;
+	/*background: white !important;*/
 	font-style: italic !important;
 	color: tomato !important;
+	border-bottom: 1px dashed dimgrey;
+	border-right: none;
 }
 
 .stamp {
@@ -65,7 +69,7 @@ body {
 .field {
 	height: 91%;
 	width: 77%;
-	border: 1px solid whitesmoke;
+	/*border-left: 1px dashed grey;*/
 /*	background: tomato;*/
 	left: 19.06%;
 	position: absolute;
@@ -76,35 +80,87 @@ body {
 
 }
 
+.field .navMods {
+	margin-left: -20px !important;
+	margin-top: 0px !important;
+	height: 40px;
+	/*background:url(metalex.jpg);;*/
+	border-bottom: 1px dashed lightgrey;
+}
+
+.x .tab {
+	right: 10%;
+	background: url(dtw.png);
+	background-position: 0px 820px;
+}
+
+.y .tab { 
+	right: 15%;
+	background: url(bi1.png);
+	background-position: 330px 820px;
+}
+
+.z .tab {
+	right: 20%;
+	background: url(fafw.png);
+	background-position: 50px 820px;
+}
+
+.tab {
+	position: absolute;
+	margin-top: 10px;
+	width: 350px;
+	height: 30px;
+	border: 1px solid lightgrey;
+	-webkit-border-radius: 40px 20px 0px 0;
+	border-bottom:none;
+	-webkit-transition: all 2.5s ease;
+}
+
+.tab:hover {
+	background: tomato;
+}
+
 .splash {
-	background-image:url(frame.png);
+	/*background-image:url(frame.png);*/
 	height: 100%;
 	background-repeat: no-repeat;
 }
 
 .fieldT {
-	height: 91%;
+	height: 95%;
 	width: 70.5% !important;
-	border: 1px solid whitesmoke;
+/*	border: 1px solid whitesmoke;*/
 /*	background: cyan;*/
 	left: 19.06%;
 	position: absolute;
-	margin-left: 20px;
-	margin-top: 20px;
-	padding: 20px;
+/*	margin-left: 20px;
+	margin-top: 20px;*/
+/*	padding: 20px;*/
 
 }
 
+.perm {
+	z-index: 1;
+	position: absolute;
+	bottom: 50px;
+	left: 15px;
+	font-size: 12px;
+	color: dimgrey;
+	line-height: 20px;
+}
+
 /*TEMPLATE*/
+
 
 .template {
 
 	width: 93%;
 	min-height: 85%;
 	height: auto;
-	/*margin: 20px;
+	margin-top: 20px !important;
 	padding: 20px;
-	border: 1px solid tomato;*/
+	/*border: 1px solid tomato;*/
 	color: dimgrey;
 	display: none;
 
