@@ -59,24 +59,24 @@ function template(){
 
           //slideMod 
 
-          frame = 0;
+        //   frame = 0;
 
-          $(".slideMod").click(function(){
-            frame = frame + 1;
-            console.log(frame);
+        //   $(".slideMod").click(function(){
+        //     frame = frame + 1;
+        //     console.log(frame);
 
-             for(var i = 0; i < pages.length; i++) {
+        //      for(var j = 0; j < frames.length; j++) {
         
-        if(pages[i].state === state ) {
+        // if(frames[j].framey === frame ) {
 
-             document.querySelector(".window1").style.backgroundImage=pages[i].window2;
+        //      document.querySelector(".window1").style.backgroundImage=frames[i].window;
 
-           }
+        //    }
 
-         }
+        //  }
 
 
-          });
+        //   });
 
           
 
@@ -99,9 +99,24 @@ var pages = [
         'title' : "Daphne & Telstar",
         'subTitle' : "2014   ",
         'icon' : "url(css/istamp.png)",
+        'link' : "http://camilamercado.github.io/dds/orbit.html",
+        
+        // frames : [
+         
+        //   { 
+        //     framey : 0,
+        //     'window' : "url(css/dtw.png)"
+        //   },
+          
+        //   { 
+        //     framey : 1,
+        //     'window' : "url(css/img2.png)"
+        //   },
+        
+        // ]
         'window1' : "url(css/dtw.png)",
         'window2' : "url(css/img2.png)",
-        'link' : "http://camilamercado.github.io/dds/orbit.html"
+        
          
       }, 
 
