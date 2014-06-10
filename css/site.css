@@ -46,6 +46,7 @@ body {
 	font-size: 12px;
 	color: dimgrey;
 	border-bottom: 1px dashed dimgrey;
+	overflow: hidden;
 }
 
 .navMods:hover {
@@ -205,6 +206,16 @@ body {
 	left: 120px;
 	top: 20px;
 	line-height: 35px;
+}
+
+a {
+	text-decoration: none;
+	color: dimgrey;
+}
+
+a:hover {
+	text-decoration: none;
+	color: lightgrey;
 }
 
 

@@ -1,3 +1,5 @@
+//Template State Call
+
 var state = "";
 
 $(".topNav").click(function(){
@@ -26,7 +28,7 @@ $(".z").mouseover(function(){
 });
 
 
-//var counter = setInterval(template, 200);
+//Template Generator
 
 
 function template(){
@@ -44,7 +46,39 @@ function template(){
           document.querySelector(".subTitle").innerHTML=pages[i].subTitle;
           document.querySelector(".icon").style.backgroundImage=pages[i].icon;
           document.querySelector(".window1").style.backgroundImage=pages[i].window1;
-          document.querySelector(".text1").innerHTML=pages[i].text1;
+          //document.querySelector(".text1").innerHTML=pages[i].text1;
+
+
+          var a = document.createElement('a');
+          var linkText = document.createTextNode(pages[i].link);
+          a.appendChild(linkText);
+          a.title = pages[i].title;
+          a.href = pages[i].link;
+          document.querySelector(".subTitle").appendChild(a);
+
+
+          //slideMod 
+
+          frame = 0;
+
+          $(".slideMod").click(function(){
+            frame = frame + 1;
+            console.log(frame);
+
+             for(var i = 0; i < pages.length; i++) {
+        
+        if(pages[i].state === state ) {
+
+             document.querySelector(".window1").style.backgroundImage=pages[i].window2;
+
+           }
+
+         }
+
+
+          });
+
+          
 
 
 
@@ -55,36 +89,39 @@ function template(){
 }
 
 
+
+
 var pages = [
 
 
       { 
         'state' : "X",
         'title' : "Daphne & Telstar",
-        'subTitle' : "2014",
+        'subTitle' : "2014   ",
         'icon' : "url(css/istamp.png)",
         'window1' : "url(css/dtw.png)",
-        'text1' : "http://camilamercado.github.io/dds/orbit.html"
+        'window2' : "url(css/img2.png)",
+        'link' : "http://camilamercado.github.io/dds/orbit.html"
          
       }, 
 
       { 
         'state' : "Y",
         'title' : "b1/Ching",
-        'subTitle' : "2013",
+        'subTitle' : "2013    ",
         'icon' : "url(css/stamp2.png)", 
         'window1' : "url(css/bi1.png)",
-        'text1' : "http://camilamercado.github.io/biching/"
+        'link' : "http://camilamercado.github.io/biching/"
          
       }, 
 
       { 
         'state' : "Z",
         'title' : "Actual Size",
-        'subTitle' : "2012",
+        'subTitle' : "2012    ",
         'icon' : "url(css/fafi.png)", 
         'window1' : "url(css/still.png)",
-        'text1' : "Animation, printmaking, drawing"
+        'link' : ""
          
       },  
 
