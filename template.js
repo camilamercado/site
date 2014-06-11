@@ -37,6 +37,7 @@ function template(){
         
         if(pages[i].state === state ) {
 
+          //$("."state"").addClass("navModsh");
           document.querySelector(".template").style.display="block";
           document.querySelector(".splash").style.display="none";
 
