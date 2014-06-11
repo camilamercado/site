@@ -59,29 +59,23 @@ function template(){
 
           //slideMod 
 
-          count = 0;
+          $(function () { 
+          
+                  counter = 0;
 
-          $(".slideMod").click(function(){
-            
-            count = count + 1;
-            console.log(count);
+                  var brute = pages[i].frames;
 
-              for(var i = 0; i < pages.length; i++) {
+                  console.log(brute[counter]); 
 
-                if(pages[i].state === state ) {
-
-                console.log(pages[i].frames[count].image);
-                document.querySelector(".window1").style.backgroundImage=pages[i].frames[count].image;
-
-                // if(pages[i].frames[count] > pages[i].frames[i].index ){
-                //   count === 0;
-                //   return
-                // }
-
-              }
-            }
-
-
+             
+              $('.slideMod').click(function () {
+                  counter = (counter + 1) % brute.length; 
+                  // increment your counter
+                  // the modulus (%) operator resets the counter to 0
+                  // when it reaches the length of the array
+                  document.querySelector(".window1").style.backgroundImage=brute[counter].image;
+                  console.log(brute[counter]); // the new incremented value
+              });
           });
 
           
@@ -117,17 +111,17 @@ var pages = [
         frames : [
          
           { 
-            index : 0,
+            index : 1,
             image : "url(css/dtw.png)"
           },
           
           { 
-            index : 1,
+            index : 2,
             image : "url(css/img2.png)"
           },
 
           { 
-            index : 2,
+            index : 3,
             image : "url(css/fiction.jpg)"
           },
 
@@ -151,17 +145,17 @@ var pages = [
         frames : [
          
           { 
-            index : 0,
+            index : 1,
             image : "url(css/bi1.png)"
           },
           
           { 
-            index : 1,
+            index : 2,
             image : "url(css/bi2.png)"
           },
 
           { 
-            index : 2,
+            index : 3,
             image : "url(css/bi3.png)"
           },
 
@@ -181,17 +175,17 @@ var pages = [
         frames : [
          
           { 
-            index : 0,
+            index : 1,
             image : "url(css/still.png)"
           },
           
           { 
-            index : 1,
+            index : 2,
             image : "url(css/fa45.jpg)"
           },
 
           { 
-            index : 2,
+            index : 3,
             image : "url(css/fafw.png)"
           },
 
