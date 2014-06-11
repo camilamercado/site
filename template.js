@@ -80,21 +80,11 @@ function template(){
 
           
 
-
-
         }
 
     }
 
 }
-
-
- // _.each(pages[i].frames, function(slide, i){
- //            console.log(slide);
- //            if(word === decision.name.toLowerCase()){
- //              isMatch=true;
- //              currentPage = 'page_' + decision.page;
- //            }
 
 
 
@@ -111,18 +101,19 @@ var pages = [
         frames : [
          
           { 
-            index : 1,
             image : "url(css/dtw.png)"
           },
           
           { 
-            index : 2,
-            image : "url(css/img2.png)"
+            image : "url(css/shelf.png)"
           },
 
           { 
-            index : 3,
             image : "url(css/fiction.jpg)"
+          },
+
+          { 
+            image : "url(css/img2.png)"
           },
 
         
@@ -145,18 +136,19 @@ var pages = [
         frames : [
          
           { 
-            index : 1,
             image : "url(css/bi1.png)"
           },
           
           { 
-            index : 2,
             image : "url(css/bi2.png)"
           },
 
           { 
-            index : 3,
             image : "url(css/bi3.png)"
+          },
+
+          { 
+            image : "url(css/binary.png)"
           },
 
         
@@ -175,18 +167,19 @@ var pages = [
         frames : [
          
           { 
-            index : 1,
             image : "url(css/still.png)"
           },
           
           { 
-            index : 2,
-            image : "url(css/fa45.jpg)"
+            image : "url(css/ASC.jpg)"
           },
 
           { 
-            index : 3,
             image : "url(css/fafw.png)"
+          },
+
+          { 
+            image : "url(css/col.png)"
           },
 
         

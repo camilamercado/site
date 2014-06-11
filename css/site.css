@@ -291,6 +291,10 @@ a:hover {
 	background-repeat: no-repeat;
 }
 
+.window1:hover {
+	cursor: pointer;
+}
+
 .text1 {
 	width: auto;
 	height: auto;
