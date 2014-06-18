@@ -1,0 +1,274 @@
+
+/*TEMPLATE*/
+
+
+.template {
+
+	width: 93%;
+	min-height: 85%;
+	height: auto;
+	margin-top: 20px !important;
+	padding: 20px;
+	/*border: 1px solid tomato;*/
+	color: dimgrey;
+	display: none;
+
+}
+
+.icon {
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	width: 100px;
+	height: 100px;
+}
+
+.title {
+	position: absolute;
+	width: auto;
+	height: 40px;
+	/*border: 1px solid tomato;*/
+	margin-bottom: 10px;
+	left: 140px;
+	top: 22px;
+	line-height: 40px;
+	font-size: 24px;
+}
+
+
+a {
+	text-decoration: none;
+	color: dimgrey;
+}
+
+a:hover {
+	text-decoration: none;
+	color: lightgrey;
+}
+
+.date {
+	position: absolute;
+	width: auto;
+	height: 40px;
+	/*border: 1px solid tomato;*/
+	left: 140px;
+	top: 55px;
+	line-height: 40px;
+	font-style: italic;
+}
+
+.link {
+	position: absolute;
+	width: auto;
+	height: 40px;
+	/*border: 1px solid tomato;*/
+	left: 140px;
+	top: 82px;
+	line-height: 40px;
+	font-style: italic;
+	word-wrap: break-word;
+}
+
+.slideMod {
+	width: 70%;
+	height: auto;
+	/*border: 1px solid tomato;*/
+	position: absolute;
+	top: 140px;
+	left: 140px;
+	/*padding: 20px;*/
+}
+
+
+.frames {
+	height: auto;
+	width: auto;
+}
+
+.frame1 {
+	height: auto;
+	width: auto;
+}
+
+.window1 {
+	width: auto;
+	/*max-height: 1200px;*/
+	min-height: 500px;
+	/*border: 1px solid tomato;*/
+	margin-bottom: 20px;
+	background-repeat: no-repeat;
+	background-size: 800px auto;
+}
+
+.window1:hover {
+	cursor: pointer;
+}
+
+.text1 {
+	width: auto;
+	height: auto;
+/*	border: 1px solid tomato;*/
+	white-space:normal;
+	word-wrap: break-word;
+}
+
+
+
+/***************TABLET*****************/
+
+.fieldT
+.icon {
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	width: 80px;
+	height: 80px;
+	background-size: 80px 80px;
+/*	border: 1px solid tomato;*/
+}
+
+
+.fieldT
+.title {
+	position: absolute;
+	width: auto;
+	height: 35px;
+	/*border: 1px solid tomato;*/
+	margin-bottom: 10px;
+	left: 120px;
+	top: 20px;
+	line-height: 35px;
+}
+
+.fieldT
+.date {
+	position: absolute;
+	width: auto;
+	height: 40px;
+	/*border: 1px solid tomato;*/
+	left: 120px;
+	top: 45px;
+	line-height: 40px;
+	font-style: italic;
+}
+
+.fieldT
+.link{
+	position: absolute;
+	left: 120px;
+	top: 70px;
+	height: 35px;
+	line-height: 35px;
+}
+
+.fieldT
+.slideMod {
+	width: 77%;
+	height: auto;
+	/*border: 1px solid tomato;*/
+	position: absolute;
+	top: 120px;
+	left: 60px;
+	/*padding: 20px;*/
+}
+
+.fieldT
+.slideMod
+.window1 {
+	background-size: 650px auto;
+}
+
+
+/***************MOBILE*****************/
+
+.fieldM .navMods .tab {
+	width: 270px!important;
+
+}
+
+.fieldM {
+	height: 91%;
+	width: 100%;
+	/*border-left: 1px dashed grey;*/
+/*	background: tomato;*/
+	left: 0% !important;
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 20px;
+	font-size: 16px;
+	background-repeat: no-repeat;
+
+}
+.fieldM
+.icon {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 70px;
+	height: 70px;
+	background-size: 70px 70px;
+/*	border: 1px solid tomato;*/
+}
+
+
+.fieldM
+.title {
+	position: absolute;
+	width: auto;
+	height: 20px;
+	/*border: 1px solid tomato;*/
+	margin-bottom: 5px;
+	left: 90px;
+	top: 10px;
+	line-height: 20px;
+	font-size: 18px;
+}
+
+.fieldM
+.date {
+	position: absolute;
+	width: auto;
+	height: 40px;
+	/*border: 1px solid tomato;*/
+	left: 90px;
+	top: 25px;
+	line-height: 40px;
+	font-style: italic;
+}
+
+.fieldM
+.link{
+	position: absolute;
+	left: 20px;
+	top: 85px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12.4px;
+}
+
+.fieldM
+.slideMod {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 120px;
+	left: 00px;
+	max-height: 300px!important;
+}
+
+.fieldM
+.slideMod
+.window1 {
+	background-size: 360px auto;
+	max-height: 300px!important;
+}
+
+.fieldM
+.text1 {
+	position: absolute;
+	top: 260px;
+	font-size: 14px;
+	width: 90%;
+}
+
+
