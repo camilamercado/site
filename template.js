@@ -1,12 +1,5 @@
 //Template State Call
 
-// if (intent.responsive.name === "tablet"){
-//   console.log(intent.responsive.name);
-// }
-
-
-console.log(intent.responsive.name);
-
 var state = "";
 
 $(".topNav").click(function(){
@@ -34,6 +27,11 @@ $(".z").mouseover(function(){
   console.log(state);
 });
 
+$(".zed").mouseover(function(){
+  state = "ZED";
+  console.log(state);
+});
+
 
 //Template Generator
 
@@ -46,28 +44,28 @@ function template(){
         
         if(pages[i].state === state ) {
 
-          //$("."state"").addClass("navModsh");
           document.querySelector(".template").style.display="block";
           document.querySelector(".splash").style.display="none";
 
           document.querySelector(".title").innerHTML=pages[i].title;
-          document.querySelector(".subTitle").innerHTML=pages[i].subTitle;
+          document.querySelector(".date").innerHTML=pages[i].subTitle;
+          document.querySelector(".link").innerHTML=pages[i].link;
           document.querySelector(".icon").style.backgroundImage=pages[i].icon;
           document.querySelector(".window1").style.backgroundImage=pages[i].window1;
-          //document.querySelector(".text1").innerHTML=pages[i].text1;
+          document.querySelector(".text1").innerHTML=pages[i].text1;
 
 
           var a = document.createElement('a');
-          var linkText = document.createTextNode(pages[i].link);
+          var linkText = document.createTextNode(pages[i].linky);
           a.appendChild(linkText);
           a.title = pages[i].title;
-          a.href = pages[i].link;
-          document.querySelector(".subTitle").appendChild(a);
+          a.href = pages[i].linky;
+          document.querySelector(".link").appendChild(a);
 
 
           //slideMod 
 
-          $(function () { 
+          $(function (slide) { 
           
                   counter = 0;
 
@@ -93,18 +91,6 @@ function template(){
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
