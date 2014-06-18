@@ -5,7 +5,7 @@ body {
 .topNav {
 	background: black;
 	height: 30px;
-	border-bottom: 1px dashed tomato;
+	/*border-bottom: 1px dashed tomato;*/
 	line-height: 45px;
 	background-image: url(metalex.jpg);
 	background-position: 0px 300px;
@@ -46,7 +46,6 @@ body {
 	font-size: 12px;
 	color: dimgrey;
 	border-bottom: 1px dashed dimgrey;
-
 	overflow: hidden;
 
 
@@ -116,7 +115,7 @@ body {
 	max-width: 350px;
 	width: 60%;
 	height: 30px;
-	border: 1px solid lightgrey;
+/*	border: 1px solid lightgrey;*/
 	-webkit-border-radius: 40px 20px 0px 0;
 	border-bottom:none;
 	-webkit-transition: all 2.5s ease;
@@ -134,10 +133,10 @@ body {
 
 .fieldT {
 	height: 95%;
-	width: 70.5% !important;
+	width: 100% !important;
 /*	border: 1px solid whitesmoke;*/
 /*	background: cyan;*/
-	left: 19.06%;
+	left: 0px;
 	position: absolute;
 /*	margin-left: 20px;
 	margin-top: 20px;*/
