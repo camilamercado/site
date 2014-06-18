@@ -2,6 +2,10 @@ body {
 	font-family: "andale mono";
 }
 
+@font-face {
+	src: url('AndaleMono-webfont.eot?') format('eot'), url('AndaleMono-webfont.woff') format('woff'), url('AndaleMono-webfont.ttf') format('truetype');
+}
+
 .topNav {
 	background: white;
 	height: 30px;
