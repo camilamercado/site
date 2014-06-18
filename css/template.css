@@ -74,7 +74,7 @@ a:hover {
 	/*border: 1px solid tomato;*/
 	position: absolute;
 	top: 110px;
-	left: 120px;
+	left: 80px;
 	/*padding: 20px;*/
 }
 
@@ -115,14 +115,18 @@ a:hover {
 
 /***************TABLET*****************/
 
+.fieldT {
+	margin-left: 0px;
+}
+
 .fieldT
 .icon {
 	position: absolute;
 	left: 20px;
 	top: 20px;
-	width: 80px;
-	height: 80px;
-	background-size: 80px 80px;
+	width: 60px;
+	height: 60px;
+	background-size: 60px 60px;
 /*	border: 1px solid tomato;*/
 }
 
@@ -131,43 +135,44 @@ a:hover {
 .title {
 	position: absolute;
 	width: auto;
-	height: 35px;
+	height: 20px;
 	/*border: 1px solid tomato;*/
 	margin-bottom: 10px;
-	left: 120px;
+	left: 100px;
 	top: 20px;
-	line-height: 35px;
+	line-height: 20px;
+	font-size: 16px;
 }
 
 .fieldT
 .date {
 	position: absolute;
 	width: auto;
-	height: 40px;
+	height: 12px;
 	/*border: 1px solid tomato;*/
-	left: 120px;
+	left: 100px;
 	top: 45px;
-	line-height: 40px;
+	font-size: 12px;
 	font-style: italic;
 }
 
 .fieldT
 .link{
 	position: absolute;
-	left: 120px;
-	top: 70px;
-	height: 35px;
-	line-height: 35px;
+	height: 12px;
+	/*border: 1px solid tomato;*/
+	left: 100px;
+	top: 65px;
+	font-size: 12px;
 }
 
 .fieldT
 .slideMod {
-	width: 77%;
+	width: 85%;
 	height: auto;
-	/*border: 1px solid tomato;*/
 	position: absolute;
-	top: 120px;
-	left: 60px;
+	top: 100px;
+	left: 40px;
 	/*padding: 20px;*/
 }
 
