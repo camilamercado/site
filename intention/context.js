@@ -52,6 +52,7 @@
     horizontal_axis = intent.responsive({
       ID:'width',
       contexts: [
+        {name:'luxury', min:1100}, 
         {name:'standard', min:840}, 
         {name:'tablet', min:510},
         {name:'mobile', min:0}],
