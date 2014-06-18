@@ -3,11 +3,10 @@ body {
 }
 
 .topNav {
-	background: white;
+	background: black;
 	height: 30px;
 	border-bottom: 1px dashed tomato;
 	line-height: 45px;
-/*	background: whitesmoke;*/
 	background-image: url(metalex.jpg);
 	background-position: 0px 300px;
 	color: white;
@@ -26,6 +25,7 @@ body {
 .sideNav{
 	/*background: url(metal.jpg);*/
 	/*background: whitesmoke;*/
+	min-width: 150px;
 	position: absolute;
 	border-right:1px dashed dimgrey; 
 	height: 100%;
@@ -113,7 +113,8 @@ body {
 .tab {
 	position: absolute;
 	margin-top: 10px;
-	width: 350px;
+	max-width: 350px;
+	width: 60%;
 	height: 30px;
 	border: 1px solid lightgrey;
 	-webkit-border-radius: 40px 20px 0px 0;
@@ -178,6 +179,7 @@ body {
 	/*border: 1px solid tomato;*/
 	color: dimgrey;
 	display: none;
+	overflow: auto;
 
 }
 
