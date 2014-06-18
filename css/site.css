@@ -121,25 +121,25 @@ body {
 
 .x .tab {
 	right: 10%;
-	background: url(dtw.png);
+	background: url(daphne&telstar/dtw.png);
 	background-position: 0px 820px;
 }
 
 .y .tab { 
 	right: 15%;
-	background: url(bi1.png);
+	background: url(b1ching/bi1.png);
 	background-position: 330px 820px;
 }
 
 .z .tab {
 	right: 20%;
-	background: url(fafw.png);
+	background: url(actualsize/fafw.png);
 	background-position: 50px 820px;
 }
 
 .zed .tab {
 	right: 25%;
-	background: url(film.png);
+	background: url(tornfrom/film.png);
 	background-position: 770px 65px;
 }
 
