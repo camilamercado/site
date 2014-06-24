@@ -187,7 +187,7 @@ a:hover {
 
 .fieldM .navMods .tab {
 	margin-left: -20px;
-
+	/*margin-top:10px;*/
 }
 
 .fieldM {
@@ -197,7 +197,7 @@ a:hover {
 /*	background: tomato;*/
 	left: 0% !important;
 	position: absolute;
-	margin-left: 20px;
+	/*margin-left: 20px;*/
 	margin-top: 20px;
 	font-size: 16px;
 	background-repeat: no-repeat;
@@ -205,8 +205,8 @@ a:hover {
 .fieldM
 .icon {
 	position: absolute;
-	left: 5px;
-	top: 0px;
+	left: 15px;
+	top: -5px;
 	width: 50px;
 	height: 50px;
 	background-size: 50px 50px;
@@ -221,10 +221,10 @@ a:hover {
 	height: 14px;
 	/*border: 1px solid tomato;*/
 	margin-bottom: 5px;
-	left: 70px;
-	top: 10px;
+	left: 75px;
+	top: 0px;
 	line-height: 14px;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .fieldM
@@ -233,8 +233,8 @@ a:hover {
 	width: auto;
 	height: 40px;
 	/*border: 1px solid tomato;*/
-	left: 70px;
-	top: 15px;
+	left: 75px;
+	top: 5px;
 	line-height: 40px;
 	font-style: italic;
 }
@@ -242,8 +242,8 @@ a:hover {
 .fieldM
 .link{
 	position: absolute;
-	left: 20px;
-	top: 60px;
+	left: 40px;
+	top: 45px;
 	height: 20px;
 	line-height: 20px;
 	font-size: 12.4px;
@@ -254,7 +254,7 @@ a:hover {
 	width: 100%;
 	height: auto;
 	position: absolute;
-	top: 100px;
+	top: 80px;
 	left: 00px;
 	max-height: 300px!important;
 }
@@ -262,7 +262,7 @@ a:hover {
 .fieldM
 .slideMod
 .window1 {
-	background-size: 360px auto;
+	background-size: 400px auto;
 	max-height: 300px!important;
 }
 

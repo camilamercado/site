@@ -1,20 +1,28 @@
+/*body {
+	font-family: 'Andale Mono';
+}
+*/
 body {
-	font-family: "andale mono";
+	font-family: 'Inconsolata';
 }
 
-@font-face {
-	src: url('AndaleMono-webfont.eot?') format('eot'), url('AndaleMono-webfont.woff') format('woff'), url('AndaleMono-webfont.ttf') format('truetype');
-}
+/*@font-face {
+font-family: Dosis-ExtraLight;
+src: url("dosis/Dosis-ExtraLight.otf") format("opentype");
+}*/
+
+@import url(http://fonts.googleapis.com/css?family=Italiana);
 
 .topNav {
 	background: white;
 	height: 30px;
-	line-height: 45px;
+	line-height: 41px;
 	background-image: url(metalex.jpg);
 	background-position: 0px 300px;
 	color: white;
-	font-size: 25px;
+	font-size: 28px;
 	text-align: left;
+	font-family: 'Open Sans Condensed', sans-serif;
 	}
 
 .topNav:hover {

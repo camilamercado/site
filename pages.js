@@ -120,9 +120,13 @@ var pages = [
         'linky' : "http://camilamercado.github.io/torn-from/",
 
         frames : [
-
+          
           { 
             image : "url(css/tornfrom/tf.png)"
+          },
+
+          { 
+            image : "url(css/tornfrom/torngrid.png)"
           },
 
           { 
