@@ -95,7 +95,7 @@ a:hover {
 	min-height: 500px;
 	/*border: 1px solid tomato;*/
 	margin-bottom: 20px;
-	background-repeat: no-repeat;
+	background-repeat: repeat-x;
 	background-size: 800px auto;
 }
 
