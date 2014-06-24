@@ -246,7 +246,7 @@ a:hover {
 .fieldM
 .link{
 	position: absolute;
-	left: 40px;
+	left: 20px;
 	top: 45px;
 	height: 20px;
 	line-height: 20px;
@@ -266,7 +266,7 @@ a:hover {
 .fieldM
 .slideMod
 .window1 {
-	background-size: 380px auto;
+	background-size: 340px auto;
 	max-height: 300px!important;
 }
 
@@ -276,6 +276,7 @@ a:hover {
 	top: 260px;
 	font-size: 14px;
 	width: 90%;
+	left: 20px;
 }
 
 /************LUXURY*************/
