@@ -66,6 +66,7 @@ a:hover {
 	font-style: italic;
 	word-wrap: break-word;
 	font-size: 12px;
+	color: black;
 }
 
 .slideMod {
@@ -103,14 +104,14 @@ a:hover {
 	cursor: pointer;
 }
 
-/*.text1 {
+.text1 {
 	width: auto;
 	height: auto;
 	border: 1px solid tomato;
 	white-space:normal;
 	word-wrap: break-word;
 }
-*/
+
 
 
 /***************TABLET*****************/
@@ -273,7 +274,7 @@ a:hover {
 .fieldM
 .text1 {
 	/*position: absolute;*/
-	top: 260px;
+	margin-top: 80px;
 	font-size: 14px;
 	width: 90%;
 	left: 20px;

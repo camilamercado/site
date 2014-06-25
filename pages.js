@@ -10,10 +10,16 @@ var pages = [
         'subTitle' : "2014   ",
         'icon' : "url(css/daphne&telstar/istamp.png)",
         'link' : " ",
-        'linky' : "http://camilamercado.github.io/dds/orbit.html",
+        'linky' : "http://camilamercado.github.io/dds/orbit.html",       
+        'window1' : "url(css/daphne&telstar/dtw.png)",
+        'text1' : "url(css/daphne&telstar/img2.png)",
         
         frames : [
          
+          { 
+            image : "url(css/daphne&telstar/dtw.png)"
+          },
+
           { 
             image : "url(css/daphne&telstar/frames.png)"
           },
@@ -29,15 +35,9 @@ var pages = [
           { 
             image : "url(css/daphne&telstar/img2.png)"
           },
-          { 
-            image : "url(css/daphne&telstar/dtw.png)"
-          },
-
+          
         
         ],
-
-        'window1' : "url(css/daphne&telstar/dtw.png)",
-        'text1' : "url(css/daphne&telstar/img2.png)",
         
          
       }, 
