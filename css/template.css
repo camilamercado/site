@@ -170,7 +170,7 @@ a:hover {
 .slideMod {
 	width: 93%;
 	height: auto;
-	position: absolute;
+	/*position: absolute;*/
 	top: 100px;
 	left: 20px;
 	/*padding: 20px;*/
@@ -272,7 +272,7 @@ a:hover {
 
 .fieldM
 .text1 {
-	position: absolute;
+	/*position: absolute;*/
 	top: 260px;
 	font-size: 14px;
 	width: 90%;
