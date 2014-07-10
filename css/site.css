@@ -11,14 +11,16 @@ body {
 
 .topNav {
 	background: white;
-	height: 30px;
-	line-height: 45px;
+	height: 50px;
+	line-height: 55px;
 	background-image: url(metalex.jpg);
 	background-position: 0px 300px;
 	color: white;
-	font-size: 28px;
+	font-size: 100px;
 	text-align: left;
-	font-family: 'Andale Mono', sans-serif;
+	font-family: 'Lekton', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 20px;
 	}
 
 .topNav:hover {
