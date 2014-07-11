@@ -26,9 +26,7 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 	text-align: left;
 	font-family: 'Lekton', sans-serif;
 	text-transform: uppercase;
-	margin-bottom: 30px;
-	/*border-bottom: 20px solid gold;
-	border-opacity:0.2;*/
+	white-space: nowrap;
 	}
 
 .highlighter {
@@ -37,13 +35,18 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 	z-index: 1;
 	top: 29px;
 	width: 100%;
-	background-color: gold;
-	opacity: 0.7;
+	background-color: none;
+	opacity: 0.6;
+
 }
 
 
 .topNav:hover {
 	color: tomato;
+}
+
+.highlighter:hover {
+	background-color: gold;
 }
 
 .sideNav{
@@ -53,7 +56,7 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 	left: 0px;
 	float: left;
 	width: 180px;
-/*	background: lavender;*/
+	top: 80px;
 	float: left;
 }
 
@@ -82,7 +85,7 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 	color: tomato !important;
 	border-bottom: 1px dashed dimgrey;
 	border-right: none;
-		color: white;
+	color: white;
 }
 
 .stamp {
@@ -105,6 +108,10 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 	margin-top: 20px;
 	background-repeat: no-repeat;
 
+}
+
+.field .splash {
+	margin-top: 30px;
 }
 
 .field .navMods {
@@ -141,10 +148,10 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 .fieldT .navMods p:hover {
 	display: block;
 	position: absolute;
-	bottom: -31px;
+	bottom: -53px;
 	left: 25px;
 	z-index: -1;
-	font-size: 24px;
+	font-size: 55px;
 	color: white;
 }
 
