@@ -32,6 +32,11 @@ $(".zed").mouseover(function(){
   console.log(state);
 });
 
+$(".zoink").mouseover(function(){
+  state = "ZOINK";
+  console.log(state);
+});
+
 
 //Template Generator
 
@@ -43,6 +48,10 @@ function template(){
     for(var i = 0; i < pages.length; i++) {
         
         if(pages[i].state === state ) {
+
+          //document.querySelector(".sideNav").style.opacity=0;
+           // $(".sideNav").css( "opacity", "0");
+           // $(".sideNav:hover").css( "opacity", 1);
 
           document.querySelector(".template").style.display="block";
           document.querySelector(".splash").style.display="none";

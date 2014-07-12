@@ -301,7 +301,7 @@ a:hover {
 	height: auto;
 	min-height: 700px;
 	margin-bottom: 20px;
-	background-repeat: repeat-x;
+	background-repeat: no-repeat;
 	background-size: 1000px auto;
 }
 

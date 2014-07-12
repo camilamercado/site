@@ -154,5 +154,38 @@ var pages = [
          
       },   
 
+
+      { 
+        'state' : "ZOINK",
+        'title' : "C A M C O M ",
+        'subTitle' : "2011    ",
+        'icon' : "url(css/camcom/icon.png)", 
+        'window1' : "url(css/camcom/scape.jpg)",
+        'text1' : "",
+        'link' : " ",
+        'linky' : "",
+
+        frames : [
+          
+          { 
+            image : "url(css/camcom/mijaW.png)"
+          },
+
+          { 
+            image : "url(css/camcom/DXC.jpg)"
+          }, 
+
+          { 
+            image : "url(css/camcom/muay.jpg)"
+          },
+
+          { 
+            image : "url(css/camcom/scape.jpg)"
+          },          
+        
+        ],
+         
+      },   
+
 ];
 
