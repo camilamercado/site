@@ -11,7 +11,7 @@ var pages = [
         'icon' : "url(css/daphne&telstar/istamp.png)",
         'link' : " ",
         'linky' : "http://camilamercado.github.io/dds/orbit.html",       
-        'window1' : "url(css/daphne&telstar/daphs.jpg)",
+        'window1' : "url(css/daphne&telstar/dip.jpg)",
         'text1' : "",
         
         frames : [
@@ -21,7 +21,7 @@ var pages = [
           },
 
           { 
-            image : "url(css/daphne&telstar/dip.jpg)"
+            image : "url(css/daphne&telstar/daphs.jpg)"
           },
           
           { 

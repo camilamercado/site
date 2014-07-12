@@ -67,6 +67,13 @@ a:hover {
 	word-wrap: break-word;
 	font-size: 12px;
 	color: black;
+	background: gold;
+}
+
+.link a:hover {
+
+	background: cyan;
+	color: black;
 }
 
 .slideMod {
