@@ -15,9 +15,10 @@ var pages = [
         'text1' : "",
         
         frames : [
-         
+
+
           { 
-            image : "url(css/daphne&telstar/dtw.png)"
+            image : "url(css/daphne&telstar/bookx3.jpg)"
           },
 
           { 
@@ -26,6 +27,10 @@ var pages = [
 
           { 
             image : "url(css/daphne&telstar/daphs.jpg)"
+          },
+
+          { 
+            image : "url(css/daphne&telstar/bookx1.jpg)"
           },
 
           { 
@@ -41,8 +46,16 @@ var pages = [
           },
 
           { 
+            image : "url(css/daphne&telstar/bookx2.jpg)"
+          },
+
+          { 
             image : "url(css/daphne&telstar/img2.png)"
           },
+
+          { 
+            image : "url(css/daphne&telstar/dtw.png)"
+          },    
           
         
         ],
@@ -75,8 +88,13 @@ var pages = [
           },
 
           { 
+            image : "url(css/b1ching/pages.jpg)"
+          },
+
+          { 
             image : "url(css/b1ching/binary.png)"
           },
+
 
         
         ],
