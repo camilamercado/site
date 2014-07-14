@@ -1,13 +1,23 @@
 //Template State Call
 
-var state = "";
+var state = "base";
+console.log(state);
+
+// if (state==="base") {
+//   $(".sideNav").css( "opacity", "1");
+// };
 
 $(".topNav").click(function(){
-  state = "0";
+  state = "base";
   console.log(state);
-   if( state === "0" ) {
+   if( state === "base" ) {
       document.querySelector(".template").style.display="none";
       document.querySelector(".splash").style.display="block";
+      
+      $(".sideNav").css( "opacity", "1");
+      $(".sideNav").mouseout(function(){
+               $(".sideNav").css( "opacity", "1");
+      });
   }
 });
 
@@ -49,9 +59,16 @@ function template(){
         
         if(pages[i].state === state ) {
 
-          //document.querySelector(".sideNav").style.opacity=0;
-           // $(".sideNav").css( "opacity", "0");
-           // $(".sideNav:hover").css( "opacity", 1);
+          document.querySelector(".sideNav").style.opacity=0;
+           $(".sideNav").css( "opacity", "0");
+           $(".sideNav").mouseover(function(){
+               $(".sideNav").css( "opacity", "1");
+           });
+
+           $(".sideNav").mouseout(function(){
+               $(".sideNav").css( "opacity", "0");
+           });
+
 
           document.querySelector(".template").style.display="block";
           document.querySelector(".splash").style.display="none";

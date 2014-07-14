@@ -17,6 +17,9 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 
 }
 
+.sideNavM {
+	display: none;
+}
 
 .topNav {
 
@@ -71,8 +74,8 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 .sideNav:hover {
 
 	opacity: 1;
-	-webkit-transition: all 2.5s ease;
-	-moz-transition: all 2.5s ease;
+	-webkit-transition: all 1.5s ease;
+	-moz-transition: all 1.5s ease;
 }
 
 .navMods {
@@ -151,12 +154,10 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 .fieldM  p, 
 .fieldT  p {
 
-	width: 100%;
+	width: 85%;
 	height: 60px;
 	display: block;
-	position: absolute;
 	left: 25px;
-	z-index: 1;
 	font-size: 55px;
 	line-height: 70px;
 	color: transparent;
