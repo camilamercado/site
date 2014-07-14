@@ -100,11 +100,12 @@ a:hover {
 .window1 {
 	width: auto;
 	height: auto;
-	min-height: 500px;
+	min-height: 800px;
 	/*border: 1px solid tomato;*/
 	margin-bottom: 20px;
-	background-repeat: repeat-x;
+	background-repeat: no-repeat;
 	background-size: 800px auto;
+	cursor: e-resize !important;
 }
 
 .window1:hover {

@@ -11,7 +11,7 @@ var pages = [
         'icon' : "url(css/daphne&telstar/istamp.png)",
         'link' : " ",
         'linky' : "http://camilamercado.github.io/dds/orbit.html",       
-        'window1' : "url(css/daphne&telstar/dip.jpg)",
+        'window1' : "url(css/daphne&telstar/install.jpg)",
         'text1' : "",
         
         frames : [
@@ -21,15 +21,23 @@ var pages = [
           },
 
           { 
+            image : "url(css/daphne&telstar/dip.jpg)"
+          },
+
+          { 
             image : "url(css/daphne&telstar/daphs.jpg)"
           },
-          
+
           { 
             image : "url(css/daphne&telstar/shelf.png)"
           },
 
           { 
-            image : "url(css/daphne&telstar/dipp.jpg)"
+            image : "url(css/daphne&telstar/layout.jpg)"
+          },
+
+          { 
+            image : "url(css/daphne&telstar/telsplice+.jpg)"
           },
 
           { 
