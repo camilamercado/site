@@ -3,6 +3,7 @@
 }
 */
 body {
+	
 	font-family: 'Inconsolata', "lucida console";
 }
 
@@ -10,12 +11,16 @@ body {
 @import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans+Condensed:300,300italic,700);
 
 @font-face {
+
 font-family: Lekton;
 src: url("Lekton/Lekton034.otf") format("opentype");
+
 }
 
 
 .topNav {
+
+	width: 100%;
 	background: white;
 	height: 50px;
 	line-height: 65px;
@@ -27,9 +32,10 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 	font-family: 'Lekton', sans-serif;
 	text-transform: uppercase;
 	white-space: nowrap;
-	}
+}
 
 .highlighter {
+
 	height: 30px;
 	position: absolute;
 	z-index: 1;
@@ -37,31 +43,33 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 	width: 100%;
 	background-color: none;
 	opacity: 0.6;
-
 }
 
-
 .topNav:hover {
+
 	color: tomato;
 }
 
 .highlighter:hover {
+
 	background-color: gold;
 }
 
-.sideNav{
+.sideNav {
+
 	position: absolute;
 	border-right:1px dashed lightgrey; 
 	height: 100%;
 	left: 0px;
 	float: left;
-	width: 180px;
+	width: 15%;
 	top: 80px;
 	float: left;
 	/*opacity: 0;*/
 }
 
-.sideNav:hover{
+.sideNav:hover {
+
 	opacity: 1;
 	-webkit-transition: all 2.5s ease;
 	-moz-transition: all 2.5s ease;
@@ -81,13 +89,11 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 	color: dimgrey;
 	border-bottom: 1px dashed lightgrey;
 	overflow: hidden;
-
-
 }
 
 .sideNav
-.navMods:hover {
-	/*background: white !important;*/
+.navMods:hover { 
+
 	font-style: italic !important;
 	color: tomato !important;
 	border-bottom: 1px dashed dimgrey;
@@ -96,6 +102,7 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 }
 
 .stamp {
+
 	position: absolute;
 	width: 200px;
 	height: 150px;
@@ -105,43 +112,51 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 	left: 15%;
 }
 
-
 .field {
+
 	height: auto;
-	width: 80%;
-/*	border: 1px solid magenta;*/
-	left: 180px;
+	width: 85%;
+	left: 15%;
 	position: absolute;
 	margin-top: 20px;
-	background-repeat: no-repeat;
+	
+}
 
+.fieldT {
+
+	width: 100%;
+	height: 95%;
+	left: 0px;
+	position: absolute;
+}
+
+.fieldM {
+
+	width: 100%;
+	height: 95%;
+	left: 0px;
+	position: absolute;
 }
 
 .field .splash {
-	margin-top: 30px;
+
+	margin-top: 10px;
 }
 
-.field .navMods {
-	width: 110%;
-	max-width: none;
-/*	margin-left: -80px !important;*/
-	margin-top: 0px !important;
-	height: 30px;
-	/*border-bottom: 1px dashed !important;*/
-}
+.field  p {
 
-
-.field .navMods p {
 	display: none;
 	position: absolute;
 	bottom: -15px;
 	left: 25px;
 	z-index: -1;
+	margin: 0px;
 }
 
 
-.fieldT .navMods p {
-	width: 110%;
+.field  p {
+
+	width: 100%;
 	height: 60px;
 	display: block;
 	position: absolute;
@@ -152,7 +167,8 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 	color: transparent;
 }
 
-.fieldT .navMods p:hover {
+.field  p:hover {
+
 	display: block;
 	position: absolute;
 	bottom: -53px;
@@ -163,71 +179,56 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 }
 
 .x .tab {
-	right: 10%;
+
 	background: url(daphne&telstar/dtw.png);
 	background-position: 0px 820px;
 }
 
 .y .tab { 
-	right: 15%;
+
 	background: url(b1ching/bi1.png);
 	background-position: 400px 520px;
 }
 
 .z .tab {
-	right: 20%;
+
 	background: url(actualsize/fafw.png);
 	background-position: 50px 820px;
 }
 
 .zed .tab {
-	right: 25%;
+
 	background: url(tornfrom/film.png);
 	background-position: 770px 65px;
 }
 
 .zoink .tab {
+
 	background: url(camcom/slice.jpg);
 	background-position: 0px 230px;
 }
 
-/*.tab {
-	position: absolute;
-	margin-top: 10px;
-	width: 350px;
-	height: 30px;
-	-webkit-border-radius: 40px 20px 0px 0;
-	-moz-border-radius: 40px 20px 0px 0;
-	-webkit-transition: all 2.5s ease;
-	-moz-transition: all 2.5s ease;
-}*/
 
 .tab {
+
 	left:0px !important;
-	position: absolute;
-	margin-top: -20px;
-	width: 110%;
+	width: 100%;
 	height: 50px;
-	border-bottom:none;
+	border-bottom:1px dashed lightgrey;
 	opacity: 0.7;
 	-webkit-transition: all 2.5s ease;
 	-moz-transition: all 2.5s ease;
 }
 
 .tab:hover {
+
 	background: tomato;
 	opacity: 1;
 }
 
-.splash {
-	/*background-image:url(frame.png);*/
-	height: 100%;
-	background-repeat: no-repeat;
-	width: 100%;
-}
-
 
 .cam {
+
 	position: absolute;
 	width: auto;
 	max-width: 25%;
@@ -243,6 +244,7 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 }
 
 .pot {
+
 	position: absolute;
 	width: 60px;
 	background-size: 100px 172px;
@@ -253,29 +255,10 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 	margin-top: 150px;
 	margin-right: 120px;
 	background: url(satpot.png);
-/*	border: 1px solid lightgrey;
-	font-size: 12px;
-	color: dimgrey;
-	line-height: 20px;*/
-
 }
-
-
-.fieldT {
-	height: 95%;
-	width: 100% !important;
-/*	border: 1px solid whitesmoke;*/
-/*	background: cyan;*/
-	left: 0px;
-	position: absolute;
-/*	margin-left: 20px;
-	margin-top: 20px;*/
-/*	padding: 20px;*/
-
-}
-
 
 .perm {
+
 	z-index: 1;
 	position: fixed;
 	bottom: 0px;
@@ -290,10 +273,9 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 }
 
 .campic {
+
 	position: absolute;
 	width: 400px;
-	/*border: 1px solid tomato;*/
-	/*background-size: 160px 232px;*/
 	background-repeat: no-repeat;
 	height: 540px;
 	right: 11%;
