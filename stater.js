@@ -28,6 +28,8 @@ function template(){
         
         if(pages[i].state === state ) {
 
+           $(".sideNav").css( "opacity", 0);
+          document.querySelector(".sideNav").style.display="none";
           document.querySelector(".template").style.display="block";
           document.querySelector(".field").style.backgroundImage="none";
 

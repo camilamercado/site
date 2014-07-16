@@ -3,16 +3,30 @@
 }
 */
 body {
+	
 	font-family: 'Inconsolata', "lucida console";
 }
 
 @import url(http://fonts.googleapis.com/css?family=Italiana);
 @import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans+Condensed:300,300italic,700);
 
+@font-face {
+
+font-family: Lekton;
+src: url("Lekton/Lekton034.otf") format("opentype");
+
+}
+
+.sideNavM {
+	display: none;
+}
+
 .topNav {
+
+	width: 100%;
 	background: white;
 	height: 50px;
-	line-height: 55px;
+	line-height: 65px;
 	background-image: url(metalex.jpg);
 	background-position: 0px 300px;
 	color: white;
@@ -20,22 +34,48 @@ body {
 	text-align: left;
 	font-family: 'Lekton', sans-serif;
 	text-transform: uppercase;
-	margin-bottom: 20px;
-	}
+	white-space: nowrap;
+}
+
+.highlighter {
+
+	height: 30px;
+	position: absolute;
+	z-index: 1;
+	top: 29px;
+	width: 100%;
+	background-color: none;
+	opacity: 0.6;
+}
 
 .topNav:hover {
+
 	color: tomato;
 }
 
-.sideNav{
+.highlighter:hover {
+
+	background-color: gold;
+}
+
+.sideNav {
+
 	position: absolute;
 	border-right:1px dashed lightgrey; 
 	height: 100%;
 	left: 0px;
 	float: left;
-	width: 180px;
-/*	background: lavender;*/
+	width: 15%;
+	top: 80px;
 	float: left;
+	/*opacity: 0;*/
+}
+
+.sideNav:hover {
+
+	opacity: 1;
+	-webkit-transition: all 1.5s ease;
+	-moz-transition: all 1.5s ease;
 }
 
 .navMods {
@@ -44,7 +84,7 @@ body {
 	right: 5%;
 	margin-left: 20px;
 	margin-top: 30px;
-	height: 30px;
+	height: 20px;
 	margin-bottom: 20px;
 	text-align: left;
 	line-height: 30px;
@@ -52,21 +92,20 @@ body {
 	color: dimgrey;
 	border-bottom: 1px dashed lightgrey;
 	overflow: hidden;
-
-
 }
 
 .sideNav
-.navMods:hover {
-	/*background: white !important;*/
+.navMods:hover { 
+
 	font-style: italic !important;
 	color: tomato !important;
 	border-bottom: 1px dashed dimgrey;
 	border-right: none;
-		color: white;
+	color: white;
 }
 
 .stamp {
+
 	position: absolute;
 	width: 200px;
 	height: 150px;
@@ -76,120 +115,118 @@ body {
 	left: 15%;
 }
 
-
 .field {
+
 	height: auto;
-	width: 80%;
-/*	border: 1px solid magenta;*/
-	left: 180px;
+	width: 85%;
+	left: 15%;
 	position: absolute;
 	margin-top: 20px;
-	background-repeat: no-repeat;
-
+	
 }
 
-.field .navMods {
-	width: 110%;
-	max-width: none;
-/*	margin-left: -80px !important;*/
-	margin-top: 0px !important;
-	height: 40px;
-	/*border-bottom: 1px dashed !important;*/
-}
+.fieldT {
 
-
-.field .navMods p {
-	display: none;
+	width: 100%;
+	height: 95%;
+	left: 0px;
 	position: absolute;
-	bottom: -15px;
-	left: 25px;
-	z-index: -1;
 }
 
+.fieldM {
 
-.fieldT .navMods p {
-	width: 110%;
+	width: 100%;
+	height: 95%;
+	left: 0px;
+	position: absolute;
+}
+
+.field .splash {
+
+	margin-top: 10px;
+}
+
+.field  p {
+
+	display: none;
+}
+
+.fieldM  p, 
+.fieldT  p {
+
+	width: 85%;
 	height: 60px;
 	display: block;
-	position: absolute;
 	left: 25px;
-	z-index: -1;
-	font-size: 24px;
-	line-height: 90px;
+	font-size: 55px;
+	line-height: 70px;
 	color: transparent;
+	margin: 0px;
 }
 
-.fieldT .navMods p:hover {
-	display: block;
-	position: absolute;
-	bottom: -31px;
-	left: 25px;
-	z-index: -1;
-	font-size: 24px;
+.fieldM p {
+	
+	font-size: 32px !important;
+	line-height: 85px !important;
+}
+
+.fieldM  p:hover,
+.fieldT  p:hover {
+
 	color: white;
 }
 
 .x .tab {
-	right: 10%;
+
 	background: url(daphne&telstar/dtw.png);
 	background-position: 0px 820px;
 }
 
 .y .tab { 
-	right: 15%;
+
 	background: url(b1ching/bi1.png);
-	background-position: 330px 820px;
+	background-position: 400px 520px;
 }
 
 .z .tab {
-	right: 20%;
+
 	background: url(actualsize/fafw.png);
 	background-position: 50px 820px;
 }
 
 .zed .tab {
-	right: 25%;
+
 	background: url(tornfrom/film.png);
 	background-position: 770px 65px;
 }
 
-/*.tab {
-	position: absolute;
-	margin-top: 10px;
-	width: 350px;
-	height: 30px;
-	-webkit-border-radius: 40px 20px 0px 0;
-	-moz-border-radius: 40px 20px 0px 0;
-	-webkit-transition: all 2.5s ease;
-	-moz-transition: all 2.5s ease;
-}*/
+.zoink .tab {
+
+	background: url(camcom/slice.jpg);
+	background-position: 0px 230px;
+}
+
 
 .tab {
+
 	left:0px !important;
-	position: absolute;
-	margin-top: -20px;
-	width: 110%;
-	height: 60px;
-	border-bottom:none;
-	opacity: 0.8;
+	width: 100%;
+	height: 50px;
+	border-bottom:1px dashed lightgrey;
+	opacity: 0.7;
 	-webkit-transition: all 2.5s ease;
 	-moz-transition: all 2.5s ease;
 }
 
 .tab:hover {
+
 	background: tomato;
 	opacity: 1;
 }
 
-.splash {
-	/*background-image:url(frame.png);*/
-	height: 100%;
-	background-repeat: no-repeat;
-	width: 100%;
-}
-
 
 .cam {
+
 	position: absolute;
 	width: auto;
 	max-width: 25%;
@@ -204,22 +241,22 @@ body {
 
 }
 
+.pot {
 
-.fieldT {
-	height: 95%;
-	width: 100% !important;
-/*	border: 1px solid whitesmoke;*/
-/*	background: cyan;*/
-	left: 0px;
 	position: absolute;
-/*	margin-left: 20px;
-	margin-top: 20px;*/
-/*	padding: 20px;*/
-
+	width: 60px;
+	background-size: 100px 172px;
+	background-repeat: no-repeat;
+	height: 132px;
+	padding: 20px;
+	right: 10%;
+	margin-top: 150px;
+	margin-right: 120px;
+	background: url(satpot.png);
 }
 
-
 .perm {
+
 	z-index: 1;
 	position: fixed;
 	bottom: 0px;
@@ -231,5 +268,19 @@ body {
 	width: auto;
 	height: 50px;
 	padding-top: 10px;
+}
+
+.campic {
+
+	position: absolute;
+	width: 400px;
+	background-repeat: no-repeat;
+	height: 540px;
+	right: 11%;
+	margin-top: 50px;
+	margin-right: 120px;
+	background-image: url(daphne&telstar/crop.jpg);
+	background-position: 0px -0px;
+	opacity: 0.6;
 }
 

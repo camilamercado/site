@@ -1,20 +1,30 @@
 //Template State Call
 
-var state = "";
+var state = "base";
 
-$(".topNav").click(function(){
-  state = "0";
-  console.log(state);
-   if( state === "0" ) {
-      document.querySelector(".template").style.display="none";
-      document.querySelector(".splash").style.display="block";
-  }
-});
+console.log(state);
+
+  $(".topNav").click(function(){
+    
+    state = "base";
+    
+      if( state === "base" ) {
+
+        document.querySelector(".template").style.display="none";
+        document.querySelector(".splash").style.display="block";
+        
+        $(".sideNav").css( "opacity", "1");
+        
+        $(".sideNav").mouseout(function(){
+            $(".sideNav").css( "opacity", "1");
+        });
+      
+      }
+  });
 
 $(".x").mouseover(function(){
   state = "X";
   console.log(state);
-  // $(".x").addClass("navModsh");
 });
 
 $(".y").mouseover(function(){
@@ -32,6 +42,11 @@ $(".zed").mouseover(function(){
   console.log(state);
 });
 
+$(".zoink").mouseover(function(){
+  state = "ZOINK";
+  console.log(state);
+});
+
 
 //Template Generator
 
@@ -43,6 +58,20 @@ function template(){
     for(var i = 0; i < pages.length; i++) {
         
         if(pages[i].state === state ) {
+
+          //disapearing sideNav
+
+           $(".sideNav").css( "opacity", "0");
+           
+           $(".sideNav").mouseover(function(){
+               $(".sideNav").css( "opacity", "1");
+           });
+
+           $(".sideNav").mouseout(function(){
+               $(".sideNav").css( "opacity", "0");
+           });
+
+           //template contents
 
           document.querySelector(".template").style.display="block";
           document.querySelector(".splash").style.display="none";
@@ -75,12 +104,14 @@ function template(){
 
              
               $('.slideMod').click(function () {
+                  
                   counter = (counter + 1) % brute.length; 
                   // increment your counter
                   // the modulus (%) operator resets the counter to 0
                   // when it reaches the length of the array
                   document.querySelector(".window1").style.backgroundImage=brute[counter].image;
                   console.log(brute[counter]); // the new incremented value
+              
               });
           });
 
