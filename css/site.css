@@ -21,14 +21,22 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 	display: none;
 }
 
-.topNav {
+.topNav{
 
-	width: 100%;
-	background: white;
 	height: 50px;
-	line-height: 65px;
 	background-image: url(metalex.jpg);
-	background-position: 0px 300px;
+	color: white;
+	font-size: 100px;
+	text-align: left;
+	font-family: 'Lekton', sans-serif;
+	text-transform: uppercase;
+	overflow: hidden;
+	white-space: nowrap;
+	line-height: 65px;
+}
+
+.topNav p{
+
 	color: white;
 	font-size: 100px;
 	text-align: left;
@@ -51,6 +59,7 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 .topNav:hover {
 
 	color: tomato;
+	overflow: auto;
 }
 
 .highlighter:hover {
@@ -123,22 +132,6 @@ src: url("Lekton/Lekton034.otf") format("opentype");
 	position: absolute;
 	margin-top: 20px;
 	
-}
-
-.fieldT {
-
-	width: 100%;
-	height: 95%;
-	left: 0px;
-	position: absolute;
-}
-
-.fieldM {
-
-	width: 100%;
-	height: 95%;
-	left: 0px;
-	position: absolute;
 }
 
 .field .splash {
