@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script src="http://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
+    </head>
+
+    <style type="text/css">
+    
+      div.bar {
+        display: inline-block;
+        width: 20px;
+        height: 75px;
+        background-color: teal;
+        margin-right: 2px;
+        background-position: 500px -400px;
+        -webkit-transition: all .2s ease;
+        -moz-transition: all .2s ease;
+         background: url(css/fem.jpg);
+
+      }
+
+      div.bar:hover {
+        opacity: 0.3;
+      }
+
+       body {
+        background: gainsboro;
+        background-position: 0px -300px;
+        color: lightgoldenrodyellow;
+        font-family: "courier new";
+        text-transform: lowercase;
+      }
+
+      .type {
+        position: absolute;
+        z-index: 2;
+        left: 425px;
+         -webkit-transform: rotate(45deg);
+         color: crimson;
+      }
+
+      .type2 {
+        position: absolute;
+        z-index: 2;
+        left: 235px;
+      }
+
+      .type3 {
+        position: absolute;
+        z-index: 2;
+        left: 255px;
+      }
+    
+      .container {
+        position: fixed;
+        bottom: 10%;
+        left: 500px;
+        height: 100%;
+        min-height:800px; 
+        overflow: hidden;
+        -webkit-transform: rotate(45deg);
+        /*background-color: lightgoldenrodyellow;*/
+        /*opacity: 0.3;*/
+      }
+
+      .obj{
+        width: 300px;
+        height: 300px;
+        -webkit-transform: rotate(45deg);
+        /*border: 1px solid steelblue;*/
+        position: absolute;
+        bottom: 20%;
+        left: 300px;
+        background: url(css/fem.jpg);
+        background-position: 600px -200px;
+        opacity: 0.6;
+      }
+
+    </style>
+
+    <body>
+
+    <div class="type">L<BR>O<BR>S<BR>T<BR><BR>I<BR>N<BR><BR> T<BR>H<BR>E<BR><BR> D<BR>A<BR>T<BR>A</BR></div>
+    <div class="type2">N<BR>e<BR>u<BR>r<BR>o<BR>m<BR>a<BR>n<BR>c<BR>e<BR>r<BR><BR> / <BR><BR>T<BR>r<BR>a<BR>n<BR>s<BR>m<BR>i<BR>s<BR>s<BR>i<BR>o<BR>n</div>
+    <div class="type3">J<BR>o<BR>h<BR>n<BR>n<BR>y<BR><BR> D<BR>u<BR>f<BR>o<BR>r<BR>t</div>
+     <div class="obj"></div>
+    <div class="container"></div>
+    <div class="obj"></div>
+     <script type="text/javascript">
+
+
+      var dataset = [];                               //Initialize empty array
+      for (var i = 0; i < 15; i++) {                  //Loop 25 times
+        var newNumber = Math.random() * 45;           //New random number (0-30)
+        dataset = dataset.concat(newNumber);          //Add new number to array
+      }
+
+
+      
+      d3.select(".container").selectAll("div")
+        .data(dataset)
+        .enter()
+        .append("div")
+        .attr("class", "bar")
+        .style("height", function(d) {
+          var barHeight = d * 18;
+          return barHeight + "px";
+        })
+        .style("background-position", function(d) {
+          if (d > 20) {   
+              return "0px -400px";
+          } else if (d > 10){
+              return "20px -300px";
+          } else {
+              return "100px -600px"
+          }
+         });
+
+
+            
+         d3.select("body")                                  //On mouseover, update with new data  
+            .on("mouseover", function() {                   //New values for dataset
+
+                                                        
+          var numValues = dataset.length;                   //Count original length of dataset
+          dataset = [];                                     //Initialize empty array
+          
+          for (var i = 0; i < numValues; i++) {             //Loop numValues times
+            var newNumber = Math.floor(Math.random() * 55); //New random integer (0-25)
+            dataset.push(newNumber);                        //Add new number to array
+          }
+
+          d3.selectAll("div")                                //Update all rects
+            .data(dataset)
+            .transition()
+            .delay(function(d, i) {
+              return i / dataset.length * 1000;
+            })
+            .duration(500)
+            
+            .style("height", function(d) {
+               var barHeight = d * 18;
+               return barHeight + "px";
+            })
+            
+        });
+          
+                    
+        
+
+      
+    
+
+
+        </script>
+
+      </body>
+      </html>
