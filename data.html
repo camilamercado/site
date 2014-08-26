@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-    	<script src="http://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
+      <script src="http://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
     </head>
 
     <style type="text/css">
@@ -15,7 +15,7 @@
         background-position: 500px -400px;
         -webkit-transition: all .2s ease;
         -moz-transition: all .2s ease;
-         background: url(css/face.jpg);
+         background: url(css/fem.jpg);
 
       }
 
@@ -24,29 +24,16 @@
       }
 
       body {
-        background: url(css/face.jpg);
+        background: url(css/fem.jpg);
         background-position: 0px -300px;
-        color: lightgoldenrodyellow;
-        font-family: "courier new";
-        text-transform: lowercase;
       }
 
       .type {
         position: absolute;
-        z-index: 2;
-        left: 15px;
-      }
-
-      .type2 {
-        position: absolute;
-        z-index: 2;
-        left: 35px;
-      }
-
-      .type3 {
-        position: absolute;
-        z-index: 2;
-        left: 55px;
+        z-index: 1;
+        color: lightgoldenrodyellow;
+        font-family: "courier new";
+        text-transform: lowercase;
       }
     
       .container {
@@ -63,14 +50,10 @@
 
     <body>
 
-    <div class="type">L<BR>O<BR>S<BR>T<BR><BR>I<BR>N<BR><BR> T<BR>H<BR>E<BR><BR> D<BR>A<BR>T<BR>A</BR></div>
-    <div class="type2">N<BR>e<BR>u<BR>r<BR>o<BR>m<BR>a<BR>n<BR>c<BR>e<BR>r<BR><BR> / <BR><BR>T<BR>r<BR>a<BR>n<BR>s<BR>m<BR>i<BR>s<BR>s<BR>i<BR>o<BR>n</div>
-    <div class="type3">J<BR>o<BR>h<BR>n<BR>n<BR>y<BR><BR> D<BR>u<BR>f<BR>o<BR>r<BR>t</div>
+    <div class="type">L<BR>O<BR>S<BR>T<BR><BR>I<BR>N<BR><BR> T<BR>H<BR>E<BR><BR> D<BR>A<BR>T<BR>A</div>
     <div class="container"></div>
      <script type="text/javascript">
 
-     var state = "face";
-     console.log(state);
 
       var dataset = [];                               //Initialize empty array
       for (var i = 0; i < 57; i++) {                  //Loop 25 times
@@ -127,38 +110,6 @@
             })
             
         });
-
-      if (state === "face") {
-
-        d3.select("body")                                  //On mouseover, update with new data  
-            .on("click", function() {  
-            state = "fem";
-            console.log(state);
-            d3.selectAll("div")                                //Update all rects
-            .style("background-image", function(d) {
-                  return "url(css/fem.jpg)"
-            })
-           
-
-        });
-
-        } if (state === "fem"){
-          
-          d3.select("body")                                  //On mouseover, update with new data  
-            .on("click", function() { 
-            state = "face"; 
-            console.log(state);
-            d3.selectAll("div")                                //Update all rects
-            .style("background-image", function(d) {
-                  return "url(css/face.jpg)"
-            })
-          
-          });
-
-        };
-      
-
-
           
                     
         
