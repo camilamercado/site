@@ -1,0 +1,58 @@
+ div.bar {
+        display: inline-block;
+        width: 100%;
+        height: 75px;
+        background-color: teal;
+        margin-right: 2px;
+        background-position: 500px -400px;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        border: none;
+        background: url("http://tuincam.bt.tudelft.nl/mjpg/video.mjpg");
+
+      }
+
+      div.bar:hover {
+        opacity: 0.3;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: url("http://tuincam.bt.tudelft.nl/mjpg/video.mjpg");
+        /*background-position: 0px -300px;*/
+        background-size: 100% auto;
+        color: lightgoldenrodyellow;
+        font-family: "courier new";
+        text-transform: lowercase;
+        font-size: 12px;
+      }
+
+      .type {
+        position: absolute;
+        z-index: 2;
+        left: 15px;
+      }
+
+      .type2 {
+        position: absolute;
+        z-index: 2;
+        left: 35px;
+      }
+
+      .type3 {
+        position: absolute;
+        z-index: 2;
+        left: 55px;
+      }
+    
+      .container {
+        position: fixed;
+        bottom: 0px;
+        height: 100%;
+        min-height:800px; 
+        overflow: hidden;
+        /*background-color: lightgoldenrodyellow;*/
+        /*opacity: 0.3;*/
+      }

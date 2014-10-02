@@ -8,11 +8,12 @@
     
       div.bar {
         display: inline-block;
-        width: 20px;
+        width: 15px;
         height: 75px;
         background-color: teal;
         margin-right: 2px;
-        background-position: -800px 300px;
+        background-position: 0px 0px;
+        background-size: 507px 700px !important;
         -webkit-transition: all .2s ease;
         -moz-transition: all .2s ease;
          background: url(turing/turing.jpg);
@@ -24,8 +25,8 @@
       }
 
       body {
-        background: url(turing/turing.jpg);
-        /*background-position: 0px -300px;*/
+        /*background: url(turing/turing.jpg);
+        background-size: auto 100%;*/
         color: lightgoldenrodyellow;
         font-family: "courier new";
         text-transform: lowercase;
@@ -34,11 +35,22 @@
 
       .mask {
         width: auto;
-        height: auto;
+        height: 100%;
         position: absolute;
         z-index: 3;
         top: 0px;
         left: 0px;
+        min-height: 700px;
+      }
+
+      .portrait {
+        width: auto;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+        top: 0px;
+        left: 0px;
+        min-height: 700px;
       }
 
       .textbar{
@@ -73,7 +85,7 @@
     
       .container {
         position: fixed;
-        bottom: 0px;
+        bottom: 240px;
         height: 100%;
         min-height:800px; 
         overflow: hidden;
@@ -89,6 +101,7 @@
     <div class="type2">N<BR>e<BR>u<BR>r<BR>o<BR>m<BR>a<BR>n<BR>c<BR>e<BR>r<BR><BR> / <BR><BR>T<BR>r<BR>a<BR>n<BR>s<BR>m<BR>i<BR>s<BR>s<BR>i<BR>o<BR>n</div>
     <div class="type3">J<BR>o<BR>h<BR>n<BR>n<BR>y<BR><BR> D<BR>u<BR>f<BR>o<BR>r<BR>t</div>
     <div class="textbar">XXX</div>
+    <img class="portrait" src="turing/turing.jpg">
     <div class="container"></div>
     <img class="mask" src="turing/turing-mask.png">
      <script type="text/javascript">
@@ -115,11 +128,11 @@
         })
         .style("background-position", function(d) {
           if (d > 20) {   
-              return "500px -400px";
+              return "200px 0px";
           } else if (d > 10){
-              return "500px -300px";
+              return "250px 0px";
           } else {
-              return "500px -600px"
+              return "270px 0px"
           }
          });
 

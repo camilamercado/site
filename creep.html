@@ -4,76 +4,26 @@
     	<script src="http://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
     </head>
 
-    <style type="text/css">
-    
-      div.bar {
-        display: inline-block;
-        width: 20px;
-        height: 75px;
-        background-color: teal;
-        margin-right: 2px;
-        background-position: 500px -400px;
-        -webkit-transition: all .2s ease;
-        -moz-transition: all .2s ease;
-         background: url(css/face.jpg);
-
-      }
-
-      div.bar:hover {
-        opacity: 0.3;
-      }
-
-      body {
-        background: url(css/face.jpg);
-        background-position: 0px -300px;
-        color: lightgoldenrodyellow;
-        font-family: "courier new";
-        text-transform: lowercase;
-      }
-
-      .type {
-        position: absolute;
-        z-index: 2;
-        left: 15px;
-      }
-
-      .type2 {
-        position: absolute;
-        z-index: 2;
-        left: 35px;
-      }
-
-      .type3 {
-        position: absolute;
-        z-index: 2;
-        left: 55px;
-      }
-    
-      .container {
-        position: fixed;
-        bottom: 0px;
-        height: 100%;
-        min-height:800px; 
-        overflow: hidden;
-        /*background-color: lightgoldenrodyellow;*/
-        /*opacity: 0.3;*/
-      }
-
-    </style>
+   <link href="css/creep.css" rel="stylesheet" />
 
     <body>
 
-    <div class="type">L<BR>O<BR>S<BR>T<BR><BR>I<BR>N<BR><BR> T<BR>H<BR>E<BR><BR> D<BR>A<BR>T<BR>A</BR></div>
-    <div class="type2">N<BR>e<BR>u<BR>r<BR>o<BR>m<BR>a<BR>n<BR>c<BR>e<BR>r<BR><BR> / <BR><BR>T<BR>r<BR>a<BR>n<BR>s<BR>m<BR>i<BR>s<BR>s<BR>i<BR>o<BR>n</div>
-    <div class="type3">J<BR>o<BR>h<BR>n<BR>n<BR>y<BR><BR> D<BR>u<BR>f<BR>o<BR>r<BR>t</div>
+    <div class="type">T<BR>U<BR><BR>D<BR>e<BR>l<BR>f<BR>t<BR><BR>B<BR>o<BR>t<BR>a<BR>n<BR>i<BR>c<BR>a<BR>l<BR>G<BR>a<BR>r<BR>d<BR>e<BR>n<BR>N<BR>e<BR>t<BR>h<BR>e<BR>r<BR>l<BR>a<BR>n<BR>d<BR>s</BR></div>    
+
+    <div class="type2">W<BR>e<BR>s<BR>t<BR>m<BR>a<BR>n<BR><BR>I<BR>s<BR>l<BR>a<BR>n<BR>d<BR>s<BR><BR>V<BR>e<BR>s<BR>t<BR>m<BR>a<BR>n<BR>n<BR>a<BR>e<BR>y<BR>j<BR>a<BR>r<BR><BR>I<BR>c<BR>e<BR>l<BR>a<BR>n<BR>d</div>
+    
+    <div class="type3">H<BR>ô<BR>t<BR>e<BR>l<BR><BR>L<BR>e<BR>s<BR><BR>E<BR>l<BR>m<BR>e<BR>s<BR><BR>F<BR>r<BR>a<BR>n<BR>c<BR>e</div>
+    
     <div class="container"></div>
-     <script type="text/javascript">
+     
+
+    <script type="text/javascript">
 
      var state = "face";
      console.log(state);
 
       var dataset = [];                               //Initialize empty array
-      for (var i = 0; i < 57; i++) {                  //Loop 25 times
+      for (var i = 0; i < 10; i++) {                  //Loop 25 times
         var newNumber = Math.random() * 45;           //New random number (0-30)
         dataset = dataset.concat(newNumber);          //Add new number to array
       }
@@ -85,20 +35,19 @@
         .enter()
         .append("div")
         .attr("class", "bar")
-        .style("height", function(d) {
+        .style("width", function(d) {
           var barHeight = d * 18;
           return barHeight + "px";
         })
-        .style("background-position", function(d) {
-          if (d > 20) {   
-              return "500px -400px";
-          } else if (d > 10){
-              return "500px -300px";
-          } else {
-              return "500px -600px"
+        .style("background", function(d) {
+          if (d > 20) {  
+              return "url(http://217.128.135.218/mjpg/video.mjpg)";
+          } else if (d > 10) {   
+              return "url(http://82.148.72.2:60000/cgi-bin/faststream.jpg?stream=full&fps=0)";
+          } else{
+              return "url(http://tuincam.bt.tudelft.nl/mjpg/video.mjpg)";
           }
          });
-
 
             
          d3.select("body")                                  //On mouseover, update with new data  
@@ -150,7 +99,7 @@
             console.log(state);
             d3.selectAll("div")                                //Update all rects
             .style("background-image", function(d) {
-                  return "url(http://iris.not.iac.es/axis-cgi/mjpg/video.cgi)"
+                  return "url(http://200.79.225.92:8080/mjpg/video.mjpg)"
             })
           
           });
