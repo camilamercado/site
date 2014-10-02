@@ -19,71 +19,95 @@
 
     <script type="text/javascript">
 
-     var state = "face";
+     var state = "leaf";
      console.log(state);
 
       var dataset = [];                               //Initialize empty array
-      for (var i = 0; i < 10; i++) {                  //Loop 25 times
+      for (var i = 0; i < 30; i++) {                  //Loop 25 times
         var newNumber = Math.random() * 45;           //New random number (0-30)
         dataset = dataset.concat(newNumber);          //Add new number to array
       }
-
-
       
       d3.select(".container").selectAll("div")
         .data(dataset)
         .enter()
         .append("div")
         .attr("class", "bar")
-        .style("width", function(d) {
+        .style("width", function(d) {                 //d = data attr. of elm being processed
           var barHeight = d * 18;
           return barHeight + "px";
+          console.log(barHeight);
         })
         .style("background", function(d) {
-          if (d > 20) {  
+          if (d > 30) {  
               return "url(http://217.128.135.218/mjpg/video.mjpg)";
-          } else if (d > 10) {   
+          } else if (d > 20) {   
               return "url(http://82.148.72.2:60000/cgi-bin/faststream.jpg?stream=full&fps=0)";
-          } else{
+          } else {
               return "url(http://tuincam.bt.tudelft.nl/mjpg/video.mjpg)";
           }
          });
 
             
-         d3.select("body")                                  //On mouseover, update with new data  
-            .on("mouseover", function() {                   //New values for dataset
+         d3.select("body")                                        //On mouseover, update with new data  
+            .on("mouseover", function() {                         //New values for dataset
+            var numValues = dataset.length;                       //Count original length of dataset
+            dataset = [];                                         //Initialize empty array
+                
+            for (var i = 0; i < numValues; i++) {                 //Loop numValues times
+              var newNumber = Math.floor(Math.random() * 55);     //New random integer (0-25)
+              dataset.push(newNumber);                            //Add new number to array
+            }   
+    
+            d3.selectAll(".bar")                                   //Update all rects
+              .data(dataset)    
+              .transition()
+              .delay(function(d, i) {
+                return i / dataset.length * 1000;
+              })
+              .duration(500)
+              
+              .style("height", function(d) {
+                 var barHeight = d * 18;
+                 return barHeight + "px";
+              })
 
-                                                        
-          var numValues = dataset.length;                   //Count original length of dataset
-          dataset = [];                                     //Initialize empty array
-          
-          for (var i = 0; i < numValues; i++) {             //Loop numValues times
-            var newNumber = Math.floor(Math.random() * 55); //New random integer (0-25)
-            dataset.push(newNumber);                        //Add new number to array
-          }
-
-          d3.selectAll("div")                                //Update all rects
-            .data(dataset)
-            .transition()
-            .delay(function(d, i) {
-              return i / dataset.length * 1000;
-            })
-            .duration(500)
-            
-            .style("height", function(d) {
-               var barHeight = d * 18;
-               return barHeight + "px";
-            })
             
         });
 
-      if (state === "face") {
+        d3.select("body")                                        //On mouseover, update with new data  
+            .on("mouseout", function() {                         //New values for dataset
+            var numValues = dataset.length;                       //Count original length of dataset
+            dataset = [];                                         //Initialize empty array
+                
+            for (var i = 0; i < numValues; i++) {                 //Loop numValues times
+              var newNumber = Math.floor(Math.random() * 55);     //New random integer (0-25)
+              dataset.push(newNumber);                            //Add new number to array
+            }   
+    
+            d3.selectAll(".bar")                                   //Update all rects
+              .data(dataset)    
+              .transition()
+              .delay(function(d, i) {
+                return i / dataset.length * 1000;
+              })
+              .duration(500)
+              
+              .style("height", function(d) {
+                 //var barHeight = d * 18;
+                 return 75 + "px";
+              })
 
-        d3.select("body")                                  //On mouseover, update with new data  
+            
+        });
+
+      if (state === "leaf") {
+
+        d3.select("body")                                       //On mouseover, update with new data  
             .on("click", function() {  
-            state = "fem";
+            state = "obs";
             console.log(state);
-            d3.selectAll("div")                                //Update all rects
+            d3.selectAll("div")                                 //Update all rects
             .style("background-image", function(d) {
                   return "url(http://iris.not.iac.es/axis-cgi/mjpg/video.cgi)"
             })
@@ -91,13 +115,13 @@
 
         });
 
-        } if (state === "fem"){
+        } if (state === "obs"){
           
-          d3.select("body")                                  //On mouseover, update with new data  
+          d3.select("body")                                     //On mouseover, update with new data  
             .on("click", function() { 
-            state = "face"; 
+            state = "leaf"; 
             console.log(state);
-            d3.selectAll("div")                                //Update all rects
+            d3.selectAll("div")                                 //Update all rects
             .style("background-image", function(d) {
                   return "url(http://200.79.225.92:8080/mjpg/video.mjpg)"
             })
@@ -106,15 +130,6 @@
 
         };
       
-
-
-          
-                    
-        
-
-      
-    
-
 
         </script>
 
