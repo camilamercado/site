@@ -8,7 +8,7 @@
 </head>
 <body>
 		
-		<img id="source" src="alba.jpg"/>
+		<img id="source" src="http://camilamercado.github.io/site/alba.jpg" width="1000" height="1493" />
 
 <script type="text/javascript">
 
@@ -27,7 +27,8 @@
 	context.drawImage(img, 0, 0);
 
 	img.crossOrigin = "Anonymous";
-	img.src = 'http://localhost/~camila/img/alba.jpg';
+	img.setAttribute('crossOrigin','anonymous');
+	img.src = 'http://camilamercado.github.io/site/alba.jpg';
 
 	var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
 	var data = imageData.data;
@@ -36,6 +37,7 @@
 	    green: data[1],
 	    blue: data[2]
 	};
+	console.log(imageData);
 
 	// iterate over all pixels
 	var tolerance = 150;
@@ -46,7 +48,7 @@
 	    }
 	}
 	context.putImageData(imageData, 0, 0);
-	$canvasbg.css('background','red');
+	$canvasbg.css('background','#eeeeee');
 
 
 	var invocation = new XMLHttpRequest();
@@ -57,8 +59,11 @@
     invocation.open('GET', url, true);
     invocation.withCredentials = true;
     invocation.onreadystatechange = handler;
-    invocation.send(); 
+    invocation.send();
+    console.log("fuck you") 
   	}};
+
+  	// https://dl.dropboxusercontent.com/u/79492332/alba.jpg
 
 </script>
 
