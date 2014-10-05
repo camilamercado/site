@@ -8,7 +8,7 @@
 </head>
 <body>
 		
-		<img id="source" src="http://camilamercado.github.io/site/alba.jpg" width="1000" height="1493" />
+		<img id="source" src="http://camilamercado.github.io/site/alba.jpg"  width="1000" height="1493" />
 
 <script type="text/javascript">
 
@@ -37,7 +37,6 @@
 	    green: data[1],
 	    blue: data[2]
 	};
-	console.log(imageData);
 
 	// iterate over all pixels
 	var tolerance = 150;
@@ -51,17 +50,17 @@
 	$canvasbg.css('background','#eeeeee');
 
 
-	var invocation = new XMLHttpRequest();
-	var url = 'http://localhost/~camila/img/alba.jpg';
+	// var invocation = new XMLHttpRequest();
+	// var url = 'http://localhost/~camila/img/alba.jpg';
 	
-	function callOtherDomain(){
-  	if(invocation) {
-    invocation.open('GET', url, true);
-    invocation.withCredentials = true;
-    invocation.onreadystatechange = handler;
-    invocation.send();
-    console.log("fuck you") 
-  	}};
+	// function callOtherDomain(){
+ //  	if(invocation) {
+ //    invocation.open('GET', url, true);
+ //    invocation.withCredentials = true;
+ //    invocation.onreadystatechange = handler;
+ //    invocation.send();
+ //    console.log("fuck you") 
+ //  	}};
 
   	// https://dl.dropboxusercontent.com/u/79492332/alba.jpg
 
