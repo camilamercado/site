@@ -5,10 +5,29 @@
 	<script src="http://code.jquery.com/jquery-latest.min.js"
         type="text/javascript"></script>
 
+     <style type="text/css">
+    
+     img {
+     	position: absolute;
+     	border: 1px solid magenta;
+     	width: 500px;
+     	height: 747px;
+     	left: 0px;
+     }
+     canvas {
+     	position: absolute;
+     	border: 1px solid cyan;
+     	width: 500px;
+     	height: 747px;
+     	left: 505px;
+     }
+
+      </style>
+
 </head>
 <body>
 		
-		<img id="source" src="http://camilamercado.github.io/site/alba.jpg"  width="1000" height="1493" />
+		<img id="source" src="http://camilamercado.github.io/site/alba.jpg"  width="500" height="747" />
 
 <script type="text/javascript">
 
@@ -47,7 +66,7 @@
 	    }
 	}
 	context.putImageData(imageData, 0, 0);
-	$canvasbg.css('background','#eeeeee');
+	$canvasbg.css('background','cyan');
 
 
 	// var invocation = new XMLHttpRequest();
