@@ -131,6 +131,12 @@
 		context.putImageData(imageData, 0, 0);
 		$canvasbg.css('background', setColor);
 
+		if (setColor === "skull") {
+			$canvasbg.css('backgroundImage', "url(skull.jpg)");
+		} else if (setColor === "church"){
+			$canvasbg.css('backgroundImage', "url(chirch.jpg)");
+		};
+
 	};
 
 	// var invocation = new XMLHttpRequest();
