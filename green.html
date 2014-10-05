@@ -14,13 +14,22 @@
      	height: 747px;
      	left: 0px;
      }
-     canvas {
+
+     .container {
      	position: absolute;
      	border: 1px solid cyan;
      	width: 500px;
      	height: 747px;
      	left: 505px;
      }
+
+    /* canvas {
+     	position: absolute;
+     	border: 1px solid cyan;
+     	width: 500px;
+     	height: 747px;
+     	left: 505px;
+     }*/
 
       </style>
 
@@ -58,7 +67,7 @@
 	};
 
 	// iterate over all pixels
-	var tolerance = 150;
+	var tolerance = 120;
 	for(var i = 0, n = data.length; i < n; i += 4) {
 	    var diff = Math.abs(data[i] - data[0]) + Math.abs(data[i+1] - data[1]) + Math.abs(data[i+2] - data[2]);
 	    if(diff < tolerance) {
