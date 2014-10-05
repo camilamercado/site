@@ -4,27 +4,13 @@
 	<link rel="stylesheet" type="text/css" href="css/green.css">
 	<script src="http://code.jquery.com/jquery-latest.min.js"
         type="text/javascript"></script>
+
 </head>
 <body>
-	
-	<div class="container">
 		
-		<img id="source" src="alba.jpg" alt="jess"/>
+		<img id="source" src="alba.jpg"/>
 
-	</div>
-
-	<div id="controls">
-	<label for="tolerance">Tolerance</label><br>
-	<input name="tolerance" id="tolerance" type="text" value="150">
-	<div id="tolerance-control" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 19.6078431372549%;"></a></div>
-	<label for="color">Color</label><br>
-	<input name="color" id="color" readonly="" type="text" value="#A90">
-	<div id="color-r" class="color-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 27.4509803921569%;"></a></div>
-	<div id="color-g" class="color-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 78.4313725490196%;"></a></div>
-	<div id="color-b" class="color-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a></div>
-</div>
-
-// <script type="text/javascript">
+<script type="text/javascript">
 
 	var img = $("#source").get(0);
 	var $canvasbg = $("<div class='container'/>");
@@ -40,9 +26,8 @@
 	$canvasbg.height(img.clientHeight);
 	context.drawImage(img, 0, 0);
 
-	// Access-Control-Allow-Origin: *
-	img.crossOrigin = 'http://camilamercado.github.io/site/alba.jpg';
-	img.src = 'alba.jpg';
+	img.crossOrigin = "Anonymous";
+	img.src = 'http://localhost/~camila/img/alba.jpg';
 
 	var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
 	var data = imageData.data;
@@ -61,104 +46,22 @@
 	    }
 	}
 	context.putImageData(imageData, 0, 0);
-	$canvasbg.css('background','#ABC12');
+	$canvasbg.css('background','red');
+
+
+	var invocation = new XMLHttpRequest();
+	var url = 'http://localhost/~camila/img/alba.jpg';
+	
+	function callOtherDomain(){
+  	if(invocation) {
+    invocation.open('GET', url, true);
+    invocation.withCredentials = true;
+    invocation.onreadystatechange = handler;
+    invocation.send(); 
+  	}};
 
 </script>
 
-
-// <script type="text/javascript">
-	
-// 	$(function(){
-//     var img = $("#source").get(0);
-//     var $canvasbg = $("<div id='target-container' />");
-//     var canvas = $("<canvas class='greenscreen'></canvas>").get(0);
-//     $canvasbg.append(canvas);
-//     $('#container').append($canvasbg);
-//     img.onload = function() {
-//         greenScreen(img, canvas, $canvasbg);
-//     };
-    
-//     var doGS;
-//     var slider = $( "#tolerance-control" ).slider({
-//         max: 255+255+255,
-//         min: 0,
-//         value: $('#tolerance').val(),
-//         slide : function(event, ui) {
-//             $('#tolerance').val(ui.value);
-//             clearTimeout(doGS);
-//             doGS = setTimeout(function(){greenScreen(img, canvas, $canvasbg);},100);
-//         }
-//     });
-//     var r = 70, g = 200, b = 255;
-//     $('#color').val('rgb(' + r + ', ' + g + ', ' + b + ')');
-//     var rslider = $('#color-r').slider({
-//         max: 255,
-//         min: 0,
-//         value: r,
-//         slide : function(event, ui) {
-//             r = ui.value;
-//             $('#color').val('rgb(' + r + ', ' + g + ', ' + b + ')');
-//             clearTimeout(doGS);
-//             doGS = setTimeout(function(){greenScreen(img, canvas, $canvasbg);},60);
-//         }
-//     });
-//     var gslider = $('#color-g').slider({
-//         max: 255,
-//         min: 0,
-//         value: g,
-//         slide : function(event, ui) {
-//             g = ui.value;
-//             $('#color').val('rgb(' + r + ', ' + g + ', ' + b + ')');
-//             clearTimeout(doGS);
-//             doGS = setTimeout(function(){greenScreen(img, canvas, $canvasbg);},60);
-//         }
-//     });
-//     var bslider = $('#color-b').slider({
-//         max: 255,
-//         min: 0,
-//         value: b,
-//         slide : function(event, ui) {
-//             b = ui.value;
-//             $('#color').val('rgb(' + r + ', ' + g + ', ' + b + ')');
-//             clearTimeout(doGS);
-//             doGS = setTimeout(function(){greenScreen(img, canvas, $canvasbg);},60);
-//         }
-//     });
-//     $('#tolerance').keyup(function(){
-//         slider.slider("value", $(this).val());
-//         clearTimeout(doGS);
-//         doGS = setTimeout(function(){greenScreen(img, canvas, $canvasbg);},100);
-//     });
-// });
-
-// function greenScreen(img, canvas, $container, bg) {
-//     var context = canvas.getContext('2d');
-//     canvas.width = img.clientWidth;
-//     canvas.height = img.clientHeight;
-//     $container.width(img.clientWidth);
-//     $container.height(img.clientHeight);
-//     context.drawImage(img, 0, 0);
-    
-//     var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-//     var data = imageData.data;
-//     var start = {
-//         red: data[0],
-//         green: data[1],
-//         blue: data[2]
-//     };
-
-//     // iterate over all pixels
-//     for(var i = 0, n = data.length; i < n; i += 4) {
-//         var diff = Math.abs(data[i] - data[0]) + Math.abs(data[i+1] - data[1]) + Math.abs(data[i+2] - data[2]);
-//         data[i + 3] = (diff*diff)/$('#tolerance').val();
-//     }
-//     context.putImageData(imageData, 0, 0);
-//     $container.css('background',$('#color').val());
-// }
-
-
-
-// </script>
 
 
 </body>
