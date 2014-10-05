@@ -13,6 +13,7 @@
      	width: 500px;
      	height: 747px;
      	left: 0px;
+     	top: 50px;
      }
 
      .container {
@@ -21,21 +22,43 @@
      	width: 500px;
      	height: 747px;
      	left: 505px;
+     	top: 50px;
      }
 
-    /* canvas {
+     .setColor {
      	position: absolute;
+     	width: 100px;
+     	height: 20px;
+     	margin-left: 50%;
+     	left: -50px;
      	border: 1px solid cyan;
-     	width: 500px;
-     	height: 747px;
-     	left: 505px;
-     }*/
+     }
+     p {
+     	position: absolute;
+     	width: 100px;
+     	height: 20px;
+     	margin-left: 50%;
+     	left: -160px;
+     	top: -5px;
+     }
+     .enter {
+     	position: absolute;
+     	width: 20px;
+     	height: 20px;
+     	margin-left: 50%;
+     	left: 60px;
+     	color: white;
+     	background: tomato;
+     	-webkit-border-radius: 5em; -moz-border-radius: 5em;
+     }
 
       </style>
 
 </head>
 <body>
-		
+		<input class="setColor"></input>
+		<p>Enter Hex Val</p>
+		<div class="enter" onclick="greenScreen();">GO</div>
 		<img id="source" src="http://camilamercado.github.io/site/alba.jpg"  width="500" height="747" />
 
 <script type="text/javascript">
@@ -74,9 +97,15 @@
 	        data[i + 3] = 0;
 	    }
 	}
-	context.putImageData(imageData, 0, 0);
-	$canvasbg.css('background','cyan');
 
+	function greenScreen(){
+
+		var setColor = document.querySelector(".setColor").value;
+		console.log(setColor);
+		context.putImageData(imageData, 0, 0);
+		$canvasbg.css('background', setColor);
+
+	};
 
 	// var invocation = new XMLHttpRequest();
 	// var url = 'http://localhost/~camila/img/alba.jpg';
