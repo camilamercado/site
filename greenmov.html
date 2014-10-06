@@ -204,6 +204,10 @@
                 document.getElementById("backgroundimage").style.display = "none";
                 document.getElementById("videoBackgrounddata").src = backgroundFileName;
                 document.getElementById("videoBackgrounddata").loop = true
+                // var implement = document.getElementById("videoBackgrounddata").src
+                // document.getElementById("canvas").style.backgroundImage = implement;
+                // console.log(implement);
+                
                 if (isPlaying)
                     document.getElementById("videoBackgrounddata").play();
             }
@@ -283,6 +287,11 @@
       .instructions
       {
        max-width:400px;   
+      }
+
+      canvas {
+        background-image: url(meleena.jpg);
+        background-size: 320px 180px;
       }
 </style>
 </head>
