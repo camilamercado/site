@@ -1,0 +1,36 @@
+<body onload="StartBackground();">
+    
+    <h1>HTML 5 Real time video chroma key (green screen)</h1>
+    <p class="instructions">Click "Play" to start the video playing, you will see the keyed video rendered, in the canvas output area. You can select a different background to render, either video or a static image.</p>
+    
+    <div id="wrapper" class="clearfix">
+        <div id="output">
+            <p>Canvas output</p>
+            <canvas id="videoscreen" width="320" height="180">
+                <p>Sorry your browser does not support HTML5</p>
+            </canvas>
+        </div>
+        <div id="source">
+            <p>Green Screen Video</p>
+            <video style="" id="videodata" loop="loop" preload="auto" width="320" height="180">
+                <source src="http://camilamercado.github.io/site/run.mp4" type="video/mp4">
+                
+            </video>  
+        </div>
+        <div id="backgroundvideo" style="display: none;">
+            <p>Background Video</p>
+            <video style="" id="videoBackgrounddata" loop="" preload="auto" width="320" height="180" src="http://camilamercado.github.io/site/flash.mp4">
+            </video>
+        </div>
+            <div id="backgroundimage" style="display: inline;">
+            <p>Background Image</p>
+            <img id="imageBackgrounddata" src="">
+        </div>
+    </div>
+
+    <div id="videocontrols">
+        <p>Video controls</p>
+        <input id="PlayPause" type="button" onclick="Play();" value="Play">
+    </div>
+
+</body>
