@@ -179,7 +179,8 @@
 
         function loadBackgroundVideo() {
             var value = "";
-            var radioObj = document.getElementsByName("background");
+            var radioObj = document.getElementsByName("videoBackgrounddata");
+            console.log(radioObj);
             if (!radioObj)
                 return "";
             var radioLength = radioObj.length;
@@ -247,7 +248,7 @@
     .row,
     .clearfix {
       zoom: 1; }
-      #output, #source, #backgroundvideo, #backgroundimage
+      #output, #source, #backgroundvideo
       {
           float:left;
           display:inline;
@@ -265,7 +266,7 @@
 
       }
       
-      #backgroundvideoselection, #videocontrols,#backgroundimageselection
+      #backgroundvideoselection, #videocontrols, #backgroundimageselection
       {
           float:left;
           display:inline;
@@ -290,7 +291,7 @@
 <body onload="StartBackground();">
     
     <h1>HTML 5 Real time video chroma key (green screen)</h1>
-    <p class="instructions">Click "Play" to start the video playing, you will see the keyed video rendered, in the canvas output area. You can select a different background to render, either video or a static image.</p>
+    <p class="instructions">Click "Play" to start the video playing, you will see the keyed video rendered, in the canvas output area.</p>
     
     <div id="wrapper" class="clearfix">
         <div id="output">
