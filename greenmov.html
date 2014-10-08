@@ -226,7 +226,7 @@
     {
         font-family:Verdana;
         font-size:12px; 
-        background-color: black;
+        background-image: url(meleena.jpg);
         color: white;
         font-family: "andale mono";       
     }
@@ -290,14 +290,29 @@
       }
 
       canvas {
-        background-image: url(meleena.jpg);
-        background-size: 320px 180px;
+        /*background-image: url(meleena.jpg);
+        background-size: 320px 180px;*/
+      }
+      #backdrop {
+        position: absolute;
+        height: 100%;
+        width: auto;
+        z-index: 0;
+      }
+
+      #wrapper {
+        position: absolute;
+        z-index: 1;
       }
 </style>
 </head>
 
 
 <body onload="StartBackground();">
+
+    <video style="" id="backdrop" loop="loop" preload="auto" width="1000px" height="auto">
+     <source src="http://camilamercado.github.io/site/telstar.mp4" type="video/mp4">           
+    </video>
     
     <h1>HTML 5 Real time video chroma key (green screen)</h1>
     <p class="instructions">Click "Play" to start the video playing, you will see the keyed video rendered, in the canvas output area.</p>
@@ -305,23 +320,23 @@
     <div id="wrapper" class="clearfix">
         <div id="output">
             <p>Canvas output</p>
-            <canvas id="videoscreen" width="320" height="180">
+            <canvas id="videoscreen" width="1280" height="720">
                 <p>Sorry your browser does not support HTML5</p>
             </canvas>
         </div>
         <div id="source">
             <p>Green Screen Video</p>
-            <video style="" id="videodata" loop="loop" preload="auto" width="320" height="180">
+            <video style="" id="videodata" loop="loop" preload="auto" width="1280" height="720">
                 <source src="http://camilamercado.github.io/site/run.mp4" type="video/mp4">
                 
             </video>  
         </div>
-        <div id="backgroundvideo" style="display: inline;">
+        <!-- <div id="backgroundvideo" style="display: inline;">
             <p>Background Video</p>
             <video style="" id="videoBackgrounddata" loop="" preload="auto" width="320" height="180" src="flash.mp4">
             </video>
-        </div>
-            <div id="backgroundimage" style="display: none;">
+        </div> -->
+        <div id="backgroundimage" style="display: none;">
             <p>Background Image</p>
             <img id="imageBackgrounddata">
         </div>
