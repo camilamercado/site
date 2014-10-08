@@ -291,11 +291,6 @@
 
       }
 
-      canvas {
-        top: -150px;
-        left: 100px;
-      }
-
       #output, #source {
          width: 1280px;
          height: 720px;
@@ -312,16 +307,24 @@
       }
 
       canvas {
-        /*background-image: url(meleena.jpg);
-        background-size: 320px 180px;*/
+        top: -100px;
+        /*left: 100px;*/
+        z-index: 3;
+      } 
+
+      #videodata {
+        top: -100px;
+        position: absolute;
+        z-index: 0;
       }
       #backdrop {
         position: absolute;
         /*height: 100%;
         width: auto;*/
-        z-index: 0;
-        top: 0px;
+        z-index: 2;
+        top: 40%;
         left: 0px;
+        /*-webkit-transform: skew(140deg,0deg)*/
       }
 
       #wrapper {
