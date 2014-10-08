@@ -226,7 +226,7 @@
     {
         font-family:Verdana;
         font-size:12px; 
-        background-image: url(meleena.jpg);
+        /*background-image: url(meleena.jpg);*/
         color: white;
         font-family: "andale mono";       
     }
@@ -275,11 +275,28 @@
           float:left;
           display:inline;
           padding-right:40px;
+          position: absolute; 
+          z-index: 2;
+      }
+
+      #videocontrols{
+        top: 50px;
+        left: 25px;
       }
       video, canvas, #backgroundvideo
       {
-          border:1px solid white;
+          /*border:1px solid white;*/
+         position: absolute;
+         left: -10px;
+
       }
+
+      #output, #source {
+         width: 1280px;
+         height: 720px;
+         margin-bottom: 30px;
+      }
+
       #PlayPause
       {
           width:80px;
@@ -295,9 +312,11 @@
       }
       #backdrop {
         position: absolute;
-        height: 100%;
-        width: auto;
+        /*height: 100%;
+        width: auto;*/
         z-index: 0;
+        top: 0px;
+        left: 0px;
       }
 
       #wrapper {
@@ -310,7 +329,7 @@
 
 <body onload="StartBackground();">
 
-    <video style="" id="backdrop" loop="loop" preload="auto" width="1000px" height="auto">
+    <video style="" id="backdrop" loop="loop" preload="auto" autoplay="true" width="1280px" height="auto">
      <source src="http://camilamercado.github.io/site/telstar.mp4" type="video/mp4">           
     </video>
     
@@ -331,19 +350,19 @@
                 
             </video>  
         </div>
-        <!-- <div id="backgroundvideo" style="display: inline;">
+        <div id="backgroundvideo" style="display: none;">
             <p>Background Video</p>
             <video style="" id="videoBackgrounddata" loop="" preload="auto" width="320" height="180" src="flash.mp4">
             </video>
-        </div> -->
+        </div>
         <div id="backgroundimage" style="display: none;">
-            <p>Background Image</p>
+           <!--  <p>Background Image</p> -->
             <img id="imageBackgrounddata">
         </div>
     </div>
 
     <div id="videocontrols">
-        <p>Video controls</p>
+        <!-- <p>Video controls</p> -->
         <input id="PlayPause" type="button" onclick="Play();" value="Play">
     </div>
 
