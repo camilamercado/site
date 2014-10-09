@@ -2,7 +2,7 @@
     <title>mOvin' Green</title>
     <meta charset="utf-8">        
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script>
+ <script>
         var oggSupported = false;
         var webmSupported = false;
         var mp4Supported = false;
@@ -27,11 +27,13 @@
         function Play() {
             if (!isPlaying) {
                 document.getElementById("videodata").play();
+                //document.getElementById("videoBackgrounddata").play();
                 document.getElementById("PlayPause").value = "Pause";
                 isPlaying = true;               
             }
             else {
                 document.getElementById("videodata").pause();
+                //document.getElementById("videoBackgrounddata").pause();
                 document.getElementById("PlayPause").value = "Play";
                 isPlaying = false;                
             }
@@ -42,6 +44,12 @@
             var object = document.getElementById("videodata")
 
             var backgroundObject;
+            if (isBackgroundVideo) {
+                //backgroundObject = document.getElementById("videoBackgrounddata");
+            }
+            else {
+                //backgroundObject = document.getElementById("imageBackgrounddata");
+            }
             var width = object.width;
             var height = object.height;
             var canvas = document.getElementById("videoscreen");
@@ -187,9 +195,32 @@
                 }
             }
 
+            //
+            // var backgroundType= value.split("/");
+            // if (backgroundType[0] == "videos") {
+            //     isBackgroundVideo = true;
+            //     var backgroundFileName = value + videoExt;
+            //     document.getElementById("backgroundvideo").style.display = "inline";
+            //     document.getElementById("backgroundimage").style.display = "none";
+            //     document.getElementById("videoBackgrounddata").src = backgroundFileName;
+            //     document.getElementById("videoBackgrounddata").loop = true
+            //     // var implement = document.getElementById("videoBackgrounddata").src
+            //     // document.getElementById("canvas").style.backgroundImage = implement;
+            //     // console.log(implement);
+                
+            //     if (isPlaying)
+            //         document.getElementById("videoBackgrounddata").play();
+            // }
+            // else {
+            //     isBackgroundVideo = false;
+            //     document.getElementById("backgroundvideo").style.display = "none";
+            //     document.getElementById("backgroundimage").style.display = "inline";
+            //     document.getElementById("imageBackgrounddata").src = value;
+            // }
         }
 
 </script>
+
 
 <style>
     body
