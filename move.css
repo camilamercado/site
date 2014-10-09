@@ -1,0 +1,175 @@
+  .booth {
+  width:800px;
+  margin: 0 auto;
+}
+
+#canvas {
+  -webkit-filter: grayscale(100%);
+}
+
+
+  body
+    {
+        font-family:Verdana;
+        font-size:12px; 
+        background: black;
+        color: white;
+        font-family: "andale mono";       
+    }
+    h1
+    {
+        font-size:14px;
+        font-weight:bold;
+        
+    }
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+    
+      ul
+      {
+          padding:0;
+          margin:0;
+      }
+      li
+      {
+          list-style-type:none;
+
+      }
+      
+      #backgroundvideoselection, #videocontrols, #backgroundimageselection
+      {
+          float:left;
+          display:inline;
+          padding-right:40px;
+          position: absolute; 
+          z-index: 2;
+      }
+
+      #videocontrols{
+        top: 50px;
+        left: 50px;
+      }
+     #output canvas
+      {
+          margin-left: 70%;
+          /*left: -640px;*/
+          position: absolute;
+
+      }
+
+      canvas {
+        top: 60px;
+        left: 500px;
+        opacity: 0.7;
+        /*border: 1px solid white;*/
+      }
+
+      #output{
+        position: absolute;
+         width: 100%;
+         height: auto;
+         margin-bottom: -130px;
+      }
+
+      #PlayPause
+      {
+          width:80px;
+          font-family: "andale mono";
+          color: chartreuse;
+          background-color: dimgrey;
+      }
+
+      #output p {
+        color: chartreuse;
+        left: 45px;
+        top: 70px;
+        line-height: 18px;
+        position: absolute;
+
+      }
+
+      #source {
+        position: absolute;
+        top: 750px;
+        width: 800px;
+        height: 500px;
+        /*border: 1px solid yellow;*/
+        left: 250px;
+      }
+
+      #source video{
+        right: -3px;
+        position: absolute;
+        margin-bottom: 100px;
+        border: 1px solid magenta;
+        top:25px;
+      }
+
+
+      #source p {
+        top: 300px;
+        color: dimgrey;
+        left: 20px;
+        position: absolute;
+        line-height: 18px;
+        text-align: right;
+
+      }
+
+      .skew1{
+        width: 692px;
+        position: absolute;
+        top: -80px;
+        height: 100px;
+        border: 1px solid lightgrey;
+        right: -47px;
+        background: white;
+        opacity: 0.3;
+
+        -webkit-transform: skew(140deg,0deg);
+      }
+
+      .skew2{
+        width: 83px;
+        position: absolute;
+        top: -26px;
+        height: 388px;
+        border: 1px solid cyan;
+        right: -92px;
+        -webkit-transform: skew(0deg,130deg);
+      }
+      .instructions
+      {
+       max-width:400px;   
+      }
+
+      canvas {
+        /*background-image: url(meleena.jpg);
+        background-size: 320px 180px;*/
+      }
+      #backdrop {
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+        top: 0px;
+        left: 0px;
+      }
+
+      #wrapper {
+        position: absolute;
+        z-index: 1;
+      }

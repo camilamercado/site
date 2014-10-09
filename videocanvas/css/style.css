@@ -1,0 +1,8 @@
+.booth {
+	width:800px;
+	margin: 0 auto;
+}
+
+#canvas {
+	-webkit-filter: grayscale(100%);
+}
