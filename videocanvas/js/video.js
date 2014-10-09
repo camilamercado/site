@@ -35,21 +35,16 @@
  function DrawVideoOnCanvas() {
             var object = document.getElementById("video")
 
-            // var backgroundObject;
-            // if (isBackgroundVideo) {
-            //     backgroundObject = document.getElementById("videoBackgrounddata");
-            // }
-            // else {
-            //     backgroundObject = document.getElementById("imageBackgrounddata");
-            // }
+
             var width = object.width;
             var height = object.height;
             var canvas = document.getElementById("canvas");
             canvas.setAttribute('width', width);
             canvas.setAttribute('height', height);
+
+
             if (canvas.getContext) {
                 var context = canvas.getContext('2d');
-                context.drawImage(backgroundObject, 0, 0, width, height);
                 var imgBackgroundData = context.getImageData(0, 0, width, height);
                 context.drawImage(object, 0, 0, width, height);
                 imgDataNormal = context.getImageData(0, 0, width, height);
@@ -110,6 +105,7 @@
                                     change = true;
                                 }
                             }
+                            // TODO: what the?
                             if (change) {
                                 var gray = (imgData.data[((imgData.width * y) + x) * 4 + 0] * .393) + (imgData.data[((imgData.width * y) + x) * 4 + 1] * .769) + (imgData.data[((imgData.width * y) + x) * 4 + 2] * .189);                                
                                 imgData.data[((imgData.width * y) + x) * 4] = (gray * 0.2) + (imgBackgroundData.data[((imgData.width * y) + x) * 4] *0.9);
