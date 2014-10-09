@@ -25,26 +25,26 @@
 	}, false);
 
 	function draw(video, context, width, height) {
-		context.drawImage(video, 0, 0, width, height);
-		setTimeout(draw, 1, video, context, width, height);
+
+		DrawVideoOnCanvas(video, context, width, height);
+
+
+		setTimeout(draw, 50, video, context, width, height);
 	}
 
 })();
 
 
- function DrawVideoOnCanvas() {
-            var object = document.getElementById("video")
+ function DrawVideoOnCanvas(object, context, width, height) {
 
 
-            var width = object.width;
-            var height = object.height;
             var canvas = document.getElementById("canvas");
             canvas.setAttribute('width', width);
             canvas.setAttribute('height', height);
 
 
             if (canvas.getContext) {
-                var context = canvas.getContext('2d');
+                
                 var imgBackgroundData = context.getImageData(0, 0, width, height);
                 context.drawImage(object, 0, 0, width, height);
                 imgDataNormal = context.getImageData(0, 0, width, height);
