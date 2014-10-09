@@ -27,13 +27,11 @@
         function Play() {
             if (!isPlaying) {
                 document.getElementById("videodata").play();
-                document.getElementById("videoBackgrounddata").play();
                 document.getElementById("PlayPause").value = "Pause";
                 isPlaying = true;               
             }
             else {
                 document.getElementById("videodata").pause();
-                document.getElementById("videoBackgrounddata").pause();
                 document.getElementById("PlayPause").value = "Play";
                 isPlaying = false;                
             }
@@ -44,12 +42,6 @@
             var object = document.getElementById("videodata")
 
             var backgroundObject;
-            if (isBackgroundVideo) {
-                backgroundObject = document.getElementById("videoBackgrounddata");
-            }
-            else {
-                backgroundObject = document.getElementById("imageBackgrounddata");
-            }
             var width = object.width;
             var height = object.height;
             var canvas = document.getElementById("videoscreen");
@@ -195,28 +187,6 @@
                 }
             }
 
-            //
-            var backgroundType= value.split("/");
-            if (backgroundType[0] == "videos") {
-                isBackgroundVideo = true;
-                var backgroundFileName = value + videoExt;
-                document.getElementById("backgroundvideo").style.display = "inline";
-                document.getElementById("backgroundimage").style.display = "none";
-                document.getElementById("videoBackgrounddata").src = backgroundFileName;
-                document.getElementById("videoBackgrounddata").loop = true
-                // var implement = document.getElementById("videoBackgrounddata").src
-                // document.getElementById("canvas").style.backgroundImage = implement;
-                // console.log(implement);
-                
-                if (isPlaying)
-                    document.getElementById("videoBackgrounddata").play();
-            }
-            else {
-                isBackgroundVideo = false;
-                document.getElementById("backgroundvideo").style.display = "none";
-                document.getElementById("backgroundimage").style.display = "inline";
-                document.getElementById("imageBackgrounddata").src = value;
-            }
         }
 
 </script>
@@ -226,7 +196,7 @@
     {
         font-family:Verdana;
         font-size:12px; 
-        /*background-image: url(meleena.jpg);*/
+        background: black;
         color: white;
         font-family: "andale mono";       
     }
@@ -252,13 +222,7 @@
     .row,
     .clearfix {
       zoom: 1; }
-      #output, #source, #backgroundvideo
-      {
-          float:left;
-          display:inline;
-          padding:4px 10px 4px 10px;
-         
-      }
+    
       ul
       {
           padding:0;
@@ -283,11 +247,11 @@
         top: 50px;
         left: 50px;
       }
-      video, canvas, #backgroundvideo
+     #output canvas
       {
-          /*border:1px solid white;*/
-         position: absolute;
-         left: -10px;
+          margin-left: 70%;
+          /*left: -640px;*/
+          position: absolute;
 
       }
 
@@ -295,11 +259,13 @@
         top: -150px;
         left: 100px;
         opacity: 0.7;
+        /*border: 1px solid white;*/
       }
 
-      #output, #source {
-         width: 1280px;
-         height: 720px;
+      #output{
+        position: absolute;
+         width: 100%;
+         height: auto;
          margin-bottom: -130px;
       }
 
@@ -313,16 +279,62 @@
 
       #output p {
         color: chartreuse;
-        left: 40px;
+        left: 45px;
+        top: 70px;
+        line-height: 18px;
         position: absolute;
 
       }
 
-      #source p {
-        color: chartreuse;
-        margin-left: 40px;
-        /*position: absolute;*/
+      #source {
+        position: absolute;
+        top: 750px;
+        width: 800px;
+        height: 500px;
+        /*border: 1px solid yellow;*/
+        left: 250px;
+      }
 
+      #source video{
+        right: -3px;
+        position: absolute;
+        margin-bottom: 100px;
+        border: 1px solid magenta;
+        top:25px;
+      }
+
+
+      #source p {
+        top: 300px;
+        color: dimgrey;
+        left: 20px;
+        position: absolute;
+        line-height: 18px;
+        text-align: right;
+
+      }
+
+      .skew1{
+        width: 692px;
+        position: absolute;
+        top: -80px;
+        height: 100px;
+        border: 1px solid lightgrey;
+        right: -47px;
+        background: white;
+        opacity: 0.3;
+
+        -webkit-transform: skew(140deg,0deg);
+      }
+
+      .skew2{
+        width: 83px;
+        position: absolute;
+        top: -26px;
+        height: 388px;
+        border: 1px solid cyan;
+        right: -92px;
+        -webkit-transform: skew(0deg,130deg);
       }
       .instructions
       {
@@ -335,8 +347,7 @@
       }
       #backdrop {
         position: absolute;
-        /*height: 100%;
-        width: auto;*/
+        width: 100%;
         z-index: 0;
         top: 0px;
         left: 0px;
@@ -356,8 +367,6 @@
      <source src="http://camilamercado.github.io/site/bad_reception.mp4" type="video/mp4">           
     </video>
     
-    <h1>HTML 5 Real time video chroma key (green screen)</h1>
-    <p class="instructions">Click "Play" to start the video playing, you will see the keyed video rendered, in the canvas output area.</p>
     
     <div id="wrapper" class="clearfix">
         <div id="output">
@@ -367,25 +376,17 @@
             </canvas>
         </div>
         <div id="source">
-            <p>Green Screen Video</p>
-            <video style="" id="videodata" loop="loop" preload="auto" width="1280" height="720">
-                <source src="http://camilamercado.github.io/site/run.mp4" type="video/mp4">
-                
+            <p>Green<br> Screen<br> Video<br>Source</p>
+            <video style="" id="videodata" loop="loop" preload="auto" width="690" height="auto">
+                <source src="http://camilamercado.github.io/site/run.mp4" type="video/mp4">      
             </video>  
+            <div class="skew1"></div>
+            <div class="skew2"></div>
         </div>
-        <div id="backgroundvideo" style="display: none;">
-            <p>Background Video</p>
-            <video style="" id="videoBackgrounddata" loop="" preload="auto" width="320" height="180" src="flash.mp4">
-            </video>
-        </div>
-        <div id="backgroundimage" style="display: none;">
-           <!--  <p>Background Image</p> -->
-            <img id="imageBackgrounddata">
-        </div>
+       
     </div>
 
     <div id="videocontrols">
-        <!-- <p>Video controls</p> -->
         <input id="PlayPause" type="button" onclick="Play();" value="Play">
     </div>
 
