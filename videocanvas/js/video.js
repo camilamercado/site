@@ -57,9 +57,9 @@
                     var b = imgDataNormal.data[i + 2];
                     var a = imgDataNormal.data[i + 3];
                     // compare rgb levels for green and set alphachannel to 0;
-                    selectedR = 55;
-                    selectedG = 55;
-                    selectedB = 55;
+                    selectedR = 0;
+                    selectedG = 0;
+                    selectedB = 0;
                     if (r <= selectedR && b <= selectedB && g >= selectedG) {
                         a = 0;
                     }
