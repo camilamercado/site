@@ -57,10 +57,17 @@
                     var b = imgDataNormal.data[i + 2];
                     var a = imgDataNormal.data[i + 3];
                     // compare rgb levels for green and set alphachannel to 0;
-                    selectedR = 0;
-                    selectedG = 0;
-                    selectedB = 0;
-                    if (r <= selectedR && b <= selectedB && g >= selectedG) {
+
+                    var colorRange = function(color, fuzziness){
+
+                    	return [color - fuzziness, color + fuzziness]
+                    }
+
+                    selectedR = colorRange(60, 10);
+                    selectedG = colorRange(60, 10);
+                    selectedB = colorRange(60, 10);
+
+                    if (r < selectedR[1] && r > selectedR[0] && b <= selectedB[1] && g >= selectedG[0]) {
                         a = 0;
                     }
                     if (a != 0) {
