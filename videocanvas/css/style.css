@@ -1,6 +1,16 @@
 body {
-	background: purple;
+	/*background: purple;*/
 }
+
+#backdrop {
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+        top: 0px;
+        left: 0px;
+      }
+
+
 .booth {
 	width:800px;
 	margin: 0 auto;
