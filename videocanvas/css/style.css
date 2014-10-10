@@ -8,3 +8,7 @@ body {
 
 #canvas {
 }
+
+#video {
+	display: none;
+}
