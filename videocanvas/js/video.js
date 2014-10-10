@@ -29,6 +29,7 @@
 		DrawVideoOnCanvas(video, context, width, height);
 
 
+
 		setTimeout(draw, 50, video, context, width, height);
 	}
 
@@ -56,9 +57,9 @@
                     var b = imgDataNormal.data[i + 2];
                     var a = imgDataNormal.data[i + 3];
                     // compare rgb levels for green and set alphachannel to 0;
-                    selectedR = 25;
-                    selectedG = 90
-                    selectedB = 60;
+                    selectedR = 55;
+                    selectedG = 55;
+                    selectedB = 55;
                     if (r <= selectedR && b <= selectedB && g >= selectedG) {
                         a = 0;
                     }
