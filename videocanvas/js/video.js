@@ -63,9 +63,9 @@
                     	return [color - fuzziness, color + fuzziness]
                     }
 
-                    selectedR = colorRange(60, 10);
-                    selectedG = colorRange(60, 10);
-                    selectedB = colorRange(60, 10);
+                    selectedR = colorRange(4, 100);
+                    selectedG = colorRange(20, 60);
+                    selectedB = colorRange(70, 300);
 
                     if (r < selectedR[1] && r > selectedR[0] && b <= selectedB[1] && g >= selectedG[0]) {
                         a = 0;
