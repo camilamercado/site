@@ -30,7 +30,7 @@
 
 
 
-		setTimeout(draw, 50, video, context, width, height);
+		setTimeout(draw, 1, video, context, width, height);
 	}
 
 })();
