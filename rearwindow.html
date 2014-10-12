@@ -35,6 +35,7 @@
 
       .bar:hover {
        
+       z-index: 3;
        opacity: 0.5;
         width: 300px;
         -webkit-transition: all .2s ease;
@@ -43,16 +44,16 @@
       }
 
       .window {
-        width: 57%;
+        width: 45%;
         left: 20%;
         height: 80%;
         position: absolute;
        /* border: 1px solid magenta;*/
         z-index: 5;
-        top: 30px;
+        top: 0px;
       }
 
-      .mask {
+      .julia {
         /*display: none;*/
         height: auto;
         width: 100%;
@@ -60,22 +61,39 @@
         z-index: 3;
         top: 0px;
         left: 0px;
-        min-height: 700px;
-        background: url(css/creep/rwindow.png);
+        min-height: 900px;
+        background: url(css/creep/juliaL.png);
         background-size: 100% auto;
+        background-repeat: no-repeat;
       }
 
-      .portrait {
+      .hk {
         height: auto;
         width: 100%;
         position: absolute;
         z-index: 0;
         top: 0px;
         left: 0px;
-        min-height: 700px;
-        background: url(css/creep/rwindow.jpg);
+        min-height: 900px;
+        background: url(css/creep/navy_hk.jpg);
         background-size: 100% auto;
+        background-position: -132px -220px;
+        background-repeat: no-repeat;
       }
+
+      /*.hk_sky {
+        height: auto;
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+        top: 0px;
+        left: 0px;
+        min-height: 900px;
+        background: url(css/creep/navy_hk_sky.png);
+        background-size: 100% auto;
+        background-position: -132px -220px;
+        background-repeat: no-repeat;
+      }*/
 
       .textbar{
         position: absolute;
@@ -122,13 +140,16 @@
         /*opacity: 0.3;*/
       }
 
+      
+
     </style>
 
     <body>
-  
-        <div class="portrait" src="css/creep/rwindow.jpg"></div>
+        
+        <div class="hk_sky"></div>
+        <div class="hk"></div>
        
-        <div class="mask" src="css/creep/rwindow.png"></div>
+        <div class="julia"></div>
         
         <div class="window">
 
@@ -179,7 +200,9 @@
             for (var i = 0; i < numValues; i++) {                 //Loop numValues times
               var newNumber = Math.floor(Math.random() * 55);     //New random integer (0-25)
               dataset.push(newNumber);                            //Add new number to array
-            }   
+            } 
+
+              
     
             d3.selectAll(".bar")                                   //Update all rects
               .data(dataset)    
@@ -190,7 +213,7 @@
               .duration(1000)              
               .style("width", function(d) {
                  var barHeight = d * 18;
-                 return barHeight + "px";
+                 return 600 + "px";
               })
 
             
