@@ -15,7 +15,7 @@
        /* color: lightgoldenrodyellow;*/
        color: red;
         font-family: "courier new";
-        font-size: 12px;
+        font-size: 10px;
         text-transform: lowercase;
         background:black;
       }
@@ -202,7 +202,7 @@
               dataset.push(newNumber);                            //Add new number to array
             } 
 
-              
+
     
             d3.selectAll(".bar")                                   //Update all rects
               .data(dataset)    
@@ -213,7 +213,7 @@
               .duration(1000)              
               .style("width", function(d) {
                  var barHeight = d * 18;
-                 return 600 + "px";
+                 return 100 + "%";
               })
 
             
