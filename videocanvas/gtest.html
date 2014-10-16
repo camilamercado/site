@@ -36,8 +36,8 @@
     </head>
     
     <body>
-        <canvas id="hCanvas"></canvas>
-        <canvas id="dCanvas"></canvas>
+        <!-- <canvas id="hCanvas"></canvas>
+        <canvas id="dCanvas"></canvas> -->
         <!-- <video id="sourceVid" controls="true" autoplay="true">
             <source src="AAA.webm" />
         </video> -->
@@ -90,10 +90,10 @@
 
             var doc = document;
             var sourceVid = doc.getElementById("canvas");
-            var hCanvas = doc.getElementById("hCanvas");
-            var dCanvas = doc.getElementById("dCanvas");
-            var hContext = hCanvas.getContext("2d");
-            var dContext = dCanvas.getContext("2d");
+            // var hCanvas = doc.getElementById("hCanvas");
+            // var dCanvas = doc.getElementById("dCanvas");
+            // var hContext = hCanvas.getContext("2d");
+            // var dContext = dCanvas.getContext("2d");
             
                         sourceVid.addEventListener('loadeddata', function() {
                             hCanvas.setAttribute('width', sourceVid.offsetWidth);
@@ -120,9 +120,9 @@
 
 var frameFix = function() 
 {
-  hContext.drawImage(sourceVid, 0, 0, sourceVid.videoWidth, sourceVid.videoHeight);
+  canvas.drawImage(sourceVid, 0, 0, sourceVid.videoWidth, sourceVid.videoHeight);
 
-  var frame  = hContext.getImageData(0, 0, sourceVid.videoWidth, sourceVid.videoHeight),
+  var frame  = canvas.getImageData(0, 0, sourceVid.videoWidth, sourceVid.videoHeight),
       data   = frame.data,
       length = data.length, i;
 
