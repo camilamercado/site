@@ -9,26 +9,26 @@
                 display: none
             }
             #dCanvas {
+                margin-left: 30%;
                 background: url('alba.png') no-repeat 0 0 / cover;
                 width: 500px;
                 height: 800px;
             }
 
             video{
-                display: none;
+                margin-left: 30%;
             }
-
 
 
         </style>
     </head>
     
     <body>
+        <canvas id="hCanvas"></canvas>
+        <canvas id="dCanvas"></canvas>
         <video id="sourceVid" controls="true" autoplay="true">
             <source src="AAA.webm" />
         </video>
-        <canvas id="hCanvas"></canvas>
-        <canvas id="dCanvas"></canvas>
         
         <script type="text/javascript">
             var doc = document;
