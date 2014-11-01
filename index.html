@@ -129,6 +129,10 @@
         background-color: black;
       }
 
+      .blink {
+      	color: darkseagreen;
+      }
+
       .menu{
       	color: darkseagreen;
       	width: 100%;
@@ -170,18 +174,7 @@
         /*opacity: 0.3;*/
       }
 
-      .work {
-      		display: none;
-			position: absolute;
-			top: 20%;
-			left: 15%;
-			height: 0px;
-			width: 0px;
-			opacity: 0;
-			/*display: none;*/
-			/*border-top: 1px solid tomato;*/
-			z-index: 4;
-		}
+     
 
       .bars{
       	opacity: 1;
@@ -197,12 +190,27 @@
 		
       }
 
+       .work {
+      		
+			position: absolute;
+			
+			left: 15%;
+			height: 0px;
+			width: 0px;
+			opacity: 0;
+			top: 100%;
+			
+			
+			z-index: 4;
+		}
+
       .workshow {
-      	display: block;
+      	
       	width: 800px;
       	height: 210;
       	opacity: 1;
-      	-webkit-transition: all 2s;
+      	top: 20%;
+      	-webkit-transition: all 4s;
 		-moz-transition: width 1.5s ease;
       }
 
@@ -317,11 +325,12 @@
 
         <div class="work">
        		<div class="bars">
+        		
         		<div class="x"><div class="tab"><p>Daphne & Telstar</p></div></div>
 				<div class="y"><div class="tab"><p>b1/ching</p></div></div>
 				<div class="z"><div class="tab"><p>Capoet</p></div></div>
 				<div class="zed"><div class="tab"><p>Chroma Cam</p></div></div>
-				<div class="zoink"><div class="tab"><p>C A M C O M</p></div></div>
+				
 			</div>
 		</div>
 
@@ -333,6 +342,16 @@
          <div class="container"></div>
        
          <script type="text/javascript">
+
+         $( window ).load(function() {
+          var backgroundInterval = setInterval(function(){
+    	 $(".type2").toggleClass("blink");
+		 },100)
+   		 });
+
+         var backgroundInterval = setInterval(function(){
+    	 $(".type2").toggleClass("blink");
+		 },100)
 
             var state = "base";
          	$(".type2").mouseover(function(){
