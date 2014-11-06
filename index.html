@@ -134,9 +134,9 @@
       }
 
       .menu{
-      	color: darkseagreen;
+      	color: black;
       	width: 100%;
-      	background-color: black;
+      	background-color: white;
       	height: 100%;
       	-webkit-transition: all 2s;
 		-moz-transition: width 1.5s ease;
@@ -222,7 +222,7 @@
       .x, .y, .z, .zed, .zoink {
       	width: 100%;
       	height: 50px;
-      	border-bottom: 1px dashed lightgrey;
+      	border-bottom: 1px dashed dimgrey;
       }
 
       .x .tab {
@@ -283,10 +283,43 @@
 
 		.tab:hover {
 
-			background: lightgrey;
+			background: white;
+      /*border: 1px dashed dimgrey;*/
 			opacity: 1;
 			color: black;
 		}
+
+    .esc {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: -70px;
+      right: -100px;
+      font-size: 20px;
+      color: dimgrey;
+      font-family: 
+
+    }
+
+    .line1 {
+      width: 1px;
+      height: 15px;
+      background-color: dimgrey;
+      -webkit-transform: rotate(45deg);
+      position: absolute;
+    }
+
+    .line2 {
+      width: 1px;
+      height: 15px;
+      background-color: dimgrey;
+      -webkit-transform: rotate(135deg);
+    }
+
+    .line1:hover,
+    .line2:hover {
+      background-color: red;
+    }
 
 		
 
@@ -332,6 +365,12 @@
 				<div class="zed"><div class="tab"><p>Chroma Cam</p></div></div>
 				
 			</div>
+
+      <div class="esc">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      </div>
+
 		</div>
 
 		 </div>
@@ -344,42 +383,40 @@
          <script type="text/javascript">
 
          $( window ).load(function() {
-          var backgroundInterval = setInterval(function(){
-    	 $(".type2").toggleClass("blink");
-		 },100)
-   		 });
+           var backgroundInterval = setInterval(function(){
+  	       $(".type2").toggleClass("blink");
+	         },500)
+   		   });
 
          var backgroundInterval = setInterval(function(){
-    	 $(".type2").toggleClass("blink");
-		 },100)
+    	     $(".type2").toggleClass("blink");
+		     },1000)
 
-            var state = "base";
-         	$(".type2").mouseover(function(){
+        var state = "base";
+      
+      $(".type2").mouseover(function(){
 			  state = "work";
 			  console.log(state);
 
 			  $(".type2").addClass("menu");
 			  $(".work").addClass("workshow");
-			  //document.querySelector(".type2").style.width="100%";
-			  //document.querySelector(".type2").style.height="100%";
-			  // document.querySelector(".work").style.display="block";
 			});
 
-			$(".type").mouseover(function(){
+			$(".esc").click(function(){
 
+        console.log("test");
 			  $(".type2").removeClass("menu");
 			  $(".work").removeClass("workshow");
-			  // document.querySelector(".work").style.display="none";
-			  //document.querySelector(".type2").style.width="20px";
-			  //document.querySelector(".type2").style.height="auto";
+        $(".line1").css( "background-color", "dimgrey");
+        $(".line2").css( "background-color", "dimgrey");
 			});
 
-			// function work(){
-			// 	if (state === "work") {
-	
-			// 		document.querySelector(".bars").style.display="block";
-			// 	};
-			// }
+		  $(".esc").mouseover(function(){
+
+        $(".line1").css( "background-color", "red");
+        $(".line2").css( "background-color", "red");
+
+      });
 
          </script>
 
