@@ -57,11 +57,11 @@
       .julia {
         /*display: none;*/
         height: auto;
-        width: 100%;
+        width: 86%;
         position: absolute;
         z-index: 3;
         top: 0px;
-        left: 0px;
+        left: 10%;
         min-height: 900px;
         background: url(css/creep/juliaL.png);
         background-size: 100% auto;
@@ -106,6 +106,14 @@
         background: black;
         z-index: 5;
 
+      }
+
+      .text {
+        background-color: black;
+        width: 10%;
+        height: 100%;
+        left: 0px;
+        position: absolute;
       }
 
       .type {
@@ -332,96 +340,99 @@
 
     <body>
         
-        <div class="hk_sky"></div>
+        
         <div class="hk"></div>
-       
         <div class="julia"></div>
         
-        <div class="window">
+        <div class="window"></div>
 
-        <div class="type">
-        	C<BR>A<BR>M<BR>I<BR>L<BR>A<BR><BR>M<BR>E<BR>R<BR>C</BR>A<BR>D<BR>O<BR><BR>/
+        <div class="text">
+
+            <div class="type">
+            	C<BR>A<BR>M<BR>I<BR>L<BR>A<BR><BR>M<BR>E<BR>R<BR>C</BR>A<BR>D<BR>O<BR><BR>/
+            </div>
+
+            <div class="type2">
+              W<BR>O<BR>R<BR>K<BR>S<BR><BR>I<BR>N<BR><BR>C<BR>O<BR>D<BR>E<BR></BR>A<BR>N<BR>D<BR></BR>D</BR>E<BR>S<BR>I<BR>G<BR>N
+            </div>
+          
+            <div class="type3">
+            	+<BR>O<BR>B<BR>J<BR>E<BR>C<BR>T<BR>S<BR><BR>O<BR>F<BR>F<BR><BR>S<BR>C<BR>R<BR>E<BR>E<BR>N
+            </div>
+
+            <!-- <div class="type4">
+            	project rear window<br>
+            	2014<br>
+            	Live video <br>
+            	from a security camera near you
+            </div> -->
+
         </div>
-      
-        <div class="type3">
-        	+<BR>O<BR>B<BR>J<BR>E<BR>C<BR>T<BR>S<BR><BR>O<BR>F<BR>F<BR><BR>S<BR>C<BR>R<BR>E<BR>E<BR>N
-        </div>
 
-        <div class="type4">
-        	project rear window<br>
-        	2014<br>
-        	Live video <br>
-        	from a security camera near you
-        </div>
+        
 
-
-        <div class="type2">
-        	W<BR>O<BR>R<BR>K<BR>S<BR><BR>I<BR>N<BR><BR>C<BR>O<BR>D<BR>E<BR></BR>A<BR>N<BR>D<BR></BR>D</BR>E<BR>S<BR>I<BR>G<BR>N
        
 
-        <div class="work">
-       		<div class="bars">
-        		
-        		<div class="x"><div class="tab"><p>Daphne & Telstar</p></div></div>
-				<div class="y"><div class="tab"><p>b1/ching</p></div></div>
-				<div class="z"><div class="tab"><p>Capoet</p></div></div>
-				<div class="zed"><div class="tab"><p>Chroma Cam</p></div></div>
-				
-			</div>
+       <!--  <div class="work">
+       		
+            <div class="bars">
+            		
+              <div class="x"><div class="tab"><p>Daphne & Telstar</p></div></div>
+      				<div class="y"><div class="tab"><p>b1/ching</p></div></div>
+      				<div class="z"><div class="tab"><p>Capoet</p></div></div>
+      				<div class="zed"><div class="tab"><p>Chroma Cam</p></div></div>
+      				
+    			  </div>
 
-      <div class="esc">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      </div>
+            <div class="esc">
+              <div class="line1"></div>
+              <div class="line2"></div>
+            </div>
 
-		</div>
+		    </div> -->
 
-		 </div>
-		
-
-        </div>
 
          <div class="container"></div>
        
-         <script type="text/javascript">
+   //       <script type="text/javascript">
 
-         $( window ).load(function() {
-           var backgroundInterval = setInterval(function(){
-  	       $(".type2").toggleClass("blink");
-	         },500)
-   		   });
+   //       $( window ).load(function() {
+   //         var backgroundInterval = setInterval(function(){
+  	//        $(".type2").toggleClass("blink");
+	  //        },500)
+   // 		   });
 
-         var backgroundInterval = setInterval(function(){
-    	     $(".type2").toggleClass("blink");
-		     },1000)
+   //       var backgroundInterval = setInterval(function(){
+   //  	     $(".type2").toggleClass("blink");
+		 //     },1000)
 
-        var state = "base";
+   //      var state = "base";
       
-      $(".type2").mouseover(function(){
-			  state = "work";
-			  console.log(state);
+   //    $(".type2").mouseover(function(){
+			//   state = "work";
+			//   console.log(state);
 
-			  $(".type2").addClass("menu");
-			  $(".work").addClass("workshow");
-			});
+			//   $(".type2").addClass("menu");
+			//   $(".work").addClass("workshow");
+			// });
 
-			$(".esc").click(function(){
+			// $(".esc").click(function(){
 
-        console.log("test");
-			  $(".type2").removeClass("menu");
-			  $(".work").removeClass("workshow");
-        $(".line1").css( "background-color", "dimgrey");
-        $(".line2").css( "background-color", "dimgrey");
-			});
+   //      console.log("test");
+			//   $(".type2").removeClass("menu");
+			//   $(".work").removeClass("workshow");
+   //      $(".line1").css( "background-color", "dimgrey");
+   //      $(".line2").css( "background-color", "dimgrey");
+			// });
 
-		  $(".esc").mouseover(function(){
+		 //  $(".esc").mouseover(function(){
 
-        $(".line1").css( "background-color", "red");
-        $(".line2").css( "background-color", "red");
+   //      $(".line1").css( "background-color", "red");
+   //      $(".line2").css( "background-color", "red");
 
-      });
+   //    });
 
-         </script>
+   //       </script>
 
       	<script src="rearwindow.js"></script>
 
