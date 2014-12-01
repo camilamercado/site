@@ -14,17 +14,17 @@
         top: 0px;
         left: 0px;
        /* color: lightgoldenrodyellow;*/
-        color: lightgrey;
+       /* color: black;
         font-family: "courier new";
         font-size: 14px;
-        text-transform: lowercase;
-        background:black;
+        text-transform: lowercase;*/
+        background:#0e0e0e;
       }
 
       .bar {
         display: inline-block;
         width: 25px;
-        height: 75px;
+        height: 100px;
         background-color: teal;
         margin-right: 2px;
         background-position: 0px 0px;
@@ -38,9 +38,10 @@
        
        z-index: 3;
        opacity: 0.5;
-        width: 300px;
+        width: 600px;
         -webkit-transition: all .2s ease;
         -moz-transition: all .2s ease;
+        background-repeat: repeat-x;
 
       }
 
@@ -57,13 +58,13 @@
       .julia {
         /*display: none;*/
         height: auto;
-        width: 86%;
+        width: 100%;
         position: absolute;
         z-index: 3;
         top: 0px;
-        left: 10%;
+        left: 0px;
         min-height: 900px;
-        background: url(css/creep/juliaL.png);
+        background: url(css/creep/jul2.png);
         background-size: 100% auto;
         background-repeat: no-repeat;
       }
@@ -74,7 +75,7 @@
         position: absolute;
         z-index: 0;
         top: 0px;
-        left: 0px;
+        left: 35.5%;
         min-height: 900px;
         background: url(css/creep/navy_hk.jpg);
         background-size: 100% auto;
@@ -82,19 +83,33 @@
         background-repeat: no-repeat;
       }
 
-    /*  .hk_sky {
-        height: auto;
-        width: 100%;
-        position: absolute;
-        z-index: 3;
-        top: 0px;
+     .container {
+        position: fixed;
         left: 0px;
-        min-height: 900px;
-        background: url(css/creep/navy_hk_sky.png);
-        background-size: 100% auto;
-        background-position: -132px -220px;
-        background-repeat: no-repeat;
-      }*/
+        bottom: 50px;
+        height: 100%;
+        min-height:800px; 
+        overflow: hidden;
+        width: 900px;
+        /*background-color: lightgoldenrodyellow;*/
+        /*opacity: 0.3;*/
+      }
+
+     
+
+      .bars{
+        opacity: 1;
+        position: absolute;
+        /*top: 150px;
+        left: 300px;*/
+        height: 0px;
+        width: 800px;
+        /*left: 15%;*/
+        position: absolute;
+        margin-top: 20px;
+        /*border-bottom: 1px dashed lightgrey;*/
+    
+      }
 
       .textbar{
         position: absolute;
@@ -109,53 +124,54 @@
       }
 
       .text {
-        background-color: black;
-        width: 10%;
+       /* padding-left: 50px;*/
+        width: 35.5%;
         height: 100%;
         left: 0px;
+        top: 0px;
         position: absolute;
-      }
-
-      .type {
-      	height: 100%;
-      	width: 30px;
-      	/*background-color: red;*/
-        position: fixed;
-        z-index: 4;
-        left: 15px;
-        top: 0px;
-        padding-top: 10px;
-      }
-
-      .type2 {
-      	width: 20px;
-        position: fixed;
         z-index: 2;
-        left: 45px;
-        top: 0px;
-        padding-top: 10px;
+        /*background-image: url(css/creep/window.png);
+        background-position: -60px 110px;*/
         background-color: black;
-      }
+        opacity: 0.6;
+        color: white;
+        font-family: "andale mono";
+        text-transform: lowercase;
+        font-size: 26px;
+      } 
 
       .blink {
       	color: darkseagreen;
       }
 
-      .menu{
-      	color: black;
-      	width: 100%;
-      	background-color: white;
-      	height: 100%;
-      	-webkit-transition: all 2s;
-		    -moz-transition: width 1.5s ease;
+      .type {
+       /* background-color: ghostwhite;*/
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        z-index: 2;   
+        top: 25%;
+        /*text-shadow: 1px 2px lightgrey;*/
+      }
+
+      .type2 {
+        height: 100px;
+        width: 100%;
+        position: fixed;
+        z-index: 2;
+        /*left: 45px;*/
+        top: 200px;
+        /*background-color: black;*/
       }
 
       .type3 {
+        height: 100px;
+         width: 100%;
         position: fixed;
-        z-index: 1;
-        left: 75px;
-        top: 0px;
-        padding-top: 10px;
+        z-index: 2;
+        /*left: 75px;*/
+        top: 300px;
       }
 
       .type3:hover{
@@ -171,38 +187,19 @@
         font-size: 12px;
       }
     
-      .container {
-        position: fixed;
-        left: 20%;
-        bottom: 50px;
+      .menu{
+        color: black;
+        width: 100%;
+        background-color: white;
         height: 100%;
-        min-height:800px; 
-        overflow: hidden;
-        width: 800px;
-        /*background-color: lightgoldenrodyellow;*/
-        /*opacity: 0.3;*/
+        -webkit-transition: all 2s;
+        -moz-transition: width 1.5s ease;
       }
 
-     
 
-      .bars{
-      	opacity: 1;
-      	position: absolute;
-      	/*top: 150px;
-      	left: 300px;*/
-      	height: 0px;
-		width: 800px;
-		/*left: 15%;*/
-		position: absolute;
-		margin-top: 20px;
-		/*border-bottom: 1px dashed lightgrey;*/
-		
-      }
-
-       .work {
+      .work {
       		
-			position: absolute;
-			
+			position: absolute;	
 			left: 15%;
 			height: 0px;
 			width: 0px;
@@ -349,16 +346,20 @@
         <div class="text">
 
             <div class="type">
-            	C<BR>A<BR>M<BR>I<BR>L<BR>A<BR><BR>M<BR>E<BR>R<BR>C</BR>A<BR>D<BR>O<BR><BR>/
+            	<!-- C<BR>A<BR>M<BR>I<BR>L<BR>A<BR><BR>M<BR>E<BR>R<BR>C</BR>A<BR>D<BR>O<BR><BR>/ -->
+             Camila Mercado
             </div>
 
             <div class="type2">
-              W<BR>O<BR>R<BR>K<BR>S<BR><BR>I<BR>N<BR><BR>C<BR>O<BR>D<BR>E<BR></BR>A<BR>N<BR>D<BR></BR>D</BR>E<BR>S<BR>I<BR>G<BR>N
+             <!--  W<BR>O<BR>R<BR>K<BR>S<BR><BR>I<BR>N<BR><BR>C<BR>O<BR>D<BR>E<BR></BR>A<BR>N<BR>D<BR></BR>D</BR>E<BR>S<BR>I<BR>G<BR>N -->
+             Works in Code
             </div>
           
             <div class="type3">
-            	+<BR>O<BR>B<BR>J<BR>E<BR>C<BR>T<BR>S<BR><BR>O<BR>F<BR>F<BR><BR>S<BR>C<BR>R<BR>E<BR>E<BR>N
+            	<!-- +<BR>O<BR>B<BR>J<BR>E<BR>C<BR>T<BR>S<BR><BR>O<BR>F<BR>F<BR><BR>S<BR>C<BR>R<BR>E<BR>E<BR>N -->
+              + Objects off screen
             </div>
+
 
             <!-- <div class="type4">
             	project rear window<br>
