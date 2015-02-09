@@ -1,0 +1,101 @@
+.slide {
+	width: 90%;
+	height: 500px;
+	position: absolute;
+	top: 150px;
+	left: 5%;
+	overflow: hidden;
+}
+
+.imgContent{
+
+	position: absolute;
+	width: 10000px;
+	height: 500px;
+	left: 0px;
+	-webkit-transition: all 2s ease;
+	-moz-transition: all 2s ease;
+	-opera-transition: all 2s ease;
+}
+
+.a {
+	height: 400px;
+	width: auto;
+	float: left;
+	background: whitesmoke;
+}
+
+.b {
+	height: 400px;
+	width: auto;
+	float: left;
+	background: azure;
+}
+
+.c {
+	height: 400px;
+	float: left;
+	width: auto;
+	background: beige;
+}
+
+
+
+.imgMod {
+	width: auto;
+	height: 100%;
+	padding: 10px;
+	border: 1px dashed tomato;
+	border-right: none;
+	float: left;
+	padding-bottom: 0px;
+}
+
+.imgMod:hover {
+	background: white;
+}
+
+.imgMod img {
+	background: lightgrey;
+	background-image-source: none;
+	
+}
+
+.sliderBar {
+	display: none;
+	position: absolute;
+	top: 400px;
+	width: 100%;
+	border-top: 1px solid lightblue;
+	height: 50px;
+	z-index: 1;
+	background: white;
+	font-family: "andale mono";
+}
+
+.sliderBar .tabA,
+.sliderBar .tabB,
+.sliderBar .tabC {
+	-webkit-transition: all 1s ease;
+	width: 33.2%;
+	height: 50px;
+	background: white;
+	float: left;
+	
+	text-align: center;
+	line-height: 50px;
+}
+
+
+.sliderBar .tabA:hover {
+	background: whitesmoke;
+}
+
+.sliderBar .tabB:hover {
+	background: azure;
+}
+
+.sliderBar .tabC:hover {
+	background: beige;
+} 
+
