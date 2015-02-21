@@ -1,9 +1,10 @@
 .slide {
 	width: 90%;
-	height: 500px;
+	height: 380px;
 	position: absolute;
-	top: 150px;
-	left: 5%;
+	/*top: 150px;*/
+	bottom: 100px;
+	left: 30%;
 	overflow: hidden;
 }
 
@@ -11,29 +12,30 @@
 
 	position: absolute;
 	width: 10000px;
-	height: 500px;
+	height: 380px;
 	left: 0px;
+	bottom: 0px;
 	-webkit-transition: all 2s ease;
 	-moz-transition: all 2s ease;
 	-opera-transition: all 2s ease;
 }
 
 .a {
-	height: 400px;
+	height: 380px;
 	width: auto;
 	float: left;
 	background: whitesmoke;
 }
 
 .b {
-	height: 400px;
+	height: 350px;
 	width: auto;
 	float: left;
 	background: azure;
 }
 
 .c {
-	height: 400px;
+	height: 350px;
 	float: left;
 	width: auto;
 	background: beige;
@@ -51,13 +53,37 @@
 	padding-bottom: 0px;
 }
 
+.aa:hover {
+	content:url("css/02.png");
+}
+
+.bb:hover {
+	content:url("css/capoett.png");
+}
+
+.cc:hover {
+	content: url(css/b1ching/bcrop.png);
+}
+
+.dd:hover {
+	content: url(css/julia.png);
+}
+
 .imgMod:hover {
 	background: white;
 }
 
 .imgMod img {
 	background: lightgrey;
-	background-image-source: none;
+	
+}
+
+.imgMod img:hover {
+	width: 200px;
+	height: auto;
+	-webkit-transition: all 3s ease;
+	-moz-transition: all 3s ease;
+	-opera-transition: all 3s ease;
 	
 }
 
