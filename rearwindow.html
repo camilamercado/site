@@ -159,16 +159,20 @@
       .box {
         width: 30%;
         height: 300px;
-        background: black;
+        border: 0.5px solid lavender;
         margin-left: 25px;
         float: left;
         margin-bottom: 25px;
-        background-size: 100% 300px;
+
 
       }
 
+      #a, #b, #c, #d, #e, #f, #g, #h, #i{
+        background-size: auto 300px !important;
+      }
+
       #a {
-        background: url(http://195.55.112.200:8083/mjpg/video.mjpg);
+        background: url(http://iris.not.iac.es/axis-cgi/mjpg/video.cgi);
       }
 
       #b {
@@ -184,7 +188,7 @@
       }
 
       #e {
-        background: url(http://piercam.cofairhope.com/mjpg/video.mjpg);
+        background: url(http://82.148.72.2:60000/cgi-bin/faststream.jpg?stream=full&fps=0);
       }
 
       #f {
@@ -192,15 +196,15 @@
       }
 
       #g {
-        background: url(http://webcam.vanderbiltbeachresort-reservations.com:4445/mjpg/video.mjpg);
+        background: url(http://tuincam.bt.tudelft.nl/mjpg/video.mjpg);
       }
 
       #h {
-        background: url(http://camera.nton.lviv.ua/mjpg/video.mjpg);
+        background: url(http://piercam.cofairhope.com/mjpg/video.mjpg);
       }
 
       #i {
-        background: url(http://piercam.cofairhope.com/mjpg/video.mjpg);
+        background: url(http://sun.hm.ukrtel.net/axis-cgi/mjpg/video.cgi);
       }
 
 
@@ -330,7 +334,9 @@
       "url(http://webcam.csatolna.hu/mjpg/video.mjpg)",
       "url(http://sun.hm.ukrtel.net/axis-cgi/mjpg/video.cgi)",
       "url(http://sciencecentercam.fas.harvard.edu/axis-cgi/mjpg/video.cgi)",
-      "url()",
+      "url(http://iris.not.iac.es/axis-cgi/mjpg/video.cgi)",
+      "url(http://tuincam.bt.tudelft.nl/mjpg/video.mjpg)",
+      "url(http://82.148.72.2:60000/cgi-bin/faststream.jpg?stream=full&fps=0)"
       // "url()",
       ];
   var rand = windows[Math.floor(Math.random() * windows.length)]; 
