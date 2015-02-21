@@ -115,21 +115,21 @@
         z-index: 5;
       }
       .type {
-        position: fixed;
+        position: relative;
         z-index: 4;
-        left: 175px;
-        top: 240px;
+        left: -60px;
+        top: 235px;
       }
       .type2 {
-        position: fixed;
+        position: relative;
         z-index: 2;
-        left: 195px;
-        top: 240px;
+        left: -35px;
+        top: -60px;
       }
       .type3 {
         position: fixed;
         z-index: 2;
-        left: 55px;
+        left: 25px;
         top: 10px;
       }
     
@@ -144,6 +144,66 @@
         /*background-color: lightgoldenrodyellow;*/
         /*opacity: 0.3;*/
       }
+
+      .container2 {
+        position: relative;
+        top: 895px;
+        width: 100%;
+        height: 980px;
+        background: black;
+        padding-top: 25px;
+        /*background-color: lightgoldenrodyellow;*/
+        /*opacity: 0.3;*/
+      }
+
+      .box {
+        width: 30%;
+        height: 300px;
+        background: black;
+        margin-left: 25px;
+        float: left;
+        margin-bottom: 25px;
+        background-size: 100% 300px;
+
+      }
+
+      #a {
+        background: url(http://195.55.112.200:8083/mjpg/video.mjpg);
+      }
+
+      #b {
+        background: url(http://camera.nton.lviv.ua/mjpg/video.mjpg);
+      }
+
+      #c {
+        background: url(http://webcam.vanderbiltbeachresort-reservations.com:4445/mjpg/video.mjpg);
+      }
+
+      #d {
+        background: url(http://82.77.65.43:8207/cgi-bin/faststream.jpg);
+      }
+
+      #e {
+        background: url(http://piercam.cofairhope.com/mjpg/video.mjpg);
+      }
+
+      #f {
+        background: url(http://webcam.csatolna.hu/mjpg/video.mjpg);
+      }
+
+      #g {
+        background: url(http://webcam.vanderbiltbeachresort-reservations.com:4445/mjpg/video.mjpg);
+      }
+
+      #h {
+        background: url(http://camera.nton.lviv.ua/mjpg/video.mjpg);
+      }
+
+      #i {
+        background: url(http://piercam.cofairhope.com/mjpg/video.mjpg);
+      }
+
+
       
     </style>
 
@@ -166,6 +226,20 @@
         </div>
 
          <div class="container"></div>
+
+         <div class="container2">
+           
+           <div class="box" id="a"></div>
+           <div class="box" id="b"></div>
+           <div class="box" id="c"></div>
+           <div class="box" id="d"></div>
+           <div class="box" id="e"></div>
+           <div class="box" id="f"></div>
+           <div class="box" id="g"></div>
+           <div class="box" id="h"></div>
+           <div class="box" id="i"></div>
+
+         </div>
 
 
     <script type="text/javascript">
@@ -250,7 +324,6 @@
   var windows = [
       "url(http://195.55.112.200:8083/mjpg/video.mjpg)",
       "url(http://camera.nton.lviv.ua/mjpg/video.mjpg)",
-      "url(http://videovalvonta.fi/cgi-bin/faststream.jpg)",
       "url(http://webcam.vanderbiltbeachresort-reservations.com:4445/mjpg/video.mjpg)",
       "url(http://82.77.65.43:8207/cgi-bin/faststream.jpg)",
       "url(http://piercam.cofairhope.com/mjpg/video.mjpg)",
