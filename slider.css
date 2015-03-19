@@ -223,8 +223,8 @@ li p {
 
 .imgFeild {
 	width: 95%;
-	height: 800px;
-	top: 300px;
+	height: 300px;
+	top: 280px;
 	position: absolute;
 }
 
@@ -241,6 +241,15 @@ li p {
 	-webkit-transition: all 1.5s ease;
 	-moz-transition:    all 1.5s ease;
 	-opera-transition:  all 1.5s ease;
+}
+
+.imgFeild .contact {
+  margin-top: 347px;
+  margin-right: -200px;
+  float: right;
+  font-family: "andale mono";
+  font-size: 12px;
+
 }
 
 li a{
