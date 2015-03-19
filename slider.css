@@ -1,11 +1,3 @@
-.title {
-	position: absolute;
-	width: 200px;
-	height: 100px;
-	top: 550px;
-	left: 450px;
-	font-family: "andale mono";
-}
 
 .slide {
 	width: 100%;
@@ -20,7 +12,7 @@
     transform: rotate(90deg);
 }
 
-.imgContent{
+/*.imgContent{
 
 	position: absolute;
 	width: 10000px;
@@ -31,9 +23,9 @@
 	-moz-transition: all 2s ease;
 	-opera-transition: all 2s ease;
 
-}
+}*/
 
-.a {
+/*.a {
 	height: 380px;
 	width: auto;
 	float: left;
@@ -157,5 +149,106 @@
 
 .sliderBar .tabC:hover {
 	background: beige;
-} 
+} */
+
+.title {
+	position: absolute;
+	width: 245px;
+	height: 100px;
+	top: 30px;
+	left: 25px;
+	font-family: "andale mono";
+}
+
+p {
+	margin: 0px;
+	color: lightgrey;
+	font-style: italic;
+	font-size: 12px;
+	float: right;
+	margin-top: 10px;
+}
+
+
+.list {
+	top: 100px;
+	position: absolute;
+	height: 1000px;
+	width: 100%;
+	background: white;
+	color: black;
+	font-family: "andale mono";
+	font-size: 12px;
+}
+
+ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+li { 
+    padding-left: 20px; 
+    text-indent: -.7px;
+
+}
+
+li:before {
+    content: "• ";
+    color: tomato; /* or whatever color you prefer */
+}
+
+li p {
+	float: right;
+	font-style: italic;
+	padding: 0px;
+	margin-right: 40px;
+	margin-top: 0px;
+	color: darkgrey;
+}
+
+.gg {
+	width: 100%;
+	height: 20px;
+	background: whitesmoke;
+	line-height: 21px;
+}
+
+.w {
+	width: 100%;
+	height: 20px;
+	background: white;
+	line-height: 21px;
+}
+
+.imgFeild {
+	width: 95%;
+	height: 800px;
+	top: 300px;
+	position: absolute;
+}
+
+.imgContent {
+	position: relative;
+	top: 0px;
+	float: right;
+	height: 300px;
+	width: 200px;
+	border: 1px dashed blue;
+	background-size: 100% auto;
+	padding: 10px;
+	background-repeat: no-repeat;
+	-webkit-transition: all 1.5s ease;
+	-moz-transition:    all 1.5s ease;
+	-opera-transition:  all 1.5s ease;
+}
+
+li a{
+	color: black !important;
+}
+
+li a:hover {
+	color: blue !important;
+}
+
 
