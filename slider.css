@@ -37,9 +37,11 @@ ul {
     list-style: none;
     padding:0;
     margin:0;
+    width: 100%
 }
 
 li { 
+	width: 100%;
     padding-left: 20px; 
     text-indent: -.7px;
 
@@ -51,7 +53,9 @@ li:before {
 }
 
 li p {
-	float: right;
+	/*width: 200px;*/
+	height: 21px;
+	text-align: right;
 	font-style: italic;
 	padding: 0px;
 	margin-right: 40px;
@@ -61,14 +65,14 @@ li p {
 
 .gg {
 	width: 100%;
-	height: 20px;
+	/*height: 20px;*/
 	background: whitesmoke;
 	line-height: 21px;
 }
 
 .w {
 	width: 100%;
-	height: 20px;
+	/*height: 20px;*/
 	background: white;
 	line-height: 21px;
 }
