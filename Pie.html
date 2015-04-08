@@ -29,6 +29,10 @@ form {
   top: 10px;
 }
 
+label {
+  display: none;
+}
+
 </style>
 <form>
   <label><input type="radio" name="dataset" value="apples" checked> Apples</label>
@@ -83,7 +87,7 @@ d3.tsv(dataChart, type, function(error, data) {
   var timeout = setInterval(function() {
 
     d3.selectAll("input[value=\"oranges\"]").property("checked", true).each(change);
-  },10000);
+  },8000);
 
    
 
@@ -91,7 +95,7 @@ d3.tsv(dataChart, type, function(error, data) {
     var value = this.value;
     pie.value(function(d) { return d[value]; }); // change the value function
     path = path.data(pie); // compute the new angles
-    path.transition().duration(10000).attrTween("d", arcTween); // redraw the arcs
+    path.transition().duration(8000).attrTween("d", arcTween); // redraw the arcs
   }
 });
 
