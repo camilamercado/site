@@ -7,7 +7,16 @@ body {
   margin: auto;
   position: relative;
   width: 960px;
+   background: grey;
 }
+
+  .circles {
+    width: 100%;
+    height: 400;
+  /*  background: grey;*/
+    padding: 100px;
+    position: absolute;
+  }
 
 text {
   font: 10px sans-serif;
@@ -27,21 +36,21 @@ form {
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
-dial(50);
-dial(100);
-dial(150);
-dial(200);
-dial(250);
-dial(300);
+dial(140, ["grey","white"] , [32,0], "data7.tsv"  );
+dial(120, ["grey","white"] , [16,0], "data6.tsv"  );
+dial(100, ["grey","white"] , [8,0], "data5.tsv"  );
+dial(80, ["grey","white"] , [3,0], "data4.tsv"  );
+dial(60, ["grey","white"] , [1,1], "data3.tsv" );
+dial(40,  ["grey","white"] , [0,0], "data2.tsv" );
 
-function dial (oR) {
+function dial (oR, fC, dR, dataChart) {
 
 
 var width = 960,
     height = 500,
     radius = Math.min(width, height) / 2;
 
-var color = d3.scale.category20c();
+var color = d3.scale.ordinal().domain(dR).range(fC);
 
 var pie = d3.layout.pie()
     .value(function(d) { return d.apples; })
@@ -54,11 +63,12 @@ var arc = d3.svg.arc()
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
+    .attr("class", "circles")
     .append("g") 
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
 
-d3.tsv("data.tsv", type, function(error, data) {
+d3.tsv(dataChart, type, function(error, data) {
   var path = svg.datum(data).selectAll("path")
       .data(pie)
       .enter().append("path")
