@@ -6,16 +6,17 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto;
   position: relative;
-  width: 960px;
    background: grey;
 }
 
   .circles {
-    width: 100%;
-    height: 400;
-  /*  background: grey;*/
-    padding: 100px;
-    position: absolute;
+    margin-top: 150px;
+   margin-left: 50%;
+   left: -180px;
+   width: 150px;
+   height: 150px;
+   padding: 100px;
+   position: absolute;
   }
 
 text {
@@ -36,18 +37,18 @@ form {
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
-dial(140, ["grey","white"] , [32,0], "data7.tsv"  );
-dial(120, ["grey","white"] , [16,0], "data6.tsv"  );
-dial(100, ["grey","white"] , [8,0], "data5.tsv"  );
-dial(80, ["grey","white"] , [3,0], "data4.tsv"  );
-dial(60, ["grey","white"] , [1,1], "data3.tsv" );
-dial(40,  ["grey","white"] , [0,0], "data2.tsv" );
+dial(140, ["black","white"] , [32,0], "data7.tsv"  );
+dial(120, ["black","white"] , [16,0], "data6.tsv"  );
+dial(100, ["black","white"] , [8,0],  "data5.tsv"  );
+dial(80,  ["black","white"] , [3,0],  "data4.tsv"  );
+dial(60,  ["black","white"] , [1,1],  "data3.tsv" );
+dial(40,  ["black","white"] , [0,0],  "data2.tsv" );
 
 function dial (oR, fC, dR, dataChart) {
 
 
-var width = 960,
-    height = 500,
+var width  = 150,
+    height = 150,
     radius = Math.min(width, height) / 2;
 
 var color = d3.scale.ordinal().domain(dR).range(fC);
@@ -79,16 +80,18 @@ d3.tsv(dataChart, type, function(error, data) {
   d3.selectAll("input")
       .on("change", change);
 
-  var timeout = setTimeout(function() {
-    d3.select("input[value=\"oranges\"]").property("checked", true).each(change);
-  }, 2000);
+  var timeout = setInterval(function() {
+
+    d3.selectAll("input[value=\"oranges\"]").property("checked", true).each(change);
+  },10000);
+
+   
 
   function change() {
     var value = this.value;
-    clearTimeout(timeout);
     pie.value(function(d) { return d[value]; }); // change the value function
     path = path.data(pie); // compute the new angles
-    path.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
+    path.transition().duration(10000).attrTween("d", arcTween); // redraw the arcs
   }
 });
 
@@ -102,9 +105,9 @@ function type(d) {
 // Then, interpolate from _current to the new angles.
 // During the transition, _current is updated in-place by d3.interpolate.
 function arcTween(a) {
-  var i = d3.interpolate(this._current, a);
-  this._current = i(0);
-  return function(t) {
+    var i = d3.interpolate(this._current, a);
+    this._current = i(0);
+    return function(t) {
     return arc(i(t));
   };
 }
