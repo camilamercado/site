@@ -6,7 +6,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto;
   position: relative;
-   background: grey;
+   background: ghostwhite;
 }
 
   .circles {
@@ -17,6 +17,7 @@ body {
    height: 150px;
    padding: 100px;
    position: absolute;
+      /*border: 1px solid chartreuse;*/
   }
 
 
@@ -35,24 +36,27 @@ label {
   <label><input type="radio" name="dataset" value="apples" checked> Apples</label>
   <label><input type="radio" name="dataset" value="oranges"> Oranges</label>
 </form>
+
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
-dial(140, ["black","white"] , [32,0], "data7.tsv"  );
-dial(120, ["black","white"] , [16,0], "data6.tsv"  );
-dial(100, ["black","white"] , [8,0],  "data5.tsv"  );
-dial(80,  ["black","white"] , [3,0],  "data4.tsv"  );
-dial(60,  ["black","white"] , [1,1],  "data3.tsv" );
-dial(40,  ["black","white"] , [0,0],  "data2.tsv" );
+dial( 140, [32,0],  "data/d5.tsv"  );
+dial( 120, [16,0],  "data/d4.tsv"  );
+dial( 100, [8, 0],  "data/d3.tsv"  );
+dial( 80,  [3, 0],  "data/d2.tsv"  );
+dial( 60,  [1, 1],  "data/d1.tsv"  );
+dial( 40,  [0, 0],  "data/d0.tsv"  );
 
-function dial (oR, fC, dR, dataChart) {
+function dial (oR, dR, dataChart) {
 
 
 var width  = 150,
     height = 150,
     radius = Math.min(width, height) / 2;
 
-var color = d3.scale.ordinal().domain(dR).range(fC);
+var fillColor = ["black","white"];
+
+var color = d3.scale.ordinal().domain(dR).range(fillColor);
 
 var pie = d3.layout.pie()
     .value(function(d) { return d.apples; })
@@ -84,7 +88,7 @@ d3.tsv(dataChart, type, function(error, data) {
   var timeout = setInterval(function() {
 
     d3.selectAll("input[value=\"oranges\"]").property("checked", true).each(change);
-  },8000);
+  },1000);
 
    
 
@@ -92,7 +96,7 @@ d3.tsv(dataChart, type, function(error, data) {
     var value = this.value;
     pie.value(function(d) { return d[value]; }); // change the value function
     path = path.data(pie); // compute the new angles
-    path.transition().duration(8000).attrTween("d", arcTween); // redraw the arcs
+    path.transition().duration(1000).attrTween("d", arcTween); // redraw the arcs
   }
 });
 
