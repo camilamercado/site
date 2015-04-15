@@ -24,7 +24,10 @@ body {
   top: 300px;
 }
 
-
+/*.text {
+  position: relative;
+}
+*/
   .circles {
    /*margin-left: 50%;
    left: -180px;*/
@@ -42,13 +45,13 @@ form {
   top: 10px;
 }
 
-label {
+/*label {
   display: none;
-}
+}*/
 
 </style>
 <form>
-  <label><input type="radio" name="dataset" value="apples" checked> Apples</label>
+  <label><input type="radio" name="dataset" value="apples" checked="" > Apples</label>
   <label><input type="radio" name="dataset" value="oranges"> Oranges</label>
 </form>
 
@@ -84,6 +87,7 @@ var color = d3.scale.ordinal().domain(dR).range(fillColor);
 var pie = d3.layout.pie()
     .value(function(d) { return d.apples; })
     .sort(null);
+    
 
 var arc = d3.svg.arc()
     .innerRadius(0)
@@ -96,33 +100,39 @@ var svg = d3.select(dC).append("svg")
     .append("g") 
     .attr("transform", "translate(" + width  + "," + height + ")");
 
-
-
+ 
 d3.tsv(dataChart, type, function(error, data) {
   var path = svg.datum(data).selectAll("path")
       .data(pie)
-      .enter().append("path")
-      .attr("fill", function(d, i) { return color(i); })
-      .attr("d", arc)
-      .each(function(d) { this._current = d; 
+    .enter().append("g:path")
+    .attr("d", arc)
+     .attr("fill", function(d, i) { return color(i); })
+    .each(function(d) { this._current = d; });
 
-      }); // store the initial angles
+    path.append("svg:text")   
+
+                .attr("transform", function(d) {                 
+                d.innerRadius = 0;
+                d.outerRadius = oR;
+                return "translate(" + arc.centroid(d) + ")";        
+            })
+            .attr("text-anchor", "middle")                         
+            .text(function(d, i) { return d.data.labels; }); 
 
   d3.selectAll("input")
       .on("change", change);
 
-  var timeout = setInterval(function() {
-
-    d3.selectAll("input[value=\"oranges\"]").property("checked", true).each(change);
-  },1000);
-
-   
+  var timeout = setTimeout(function() {
+    d3.select("input[value=\"oranges\"]").property("checked", true).each(change);
+  }, 2000);
 
   function change() {
     var value = this.value;
+    clearTimeout(timeout);
     pie.value(function(d) { return d[value]; }); // change the value function
     path = path.data(pie); // compute the new angles
-    path.transition().duration(1000).attrTween("d", arcTween); // redraw the arcs
+    console.log(path);
+    path.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
   }
 });
 
@@ -136,13 +146,13 @@ function type(d) {
 // Then, interpolate from _current to the new angles.
 // During the transition, _current is updated in-place by d3.interpolate.
 function arcTween(a) {
-    var i = d3.interpolate(this._current, a);
-    this._current = i(0);
-    return function(t) {
+  var i = d3.interpolate(this._current, a);
+  this._current = i(0);
+  return function(t) {
     return arc(i(t));
   };
 }
-
 };
+
 
 </script>
