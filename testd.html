@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+   background: lightgrey;
+}
+
+.panel {
+  width: 400px;
+  height: 800px;
+  top: 80px;
+  float: left;
+  border-left: 1px solid white;
+
+}
+
+.orient {
+  height: 600px;
+  width: 300px;
+  float: left;
+  margin-left: 15%;
+  margin-right: 0px;
+  margin-top: 50px;
+}
+
+.target {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
+
+.compass {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 350px;
+}
+
+  .circles {
+   width: 300px;
+   height: 300px;
+   position: absolute;
+
+  }
+
+.panel {
+  font-family: "andale mono";
+  font-size: 12px;
+  color: white;
+  margin-left: 150px;
+  margin-top: 250px;
+}
+
+.panel p {
+  color: black;
+}
+
+form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+label {
+  display: none;
+}
+
+</style>
+<form>
+  <label><input type="radio" name="dataset" value="apples" checked="" > Apples</label>
+  <label><input type="radio" name="dataset" value="oranges"> Oranges</label>
+</form>
+
+
+
+<div class="orient">
+<div class= "target"></div>
+<div class= "compass"></div>
+</div>
+
+<div class="panel">
+Yi Jing Sequence
+
+</br>
+<p id="5">  0101010101010101010101010101010101010101010101010101010101010101 </p>
+<p id="4">  0011001100110011001100110011001100110011001100110011001100110011 </p>
+<p id="3">  0000111100001111000011110000111100001111000011110000111100001111 </p>
+<p id="2">  0000000011111111000000001111111100000000111111110000000011111111 </p>
+<p id="1">  0000000000000000111111111111111100000000000000001111111111111111 </p>
+<p id="0">  0000000000000000000000000000000011111111111111111111111111111111 </p>
+
+</div>
+<script src="datad.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="intention/test/vendor/jquery.js"></script>
+<script>
+
+
+var fC = ["lightgrey","white"];
+var fC2 = ["white"];
+var fC3 = ["black", "white"];
+
+
+dial( 140, [32,0], fC,  d5,  ".target", "05"  );
+dial( 120, [16,0], fC,  d4,  ".target", "04"  );
+dial( 100, [8, 0], fC,  d33, ".target", "03"  );
+dial( 80,  [3, 0], fC,  d2,  ".target", "02"  );
+dial( 60,  [1, 1], fC,  d1,  ".target", "01"  );
+dial( 40,  [0, 0], fC,  d0,  ".target", "00"  );
+ 
+//dial( 81,  [0, 0], fC3,  "data/d0.tsv", ".compass"  ); 
+dial( 80,  [3, 0], fC,  d2, ".compass"  );
+dial( 70,  [1, 1], fC,  d1, ".compass"  );
+dial( 60,  [0, 0], fC,  d0, ".compass"  );
+dial( 50,  [8, 0], fC2, d0, ".compass"  );
+
+function dial (oR, dR, fillColor, data, dC, classy) {
+
+
+var width  = 150,
+    height = 150,
+    radius = Math.min(width, height) / 2;
+
+var color = d3.scale.ordinal().domain(dR).range(fillColor);
+
+var vis = d3.select(dC)
+        .append("svg:svg")             
+        .data([data])                   
+            .attr("width", width)           
+            .attr("height", height)
+            .attr("class", "circles")
+            .append("svg:g") 
+            .attr("class", classy)               
+            .attr("transform", "translate(" + width  + "," + height + ")");
+
+var arc = d3.svg.arc()
+    .innerRadius(0)
+    .outerRadius(oR); 
+
+var pie = d3.layout.pie()
+    .value(function(d) { return d.apples; })
+    .sort(null); 
+
+
+var arcs = vis.selectAll("g.slice")     
+        .data(pie)                          
+        .enter()                          
+        .append("svg:g")               
+        .attr("class", "slice"); 
+
+    arcs.append("svg:path")
+          .attr("fill", function(d, i) { return color(i); } ) 
+          .attr("d", arc) 
+          .each(function(d) { this._current = d; });
+
+    // arcs.append("svg:text")                                     
+    //               .attr("transform", function(d) {                   
+    //               return "translate(" + arc.centroid(d) + ")";        
+    //           })
+    //           .attr("text-anchor", "middle") 
+    //           .attr("fill", "red" )
+    //           .attr("font-family", "andale mono" )                        
+    //           .text(function(d, i) { return data[i].labels; });  
+                 
+ 
+
+function render(){
+  
+  pie.value(function(d) { return d.oranges; });
+  vis.datum(data)
+  .selectAll("path")
+  .data(pie)
+  .transition()
+  .duration(750)
+  .attrTween("d", arcTween);
+ 
+}
+
+setInterval(render,2000);
+
+function arcTween(a) {
+  var i = d3.interpolate(this._current, a);
+  this._current = i(0);
+  return function(t) {
+  return arc(i(t));
+  };
+}
+
+// $("#0").mouseover(function(){
+    
+//     shift();
+    
+//     });
+
+// function shift(){
+
+//   color = d3.scale.ordinal().domain(dR).range(fC);
+
+//   arcs.selectAll("path")
+//           .attr("fill", function(d, i) { return color(i); } ) 
+//           .attr("d", arc) 
+//           .each(function(d) { this._current = d; })
+
+//   console.log("butt");
+// }
+
+
+
+};
+
+
+
+</script>
