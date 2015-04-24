@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<link href='http://fonts.googleapis.com/css?family=Amiri:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
 <style>
 
+@import url(http://fonts.googleapis.com/css?family=Amiri:400,400italic,700,700italic);
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Amiri', serif;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   margin: auto;
   position: relative;
-   background: lightgrey;
+   /*background: lightgrey;*/
 }
+
 
 .panel {
   width: 400px;
@@ -44,19 +49,30 @@ body {
    width: 300px;
    height: 300px;
    position: absolute;
-
+   opacity: 1;
+   -webkit-transition: all 2s ease;
+   -moz-transition: all 2s ease;
   }
 
+  /*.circles:hover {
+    opacity: 0.1;
+  }*/
+
 .panel {
-  font-family: "andale mono";
+  /*font-family: "andale mono";*/
   font-size: 12px;
-  color: white;
+  color: black;
+  font-style: italic;
+  font-weight: bold;
   margin-left: 150px;
   margin-top: 250px;
+  background-image: url(yarrow.jpg);
 }
 
 .panel p {
   color: black;
+  font-style: normal;
+ /* font-weight: normal;*/
 }
 
 form {
@@ -67,7 +83,9 @@ form {
 
 label {
   display: none;
+
 }
+
 
 </style>
 <form>
@@ -86,12 +104,12 @@ label {
 Yi Jing Sequence
 
 </br>
-<p id="5">  0101010101010101010101010101010101010101010101010101010101010101 </p>
-<p id="4">  0011001100110011001100110011001100110011001100110011001100110011 </p>
-<p id="3">  0000111100001111000011110000111100001111000011110000111100001111 </p>
-<p id="2">  0000000011111111000000001111111100000000111111110000000011111111 </p>
-<p id="1">  0000000000000000111111111111111100000000000000001111111111111111 </p>
-<p id="0">  0000000000000000000000000000000011111111111111111111111111111111 </p>
+<p class="5">  0101010101010101010101010101010101010101010101010101010101010101 </p>
+<p class="4">  0011001100110011001100110011001100110011001100110011001100110011 </p>
+<p class="3">  0000111100001111000011110000111100001111000011110000111100001111 </p>
+<p class="2">  0000000011111111000000001111111100000000111111110000000011111111 </p>
+<p class="1">  0000000000000000111111111111111100000000000000001111111111111111 </p>
+<p class="0">  0000000000000000000000000000000011111111111111111111111111111111 </p>
 
 </div>
 <script src="datad.js"></script>
@@ -105,18 +123,18 @@ var fC2 = ["white"];
 var fC3 = ["black", "white"];
 
 
-dial( 140, [32,0], fC,  d5,  ".target", "05"  );
-dial( 120, [16,0], fC,  d4,  ".target", "04"  );
-dial( 100, [8, 0], fC,  d33, ".target", "03"  );
-dial( 80,  [3, 0], fC,  d2,  ".target", "02"  );
-dial( 60,  [1, 1], fC,  d1,  ".target", "01"  );
-dial( 40,  [0, 0], fC,  d0,  ".target", "00"  );
+dial( 140, [32,0], fC3,  d5,  ".target", "05"  );
+dial( 120, [16,0], fC3,  d4,  ".target", "04"  );
+dial( 100, [8, 0], fC3,  d33, ".target", "03"  );
+dial( 80,  [3, 0], fC3,  d2,  ".target", "02"  );
+dial( 60,  [1, 1], fC3,  d1,  ".target", "01"  );
+dial( 40,  [0, 0], fC3,  d0,  ".target", "00"  );
  
 //dial( 81,  [0, 0], fC3,  "data/d0.tsv", ".compass"  ); 
-dial( 80,  [3, 0], fC,  d2, ".compass"  );
-dial( 70,  [1, 1], fC,  d1, ".compass"  );
-dial( 60,  [0, 0], fC,  d0, ".compass"  );
-dial( 50,  [8, 0], fC2, d0, ".compass"  );
+dial( 80,  [3, 0], fC3,  d2, ".compass"  );
+dial( 70,  [1, 1], fC3,  d1, ".compass"  );
+dial( 60,  [0, 0], fC3,  d0, ".compass"  );
+dial( 50,  [8, 0], fC2,  d0, ".compass"  );
 
 function dial (oR, dR, fillColor, data, dC, classy) {
 
@@ -133,8 +151,9 @@ var vis = d3.select(dC)
             .attr("width", width)           
             .attr("height", height)
             .attr("class", "circles")
+             .attr("id", classy)
             .append("svg:g") 
-            .attr("class", classy)               
+            //.attr("class", classy)               
             .attr("transform", "translate(" + width  + "," + height + ")");
 
 var arc = d3.svg.arc()
@@ -211,6 +230,7 @@ function arcTween(a) {
 
 
 };
+
 
 
 
