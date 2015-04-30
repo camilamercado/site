@@ -7,12 +7,6 @@
    <link href="css/creep.css" rel="stylesheet" />
 
     <body>
-
-    <div class="type">They will be looking at stars in there, finding reason to continue peering, peeping toms for a glimpse of action.</div>    
-
-    <div class="type2">W<BR>e<BR>s<BR>t<BR>m<BR>a<BR>n<BR><BR>I<BR>s<BR>l<BR>a<BR>n<BR>d<BR>s<BR><BR>V<BR>e<BR>s<BR>t<BR>m<BR>a<BR>n<BR>n<BR>a<BR>e<BR>y<BR>j<BR>a<BR>r<BR><BR>I<BR>c<BR>e<BR>l<BR>a<BR>n<BR>d</div>
-    
-    <div class="type3">H<BR>ô<BR>t<BR>e<BR>l<BR><BR>L<BR>e<BR>s<BR><BR>E<BR>l<BR>m<BR>e<BR>s<BR><BR>F<BR>r<BR>a<BR>n<BR>c<BR>e</div>
     
     <div class="container"></div>
      
@@ -106,7 +100,7 @@
             d3.selectAll("div")                                 //Update all rects
              .style("background", function(d) {
           if (d > 30) {  
-              return "url(http://217.128.135.218/mjpg/video.mjpg)";
+              return "url(http://camera.nton.lviv.ua/mjpg/video.mjpg)";
           } else if (d > 20) {   
               return "url(http://82.148.72.2:60000/cgi-bin/faststream.jpg?stream=full&fps=0)";
           } else {
@@ -123,11 +117,16 @@
             .on("click", function() { 
             state = "leaf"; 
             console.log(state);
-            d3.selectAll("div")                                 //Update all rects
-            .style("background-image", function(d) {
-
-                  return "url(http://iris.not.iac.es/axis-cgi/mjpg/video.cgi)"
-            })
+             d3.selectAll("div")                                 //Update all rects
+            .style("background", function(d) {
+                if (d > 30) {  
+                    return "url(http://217.128.135.218/mjpg/video.mjpg)";
+                } else if (d > 20) {   
+                    return "url(http://82.148.72.2:60000/cgi-bin/faststream.jpg?stream=full&fps=0)";
+                } else {
+                    return "url(http://217.128.135.218/mjpg/video.mjpg)";
+                }
+               })
           
           });
 
