@@ -6,9 +6,11 @@ body {
 	width: 60%;
 	height: 600px;
 	background: white;
-	/*border: 1px solid grey;*/
+	/*padding-top: 20px;*/
 	margin-left: 20%;
 	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 @import url(http://fonts.googleapis.com/css?family=EB+Garamond);
@@ -17,7 +19,7 @@ body {
 	position: absolute;
 	width: 200px;
 	height: 100px;
-	top: 30px;
+	top: 0px;
 	left: 0px;
 	font-family: 'EB Garamond', serif;
 	/*font-weight: bold;*/
@@ -45,7 +47,7 @@ p {
 
 
 .list {
-	top: 90px;
+	top: 60px;
 	position: absolute;
 	/*height: 1000px;*/
 	width: 100%;
@@ -84,9 +86,7 @@ a:hover {
 	background: rgba(245, 245, 245, 0.45);
 	line-height: 21px;
 	background-size: 100% auto;
-	-webkit-transition: all 1s ease;
-	-moz-transition:    all 1s ease;
-	-opera-transition:  all 1s ease;
+	
 }
 
 .w {
@@ -94,12 +94,13 @@ a:hover {
 	/*height: 20px;*/
 	background: white;
 	line-height: 21px;
+	
 }
 
 .imgFeild {
 	width: 100%;
 	height: 300px;
-	top: 290px;
+	top: 250px;
 	position: absolute;
 	font-family: 'EB Garamond', serif;
   	font-size: 13px;
@@ -119,6 +120,7 @@ a:hover {
 	-opera-transition:  all 1.5s ease;
 }
 
+
 .textContent {
 	position: relative;
 	top: 0px;
@@ -131,7 +133,7 @@ a:hover {
 }
 
 .imgFeild .contact {
-  margin-top: 300px;
+  margin-top: 283px;
   color: lightgrey;
-  /*margin-left: 25%;*/
-  /*float: right;*/
+  width: 150px;
+}
