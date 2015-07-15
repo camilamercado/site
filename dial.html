@@ -37,6 +37,20 @@ body {
   /*background: grey;*/
 }
 
+.x, .y {
+  width: 300px;
+  height: 300px;
+}
+
+.target:hover{
+  background: tomato;
+}
+
+
+.compass:hover{
+  background: cornflowerblue;
+}
+
 .compass {
   position: absolute;
   width: 300px;
@@ -44,20 +58,6 @@ body {
   /*background: royalblue;*/
   top: 350px;
 }
-
-/*.text {
-  position: relative;
-}
-*/
-  .circles {
-   /*margin-left: 50%;
-   left: -180px;*/
-   width: 300px;
-   height: 300px;
-  /* padding: 100px;*/
-   position: absolute;
-      /*border: 1px solid chartreuse;*/
-  }
 
 .panel p {
   font-family: "andale mono";
@@ -91,8 +91,8 @@ label {
 
 
 <div class="orient">
-<div class= "target"></div>
-<div class= "compass"></div>
+<div class= "target"><svg class="x"></svg></div>
+<div class= "compass"><svg class="y"></svg></div>
 </div>
 
 <div class="panel">
@@ -115,25 +115,24 @@ data = [{"label":"one", "value":20},
             {"label":"two", "value":50}, 
             {"label":"three", "value":30}];
 
-var fC = ["lightgrey","white"];
+var fC  = ["lightgrey","white"];
 var fC2 = ["white"];
 var fC3 = ["red"];
 
-dial( 140, [32,0], fC,  "data/d5.tsv", ".target"  );
-dial( 120, [16,0], fC,  "data/d4.tsv", ".target"  );
-dial( 100, [8, 0], fC,  "data/d3.tsv", ".target"  );
-dial( 80,  [3, 0], fC,  "data/d2.tsv", ".target"  );
-dial( 60,  [1, 1], fC,  "data/d1.tsv", ".target"  );
-dial( 40,  [0, 0], fC,  "data/d0.tsv", ".target"  );
+dial( 140, [32,0], fC,  "data/d5.tsv", ".x", "f"  );
+dial( 120, [16,0], fC,  "data/d4.tsv", ".x", "e"  );
+dial( 100, [8, 0], fC,  "data/d3.tsv", ".x", "d"  );
+dial( 80,  [3, 0], fC,  "data/d2.tsv", ".x", "c"  );
+dial( 60,  [1, 1], fC,  "data/d1.tsv", ".x", "b"  );
+dial( 40,  [0, 0], fC,  "data/d0.tsv", ".x", "a"  );
  
 //dial( 81,  [0, 0], fC3,  "data/d0.tsv", ".compass"  ); 
-dial( 80,  [3, 0], fC,  "data/d2.tsv", ".compass"  );
-dial( 70,  [1, 1], fC,  "data/d1.tsv", ".compass"  );
-dial( 60,  [0, 0], fC,  "data/d0.tsv", ".compass"  );
-dial( 50,  [8, 0], fC2, "data/d0.tsv", ".compass"  );
+dial( 80,  [3, 0], fC,  "data/d2.tsv", ".y", "j"  );
+dial( 70,  [1, 1], fC,  "data/d1.tsv", ".y", "i"  );
+dial( 60,  [0, 0], fC,  "data/d0.tsv", ".y", "h"  );
+dial( 50,  [8, 0], fC2, "data/d0.tsv", ".y", "g"  );
 
-function dial (oR, dR, fillColor, dataChart, dC) {
-
+function dial (oR, dR, fillColor, dataChart, dC, id) {
 
 var width  = 150,
     height = 150,
@@ -145,16 +144,12 @@ var pie = d3.layout.pie()
     .value(function(d) { return d.apples; })
     .sort(null);
     
-
 var arc = d3.svg.arc()
     .innerRadius(0)
     .outerRadius(oR);
 
-var svg = d3.select(dC).append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .attr("class", "circles")
-    .append("g") 
+var svg = d3.select(dC).append("g")
+    .attr("id", id) 
     .attr("transform", "translate(" + width  + "," + height + ")");
 
  
@@ -164,17 +159,7 @@ d3.tsv(dataChart, type, function(error, data) {
     .enter().append("g:path")
     .attr("d", arc)
      .attr("fill", function(d, i) { return color(i); })
-    .each(function(d) { this._current = d; });
-
-    path.append("svg:text")   
-
-                .attr("transform", function(d) {                 
-                d.innerRadius = 0;
-                d.outerRadius = oR;
-                return "translate(" + arc.centroid(d) + ")";        
-            })
-            .attr("text-anchor", "middle")                         
-            .text(function(d, i) { return d.data.labels; }); 
+    .each(function(d) { this._current = d; }); 
 
   d3.selectAll("input")
       .on("change", change);
@@ -199,9 +184,6 @@ function type(d) {
   return d;
 }
 
-// Store the displayed angles in _current.
-// Then, interpolate from _current to the new angles.
-// During the transition, _current is updated in-place by d3.interpolate.
 function arcTween(a) {
   var i = d3.interpolate(this._current, a);
   this._current = i(0);
