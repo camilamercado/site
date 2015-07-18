@@ -27,7 +27,12 @@
 		data-in-standard-class="col10wide" 
 		>
 
+		<div class="header">
+			<div class="box"><p class="count">01</p></div>
+		</div>
+
 		<div class="container">
+
 
  			<div class="title">Camila Mercado 
  			<div class="cursor"></div>
@@ -81,6 +86,13 @@
 		$("#a").mouseover(function(){
 		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/bcrop2.png)";
 		  document.querySelector('.textContent').innerHTML="Ongoing project to develop a public repository of responses to I Ching readings generated from timestamps. Contains vague attempts at binary to I Ching conversion techniques. Opaque / Abstract, built with Firebase. ";
+		  
+		});
+
+		$("#a").mouseover(function(){
+			 document.querySelector('.box').style.border="1px solid cyan";
+		   document.querySelector('.count').style.color="cyan";
+
 		});
 
 		$("#b").mouseover(function(){

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<!-- <meta charset="utf-8"> -->
 <style>
 
 body {
@@ -42,14 +44,14 @@ body {
   height: 300px;
 }
 
-.target:hover{
+/*.target:hover{
   background: tomato;
 }
 
 
 .compass:hover{
   background: cornflowerblue;
-}
+}*/
 
 .compass {
   position: absolute;
@@ -59,7 +61,7 @@ body {
   top: 350px;
 }
 
-.panel p {
+.panel .numbers {
   font-family: "andale mono";
   font-size: 12px;
   color: white;
@@ -77,10 +79,13 @@ label {
   display: none;
 }
 
-.05 {
-  width: 1000px;
-  background: pink;
-}
+/*.panel p {
+  font-family: "andale mono";
+  font-size: 12px;
+  color: white;
+  margin-left: 0px;
+  margin-top: 0px;
+}*/
 
 </style>
 <form>
@@ -96,19 +101,31 @@ label {
 </div>
 
 <div class="panel">
- <p> 
+ <div class="numbers">
 Yi Jing Sequence
 </br>
-0101010101010101010101010101010101010101010101010101010101010101
+<p class="ff">0101010101010101010101010101010101010101010101010101010101010101
+</p>
+<p class="ee">
 0011001100110011001100110011001100110011001100110011001100110011
+</p>
+<p class="dd">
 0000111100001111000011110000111100001111000011110000111100001111
+</p>
+<p class="cc">
 0000000011111111000000001111111100000000111111110000000011111111
+</p>
+<p class="bb">
 0000000000000000111111111111111100000000000000001111111111111111
+</p>
+<p class="aa">
 0000000000000000000000000000000011111111111111111111111111111111
 </p>
 </div>
+</div>
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="intention/test/vendor/jquery.js"></script>
 <script>
 
 data = [{"label":"one", "value":20}, 
@@ -139,7 +156,17 @@ var width  = 150,
     radius = Math.min(width, height) / 2;
 
 var color = d3.scale.ordinal().domain(dR).range(fillColor);
+// .style("fill", function(d) {
+//     return d.color = color(d.name.replace(/ .*/, ""));
+// })
 
+var color = d3.scale.ordinal()
+    .domain(dR)
+    .range(fillColor);
+   // .attr("id", id);
+//.attr("fill", function(d) { return color(d.division); });
+
+//console.log(color);
 var pie = d3.layout.pie()
     .value(function(d) { return d.apples; })
     .sort(null);
@@ -156,10 +183,13 @@ var svg = d3.select(dC).append("g")
 d3.tsv(dataChart, type, function(error, data) {
   var path = svg.datum(data).selectAll("path")
       .data(pie)
-    .enter().append("g:path")
-    .attr("d", arc)
-     .attr("fill", function(d, i) { return color(i); })
-    .each(function(d) { this._current = d; }); 
+      .enter().append("g:path")
+      
+      .attr("d", arc)
+      .attr("fill", function(d, i) { return color(i); })
+      .each(function(d) { this._current = d; })
+      .attr("id", function(d, i) { return color(i); });  
+
 
   d3.selectAll("input")
       .on("change", change);
@@ -173,16 +203,18 @@ d3.tsv(dataChart, type, function(error, data) {
     clearTimeout(timeout);
     pie.value(function(d) { return d[value]; }); // change the value function
     path = path.data(pie); // compute the new angles
-    console.log(path);
+    //console.log(patxh);
     path.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
   }
 });
+
 
 function type(d) {
   d.apples = +d.apples;
   d.oranges = +d.oranges;
   return d;
 }
+
 
 function arcTween(a) {
   var i = d3.interpolate(this._current, a);
@@ -192,5 +224,94 @@ function arcTween(a) {
   };
 }
 };
+
+
+d3.select("#a")                                     
+  .on("mouseover", function(d) {  
+   d3.selectAll("#a #lightgrey") .attr("fill", "blue")
+   d3.select(".aa") .style("color", "blue")
+})
+
+d3.select("#b")                                     
+  .on("mouseover", function(d) {  
+   d3.selectAll("#b #lightgrey") .attr("fill", "blue")
+   d3.select(".bb") .style("color", "blue")
+})
+
+d3.select("#c")                                     
+  .on("mouseover", function(d) {  
+   d3.selectAll("#c #lightgrey") .attr("fill", "blue")
+   d3.select(".cc") .style("color", "blue")
+})
+
+d3.select("#d")                                     
+  .on("mouseover", function(d) {  
+   d3.selectAll("#d #lightgrey") .attr("fill", "blue")
+   d3.select(".dd") .style("color", "blue")
+})
+
+d3.select("#e")                                     
+  .on("mouseover", function(d) {  
+   d3.selectAll("#e #lightgrey") .attr("fill", "blue")
+   d3.select(".ee") .style("color", "blue")
+})
+
+d3.select("#f")                                     
+  .on("mouseover", function(d) {  
+   d3.selectAll("#f #lightgrey") .attr("fill", "blue")
+   d3.select(".ff") .style("color", "blue")
+})
+
+
+d3.select("#a, #b, #c, #d, #e, #f, #g")                                     
+  .on("mouseout", function(d) {  
+   d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
+   d3.select(".aa") .style("color", "lightgrey")
+}) 
+
+
+d3.select("#a")                                     
+  .on("mouseout", function(d) {  
+   d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
+   d3.select(".aa") .style("color", "white")
+})
+
+d3.select("#b")                                     
+  .on("mouseout", function(d) {  
+   d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
+   d3.select(".bb") .style("color", "white")
+})
+
+d3.select("#c")                                     
+  .on("mouseout", function(d) {  
+   d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
+   d3.select(".cc") .style("color", "white")
+})
+
+d3.select("#d")                                     
+  .on("mouseout", function(d) {  
+   d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
+   d3.select(".dd") .style("color", "white")
+})
+
+d3.select("#e")                                     
+  .on("mouseout", function(d) {  
+   d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
+   d3.select(".ee") .style("color", "white")
+})
+
+d3.select("#f")                                     
+  .on("mouseout", function(d) {  
+   d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
+   d3.select(".ff") .style("color", "white")
+})
+
+// d3.select("#g")                                     
+//   .on("mouseout", function(d) {  
+//    d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
+//    d3.select(".ff") .style("color", "lightgrey")
+// })
+
+
 
 </script>
