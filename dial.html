@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta content="utf-8" http-equiv="encoding">
-<!-- <meta charset="utf-8"> -->
+<link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 <style>
 
+
+@import url(http://fonts.googleapis.com/css?family=EB+Garamond);
+
+
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'EB Garamond', serif;
   margin: auto;
   position: relative;
    background: lightgrey;
@@ -14,10 +18,8 @@ body {
 .panel {
   width: 400px;
   height: 800px;
-  /*position: absolute;*/
   top: 80px;
   float: left;
- /* background: #eee;*/
   border-left: 1px solid white;
 
 }
@@ -28,7 +30,6 @@ body {
   float: left;
   margin-left: 5%;
   margin-right: 100px;
-  /*position: absolute;*/
   margin-top: 50px;
 }
 
@@ -36,7 +37,6 @@ body {
   position: absolute;
   width: 300px;
   height: 300px;
-  /*background: grey;*/
 }
 
 .x, .y {
@@ -44,26 +44,16 @@ body {
   height: 300px;
 }
 
-/*.target:hover{
-  background: tomato;
-}
-
-
-.compass:hover{
-  background: cornflowerblue;
-}*/
-
 .compass {
   position: absolute;
   width: 300px;
   height: 300px;
-  /*background: royalblue;*/
   top: 350px;
 }
 
 .panel .numbers {
-  font-family: "andale mono";
-  font-size: 12px;
+  font-family: 'andale mono', sans-serif;
+  font-size: 14px;
   color: white;
   margin-left: 150px;
   margin-top: 200px;
@@ -79,13 +69,11 @@ label {
   display: none;
 }
 
-/*.panel p {
-  font-family: "andale mono";
-  font-size: 12px;
-  color: white;
-  margin-left: 0px;
-  margin-top: 0px;
-}*/
+#pic {
+  background-image: url(col.jpg);
+  width: 100px;
+  height: 100px;
+}
 
 </style>
 <form>
@@ -228,90 +216,62 @@ function arcTween(a) {
 
 d3.select("#a")                                     
   .on("mouseover", function(d) {  
-   d3.selectAll("#a #lightgrey") .attr("fill", "blue")
-   d3.select(".aa") .style("color", "blue")
+   d3.selectAll("#a #lightgrey").attr("fill", "black")
+   //d3.selectAll("#a #white") .attr("fill", "#e7f4f9")
+   d3.select(".aa") .style("color", "black")
 })
 
 d3.select("#b")                                     
   .on("mouseover", function(d) {  
-   d3.selectAll("#b #lightgrey") .attr("fill", "blue")
-   d3.select(".bb") .style("color", "blue")
+   d3.selectAll("#b #lightgrey") .attr("fill", "black")
+   //d3.selectAll("#b #white") .attr("fill", "#e7f4f9")
+   d3.select(".bb") .style("color", "black")
 })
 
 d3.select("#c")                                     
   .on("mouseover", function(d) {  
-   d3.selectAll("#c #lightgrey") .attr("fill", "blue")
-   d3.select(".cc") .style("color", "blue")
+   d3.selectAll("#c #lightgrey") .attr("fill", "black")
+   //d3.selectAll("#c #white") .attr("fill", "#e7f4f9")
+   d3.select(".cc") .style("color", "black")
 })
 
 d3.select("#d")                                     
   .on("mouseover", function(d) {  
-   d3.selectAll("#d #lightgrey") .attr("fill", "blue")
-   d3.select(".dd") .style("color", "blue")
+   d3.selectAll("#d #lightgrey") .attr("fill", "black")
+   //d3.selectAll("#d #white") .attr("fill", "#e7f4f9")
+   d3.select(".dd") .style("color", "black")
 })
 
 d3.select("#e")                                     
   .on("mouseover", function(d) {  
-   d3.selectAll("#e #lightgrey") .attr("fill", "blue")
-   d3.select(".ee") .style("color", "blue")
+   d3.selectAll("#e #lightgrey") .attr("fill", "black")
+   //d3.selectAll("#e #white") .attr("fill", "#e7f4f9")
+   d3.select(".ee") .style("color", "black")
 })
 
 d3.select("#f")                                     
   .on("mouseover", function(d) {  
-   d3.selectAll("#f #lightgrey") .attr("fill", "blue")
-   d3.select(".ff") .style("color", "blue")
+   d3.selectAll("#f #lightgrey") .attr("fill", "black")
+   //d3.selectAll("#f #white") .attr("fill", "#e7f4f9")
+   d3.select(".ff") .style("color", "black")
 })
 
 
-d3.select("#a, #b, #c, #d, #e, #f, #g")                                     
+d3.selectAll("g")                                     
   .on("mouseout", function(d) {  
    d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
-   d3.select(".aa") .style("color", "lightgrey")
+   d3.selectAll("#white") .attr("fill", "white")
+   d3.selectAll("p") .style("color", "white")
 }) 
 
-
-d3.select("#a")                                     
-  .on("mouseout", function(d) {  
-   d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
-   d3.select(".aa") .style("color", "white")
+d3.select(".y")                                     
+  .on("mouseover", function(d) {  
+   d3.selectAll("#lightgrey") .attr("fill", "black")
 })
 
-d3.select("#b")                                     
+d3.select(".y")                                     
   .on("mouseout", function(d) {  
    d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
-   d3.select(".bb") .style("color", "white")
 })
-
-d3.select("#c")                                     
-  .on("mouseout", function(d) {  
-   d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
-   d3.select(".cc") .style("color", "white")
-})
-
-d3.select("#d")                                     
-  .on("mouseout", function(d) {  
-   d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
-   d3.select(".dd") .style("color", "white")
-})
-
-d3.select("#e")                                     
-  .on("mouseout", function(d) {  
-   d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
-   d3.select(".ee") .style("color", "white")
-})
-
-d3.select("#f")                                     
-  .on("mouseout", function(d) {  
-   d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
-   d3.select(".ff") .style("color", "white")
-})
-
-// d3.select("#g")                                     
-//   .on("mouseout", function(d) {  
-//    d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
-//    d3.select(".ff") .style("color", "lightgrey")
-// })
-
-
 
 </script>
