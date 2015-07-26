@@ -5,17 +5,22 @@ body {
 }
 
 .container {
-	min-width: 250px;
+	min-width: 300px;
 	width: 58%;
 	height: 600px;
 	background: white;
 	/*padding-top: 20px;*/
-	margin-left: 21%;
+	/*margin-left: 21%;*/
+
 	position: absolute;
-	top: 50%;
+	margin-top: 50px;
+	left: 50%;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
 	
 }
 
