@@ -55,7 +55,7 @@ p {
 	margin: 0px;
 	color: lightgrey;
 	font-style: italic;
-	font-size: 11px;
+	font-size: 11.5px;
 	float: right;
 	margin-top: 10px;
 }
@@ -69,7 +69,7 @@ p {
 	background: white;
 	color: black;
 	font-family: 'EB Garamond', serif;
-	font-size: 11px;
+	font-size: 11.5px;
 }
 
 ul {
@@ -119,7 +119,7 @@ a:hover {
 	top: 270px;
 	position: absolute;
 	font-family: 'EB Garamond', serif;
-  	font-size: 11px;
+  	font-size: 11.5px;
 }
 
 .imgContent {
