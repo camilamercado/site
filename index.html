@@ -36,17 +36,17 @@
 
  			<div class="title">Camila Mercado 
  			<div class="cursor"></div>
- 			<p> Works in Code</p></div>
+ 			<p class="works"> Works in Code</p></div>
 			
 
 			<div class="list">
 				<ul>
 					
-					<li id="b"class="gg">
+					<li id="a"class="gg">
 					<a href="http://camilamercado.github.io/dds/orbit.html" target="_blank">Daphne & Telstar</a>
 					<p>/*In Progress*/</p></li>
 
-					<li id="a"class="w"><a href="http://camilamercado.github.io/biching/" target="_blank">B1/Ching</a>
+					<li id="b"class="w"><a href="http://camilamercado.github.io/biching/" target="_blank">B1/Ching</a>
 					<p>/*In Progress*/</p>
 					</li>
 
@@ -82,23 +82,23 @@
 
 		<script type="text/javascript">
 		
-
 		$("#a").mouseover(function(){
-		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/bcrop2.png)";
-		  document.querySelector('.textContent').innerHTML="Ongoing project to develop a public repository of responses to I Ching readings generated from timestamps. Contains vague attempts at binary to I Ching conversion techniques. Opaque / Abstract, built with Firebase. ";
-		  
-		});
-
-		$("#a").mouseover(function(){
-			 document.querySelector('.box').style.border="1px solid cyan";
-		   document.querySelector('.count').style.color="cyan";
-
-		});
-
-		$("#b").mouseover(function(){
 		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/orbb.png)";
 		  document.querySelector('.textContent').innerHTML="Across The Flattened Fold. Daphne and Apollo as told through the retroactive meddling of the first commercially broadcasting satellite - Telstar.";
 		});
+
+
+		$("#b").mouseover(function(){
+		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/bcrop2.png)";
+		  document.querySelector('.textContent').innerHTML="Ongoing project to develop a public repository of responses to I Ching readings generated from timestamps. Contains vague attempts at binary to I Ching conversion techniques. Opaque / Abstract, built with Firebase. ";
+
+		});
+
+		// $("#a").mouseover(function(){
+		// 	 document.querySelector('.box').style.border="1px solid cyan";
+		//    document.querySelector('.count').style.color="cyan";
+
+		// });
 
 		$("#c").mouseover(function(){
 		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/capoet2.png)";
@@ -108,19 +108,19 @@
 		$("#d").mouseover(function(){
 		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/julia.png)";
 		  document.querySelector('.textContent').innerHTML="Baby's got eyes all over.";
-
+		 
 		});
 
 		$("#e").mouseover(function(){
 		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/creeper.png)";
 		  document.querySelector('.textContent').innerHTML="Playing with live feeds.";
-
+		  
 		});
 
 		$("#f").mouseover(function(){
 		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/gio.png)";
 		  document.querySelector('.textContent').innerHTML="Experimenting with overlaps of film and code.";
-
+		  
 		});
 
 		$("#g").mouseover(function(){
@@ -135,7 +135,15 @@
 
 		});
 
+		$(".gg").mouseover(function(){
+		  document.querySelector('.cursor').style.backgroundImage="url(3E.jpg)";
+		 // document.querySelector('.cursor').style.border="1px solid #8bba5e";
+		});
 
+		$(".w").mouseover(function(){
+		  document.querySelector('.cursor').style.backgroundImage="url(mask.jpg)";
+		 // document.querySelector('.cursor').style.border="1px solid white";
+		});
 
 
 		</script>
