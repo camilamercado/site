@@ -47,8 +47,8 @@ body {
 
 .target {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }
 
 .x, .y {
@@ -58,17 +58,34 @@ body {
 
 .compass {
   position: absolute;
+  width: 250px;
+  height: 250px;
+  top: 300px;
+}
+
+.stone {
+  position: absolute;
   width: 300px;
   height: 300px;
-  top: 350px;
+  top: 300px;
+  background-image: url(tablet.jpg);
+  background-size: 290px 290px;
+  background-repeat: no-repeat;
+ /* border-radius: 50%;*/
+/* padding: 10px 10px 5px 5px;*/
+background-position: 10px 10px;
+ padding-top: 10px;
+  padding-left: 10px;
+ border: 1px solid white;
+
 }
 
 .panel .numbers {
   font-family: 'andale mono', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   color: white;
-  margin-left: 150px;
-  margin-top: 200px;
+  margin-left: 100px;
+  margin-top: 100px;
 }
 
 form {
@@ -115,8 +132,11 @@ label {
 </div>
 
 <div class="panel">
+
 <div class="border"></div>
+
  <div class="numbers">
+ <div class= "stone"><svg class="z"></svg></div>
 Yi Jing Sequence
 </br>
 <p class="ff">0101010101010101010101010101010101010101010101010101010101010101
@@ -152,23 +172,23 @@ var fC  = ["lightgrey","white"];
 var fC2 = ["white"];
 var fC3 = ["red"];
 
-dial( 140, [32,0], fC,  "data/d5.tsv", ".x", "f", 64  );
-dial( 120, [16,0], fC,  "data/d4.tsv", ".x", "e", 32  );
-dial( 100, [8, 0], fC,  "data/d3.tsv", ".x", "d", 16  );
-dial( 80,  [3, 0], fC,  "data/d2.tsv", ".x", "c", 8  );
-dial( 60,  [1, 1], fC,  "data/d1.tsv", ".x", "b", 4  );
-dial( 40,  [0, 0], fC,  "data/d0.tsv", ".x", "a", 2  );
+dial( 120, [32,0], fC,  "data/d5.tsv", ".x", "f", 64  );
+dial( 100, [16,0], fC,  "data/d4.tsv", ".x", "e", 32  );
+dial( 80, [8, 0], fC,  "data/d3.tsv", ".x", "d", 16  );
+dial( 60,  [3, 0], fC,  "data/d2.tsv", ".x", "c", 8  );
+dial( 40,  [1, 1], fC,  "data/d1.tsv", ".x", "b", 4  );
+dial( 20,  [0, 0], fC,  "data/d0.tsv", ".x", "a", 2  );
  
 //dial( 81,  [0, 0], fC3,  "data/d0.tsv", ".comp, 0ass"  ); 
-dial( 80,  [3, 0], fC,  "data/d2.tsv", ".y", "j", 0  );
-dial( 70,  [1, 1], fC,  "data/d1.tsv", ".y", "i", 0  );
-dial( 60,  [0, 0], fC,  "data/d0.tsv", ".y", "h", 0  );
-dial( 50,  [8, 0], fC2, "data/d0.tsv", ".y", "g", 0  );
+dial( 60,  [3, 0], fC,  "data/d2.tsv", ".y", "j", 0  );
+dial( 50,  [1, 1], fC,  "data/d1.tsv", ".y", "i", 0  );
+dial( 40,  [0, 0], fC,  "data/d0.tsv", ".y", "h", 0  );
+dial( 30,  [8, 0], fC2, "data/d0.tsv", ".y", "g", 0  );
 
 function dial (oR, dR, fillColor, dataChart, dC, id, C) {
 
-var width  = 150,
-    height = 150,
+var width  = 125,
+    height = 125,
     radius = Math.min(width, height) / 2;
 
 var color = d3.scale.ordinal().domain(dR).range(fillColor);
