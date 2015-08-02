@@ -8,7 +8,8 @@
         -webkit-transition: all .3s ease;
         -moz-transition: all .3s ease;
         border: none;
-        background: url("http://tuincam.bt.tudelft.nl/mjpg/video.mjpg");
+        background:url("http://iris.not.iac.es/axis-cgi/mjpg/video.cgi");
+
 
       }
 
@@ -20,28 +21,37 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        background: url("http://tuincam.bt.tudelft.nl/mjpg/video.mjpg");
+       background:url("http://iris.not.iac.es/axis-cgi/mjpg/video.cgi");
         /*background-position: 0px -300px;*/
         background-size: 100% auto;
-        color: lightgoldenrodyellow;
-        font-family: "courier new";
-        text-transform: lowercase;
+        color: white;
+        font-family: "Helvetica Narrow, sans-serif";
+       /* text-transform: lowercase;*/
         font-size: 12px;
+
       }
 
       .type {
+         z-index: 10;
+        width: 100%;
+        height:20px;
+        background: black;
         position: absolute;
-        z-index: 2;
-        left: 15px;
+        top: -10px;
+        left: -10px;
+        line-height: 20px;
+        padding-left: 10px;
       }
 
       .type2 {
+        display: none;
         position: absolute;
         z-index: 2;
         left: 35px;
       }
 
       .type3 {
+        display: none;
         position: absolute;
         z-index: 2;
         left: 55px;

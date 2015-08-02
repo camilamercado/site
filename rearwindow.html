@@ -6,7 +6,6 @@
 
     <style type="text/css">
     
-
       body {
         width: 100%;
         height: 100%;
@@ -15,11 +14,10 @@
        /* color: lightgoldenrodyellow;*/
        color: red;
         font-family: "courier new";
-        font-size: 10px;
+        font-size: 12px;
         text-transform: lowercase;
         background:black;
       }
-
       .bar {
         display: inline-block;
         width: 25px;
@@ -30,9 +28,7 @@
         background-size: 507px 700px !important;
         -webkit-transition: all .2s ease;
         -moz-transition: all .2s ease;
-
       }
-
       .bar:hover {
        
        z-index: 3;
@@ -40,9 +36,7 @@
         width: 300px;
         -webkit-transition: all .2s ease;
         -moz-transition: all .2s ease;
-
       }
-
       .window {
         width: 45%;
         left: 20%;
@@ -52,21 +46,19 @@
         z-index: 5;
         top: 0px;
       }
-
       .julia {
         /*display: none;*/
         height: auto;
-        width: 100%;
+        width: 110%;
         position: absolute;
         z-index: 3;
         top: 0px;
-        left: 0px;
+        left: 80px;
         min-height: 900px;
-        background: url(css/creep/juliaL.png);
-        background-size: 100% auto;
+        background: url(css/creep/juliaLong.png);
+        background-size: 80% auto;
         background-repeat: no-repeat;
       }
-
       .hk {
         height: auto;
         width: 100%;
@@ -81,7 +73,25 @@
         background-repeat: no-repeat;
       }
 
-      /*.hk_sky {
+      .block {
+        width: 22%;
+        height: 100%;
+        background: #0D0D0D;
+        right: 0px;
+        position: absolute;
+        top: 0px;
+        z-index: 5;
+      }
+      .block2 {
+        width: 140px;
+        height: 100%;
+        background: black;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        z-index: 5;
+      }
+    /*  .hk_sky {
         height: auto;
         width: 100%;
         position: absolute;
@@ -94,7 +104,6 @@
         background-position: -132px -220px;
         background-repeat: no-repeat;
       }*/
-
       .textbar{
         position: absolute;
         top: 50px;
@@ -104,27 +113,23 @@
         color: white;
         background: black;
         z-index: 5;
-
       }
-
       .type {
-        position: fixed;
+        position: relative;
         z-index: 4;
-        left: 15px;
-        top: 10px;
+        left: -60px;
+        top: 235px;
       }
-
       .type2 {
-        position: fixed;
+        position: relative;
         z-index: 2;
-        left: 35px;
-        top: 10px;
+        left: -35px;
+        top: -60px;
       }
-
       .type3 {
         position: fixed;
         z-index: 2;
-        left: 55px;
+        left: 25px;
         top: 10px;
       }
     
@@ -140,8 +145,70 @@
         /*opacity: 0.3;*/
       }
 
-      
+      .container2 {
+        position: relative;
+        top: 895px;
+        width: 100%;
+        height: 980px;
+        background: black;
+        padding-top: 25px;
+        /*background-color: lightgoldenrodyellow;*/
+        /*opacity: 0.3;*/
+      }
 
+      .box {
+        width: 30%;
+        height: 300px;
+        border: 0.5px solid lavender;
+        margin-left: 25px;
+        float: left;
+        margin-bottom: 25px;
+
+
+      }
+
+      #a, #b, #c, #d, #e, #f, #g, #h, #i{
+        background-size: auto 300px !important;
+      }
+
+      #a {
+        background: url(http://iris.not.iac.es/axis-cgi/mjpg/video.cgi);
+      }
+
+      #b {
+        background: url(http://camera.nton.lviv.ua/mjpg/video.mjpg);
+      }
+
+      #c {
+        background: url(http://webcam.vanderbiltbeachresort-reservations.com:4445/mjpg/video.mjpg);
+      }
+
+      #d {
+        background: url(http://82.77.65.43:8207/cgi-bin/faststream.jpg);
+      }
+
+      #e {
+        background: url(http://82.148.72.2:60000/cgi-bin/faststream.jpg?stream=full&fps=0);
+      }
+
+      #f {
+        background: url(http://webcam.csatolna.hu/mjpg/video.mjpg);
+      }
+
+      #g {
+        background: url(http://tuincam.bt.tudelft.nl/mjpg/video.mjpg);
+      }
+
+      #h {
+        background: url(http://piercam.cofairhope.com/mjpg/video.mjpg);
+      }
+
+      #i {
+        background: url(http://sun.hm.ukrtel.net/axis-cgi/mjpg/video.cgi);
+      }
+
+
+      
     </style>
 
     <body>
@@ -150,20 +217,36 @@
         <div class="hk"></div>
        
         <div class="julia"></div>
+        <div class="block"></div>
+        <div class="block2"></div>
         
         <div class="window">
 
-          <div class="type">T<BR>U<BR><BR>D<BR>e<BR>l<BR>f<BR>t<BR><BR>B<BR>o<BR>t<BR>a<BR>n<BR>i<BR>c<BR>a<BR>l<BR>G<BR>a<BR>r<BR>d<BR>e<BR>n<BR>N<BR>e<BR>t<BR>h<BR>e<BR>r<BR>l<BR>a<BR>n<BR>d<BR>s</BR></div> 
-          <div class="type2">W<BR>e<BR>s<BR>t<BR>m<BR>a<BR>n<BR><BR>I<BR>s<BR>l<BR>a<BR>n<BR>d<BR>s<BR><BR>V<BR>e<BR>s<BR>t<BR>m<BR>a<BR>n<BR>n<BR>a<BR>e<BR>y<BR>j<BR>a<BR>r<BR><BR>I<BR>c<BR>e<BR>l<BR>a<BR>n<BR>d</div>     
-          <div class="type3">H<BR>ô<BR>t<BR>e<BR>l<BR><BR>L<BR>e<BR>s<BR><BR>E<BR>l<BR>m<BR>e<BR>s<BR><BR>F<BR>r<BR>a<BR>n<BR>c<BR>e</div>
+        <div class="type">F<BR>i<BR>c<BR>t<BR>i<BR>o<BR>n<BR><BR> B<BR>a<BR>c<BR>k<BR>d<BR>r<BR>o<BR>p<BR><BR> N<BR>.<BR><BR>1</div>
+          <div class="type2">"<br>B<BR>a<BR>b<BR>y<BR>'<BR>s<BR><BR> g<BR>o<BR>t<BR><BR> e<BR>y<BR>e<BR>s<BR><BR>"</div>
+         <!--  <div class="type2">W<BR>e<BR>s<BR>t<BR>m<BR>a<BR>n<BR><BR>I<BR>s<BR>l<BR>a<BR>n<BR>d<BR>s<BR><BR>V<BR>e<BR>s<BR>t<BR>m<BR>a<BR>n<BR>n<BR>a<BR>e<BR>y<BR>j<BR>a<BR>r<BR><BR>I<BR>c<BR>e<BR>l<BR>a<BR>n<BR>d</div>     
+          <div class="type3">H<BR>ô<BR>t<BR>e<BR>l<BR><BR>L<BR>e<BR>s<BR><BR>E<BR>l<BR>m<BR>e<BR>s<BR><BR>F<BR>r<BR>a<BR>n<BR>c<BR>e</div> -->
        
         </div>
 
          <div class="container"></div>
 
+         <!-- <div class="container2">
+           
+           <div class="box" id="a"></div>
+           <div class="box" id="b"></div>
+           <div class="box" id="c"></div>
+           <div class="box" id="d"></div>
+           <div class="box" id="e"></div>
+           <div class="box" id="f"></div>
+           <div class="box" id="g"></div>
+           <div class="box" id="h"></div>
+           <div class="box" id="i"></div>
+
+         </div> -->
+
 
     <script type="text/javascript">
-
       var dataset = [];                               //Initialize empty array
       for (var i = 0; i < 20; i++) {                  //Loop 25 times
         var newNumber = Math.random() * 45;           //New random number (0-30)
@@ -191,7 +274,6 @@
               return "url(http://cam6284208.miemasu.net/nphMotionJpeg?Resolution=640x480&Quality=Clarity)";
           }
          });
-
             
          d3.select(".window")                                     //On mouseover, update with new data  
             .on("mouseover", function() {                         //New values for dataset
@@ -201,8 +283,6 @@
               var newNumber = Math.floor(Math.random() * 55);     //New random integer (0-25)
               dataset.push(newNumber);                            //Add new number to array
             } 
-
-
     
             d3.selectAll(".bar")                                   //Update all rects
               .data(dataset)    
@@ -215,10 +295,8 @@
                  var barHeight = d * 18;
                  return 100 + "%";
               })
-
             
         });
-
         d3.select(".window")                                        
           .on("mouseout", function() {                         
             
@@ -245,28 +323,24 @@
                       return rand;
                   }
                });
-
             
         });
-
   var windows = [
-
-      "url(http://tuincam.bt.tudelft.nl/mjpg/video.mjpg)",
       "url(http://195.55.112.200:8083/mjpg/video.mjpg)",
       "url(http://camera.nton.lviv.ua/mjpg/video.mjpg)",
-      "url(http://videovalvonta.fi/cgi-bin/faststream.jpg)",
       "url(http://webcam.vanderbiltbeachresort-reservations.com:4445/mjpg/video.mjpg)",
-      "url(http://tancredi.axiscam.net/mjpg/video.mjpg)",
       "url(http://82.77.65.43:8207/cgi-bin/faststream.jpg)",
-      "url(http://piercam.cofairhope.com/mjpg/video.mjpg)"
-
-
+      "url(http://piercam.cofairhope.com/mjpg/video.mjpg)",
+      "url(http://webcam.csatolna.hu/mjpg/video.mjpg)",
+      "url(http://sun.hm.ukrtel.net/axis-cgi/mjpg/video.cgi)",
+      "url(http://sciencecentercam.fas.harvard.edu/axis-cgi/mjpg/video.cgi)",
+      "url(http://iris.not.iac.es/axis-cgi/mjpg/video.cgi)",
+      "url(http://tuincam.bt.tudelft.nl/mjpg/video.mjpg)",
+      "url(http://82.148.72.2:60000/cgi-bin/faststream.jpg?stream=full&fps=0)"
+      // "url()",
       ];
-
   var rand = windows[Math.floor(Math.random() * windows.length)]; 
   console.log(rand);
-
-
         </script>
 
       </body>

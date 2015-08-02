@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+  
+  <style type="text/css">
+
+  .circles {
+    width: 100%;
+    height: 500;
+    background: black;
+    padding: 100px;
+  }
+
+  .fill {
+    position: absolute;
+    z-index: 1;
+  }
+
+  input {
+    /*position: absolute;
+    top: 20px;
+    left: 20px;*/
+  }
+
+  .button {
+    width: 20px;
+    height: 20px;
+    background: tomato;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+
+
+
+  </style>
+
+</head>
+<body>
+
+<input class="xvA" value=".1"/>
+<input class="xvB" value="2"/>
+<input class="xvC" value=".8"/>
+<input class="xvD" value=".9"/>
+<input class="xvE" value=".5"/>
+<input class="xvF" value=""/>
+
+<!-- <div class="button" onclick="dial();"></div> -->
+
+
+
+</body>
+
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<script>
+
+var xvA = document.querySelector(".xvA").value;
+var xvB = document.querySelector(".xvB").value;
+var xvC = document.querySelector(".xvC").value;
+var xvD = document.querySelector(".xvD").value;
+var xvE = document.querySelector(".xvE").value;
+var xvF = document.querySelector(".xvF").value;
+
+var width = 960,
+    height = 500,
+    τ = 2 * Math.PI; // http://tauday.com/tau-manifesto
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("class", "circles")
+    .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+
+ var counter = setInterval( function () {dial(0, 300, 0, xvA, "red");        }, 1000); 
+ var counter = setInterval( function () {dial(0, 250, 0, xvB, "ghostwhite"); }, 1000);
+ var counter = setInterval( function () {dial(0, 200, 0, xvC, "lightgrey");  }, 1000);
+ var counter = setInterval( function () {dial(0, 150, 0, xvD, "darkgrey");   }, 1000);
+ var counter = setInterval( function () {dial(0, 100, 0, xvE, "grey");       }, 1000);
+ var counter = setInterval( function () {dial(0, 50,  0, xvF, "black");      }, 1000);
+
+
+
+// dial(0, 300, 0, xvA, "red");         
+// dial(0, 250, 0, xvB, "ghostwhite"); 
+// dial(0, 200, 0, xvC, "lightgrey");  
+// dial(0, 150, 0, xvD, "darkgrey");   
+// dial(0, 100, 0, xvE, "grey");       
+// dial(0, 50,  0, xvF, "black");      
+
+ function dial (iR, oR, sA, eA, fC){
+
+  xvA = document.querySelector(".xvA").value;
+  xvB = document.querySelector(".xvB").value;
+  xvC = document.querySelector(".xvC").value;
+  xvD = document.querySelector(".xvD").value;
+  xvE = document.querySelector(".xvE").value;
+  xvF = document.querySelector(".xvF").value;
+
+  var arc = d3.svg.arc()
+            .innerRadius(iR)
+            .outerRadius(oR)
+            .startAngle(sA);
+
+  var background = svg.append("path")
+                    .datum({endAngle: τ})
+                    .style("fill", "white")
+                    .attr("class", "background")
+                    .attr("d", arc);
+
+  var foreground = svg.append("path")
+                    .datum({endAngle: eA * τ})
+                    .style("fill", fC)
+                    .attr("class", "foreground")
+                    .attr("d", arc);
+
+  setInterval(function() {
+  foreground.transition()
+      .duration(750)
+      .call(arcTween, Math.random() * τ);
+}, 1000);
+
+
+ };
+
+
+
+</script>

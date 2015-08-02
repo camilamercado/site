@@ -15,7 +15,7 @@
         background-color: teal;
         margin-right: 2px;
 
-        background-position: 0px 0px;
+        background-position: 200px 0px;
         -webkit-transition: all .2s ease;
         -moz-transition: all .2s ease;
          background: url(col1.jpg);
@@ -31,28 +31,31 @@
 
       body {
         background: url(cat.jpg);
-       /* background-position: 0px -300px;*/
+        background-position: -100px 0px;
         color: black;
         font-family: "courier new";
         text-transform: lowercase;
+        background-size: 100% auto;
       }
 
       .type {
         position: absolute;
         z-index: 2;
-        left: 960px;
+        right: 90px;
       }
 
        .obj{
-        width: 960px;
-        height: 800px;
+        width: 85%;
+        height: 100%;
        /* -webkit-transform: rotate(45deg);*/
         /*border: 1px solid steelblue;*/
         position: absolute;
         top: 0px;
-        left: 10px;
+        left: 90px;
         background: url(cat.jpg);
-       /* background-position: 600px -200px;*/
+        background-size: 115% auto;
+        background-position: -150px 0px;
+
         opacity: 0.6;
 
       }
@@ -60,13 +63,43 @@
       .gio {
         position: absolute;
         top: 0px;
-        left: 0px;
-        width: 960px;
-        height: 624px;
+        left: 50px;
+        width: 85%;
+        height: 100%;
         background: url(steam.jpg);
         background-size: 100%; 
         position: absolute;
         opacity: 0.8;
+      }
+
+       #chap {
+        display: none;
+         position: absolute;
+        top: 0px;
+        left: 50px;
+        width: 85%;
+        height: 100%;
+        background: url(stadium.jpg);
+        background-size: 100%; 
+        position: absolute;
+        opacity: 0.8;
+        -webkit-transition: display 3.5s ease;
+      }
+
+      .chap {
+        position: absolute;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+         background-size: 100%; 
+        opacity: 0.4;
+        background: url(stadium.jpg)!important;
+      }
+
+      .chap:hover {
+       top: 50px;
+       opacity: 0;
+        -webkit-transition: all 2s ease;
       }
 
       /*.gio:hover{
@@ -78,20 +111,23 @@
 
       .obj:hover {
         opacity: 0;
-        left: 0px;
+        left:30px;
        /* -webkit-transform: rotate(45deg);*/
         -webkit-transition: all 3.5s ease;
         -moz-transition: all 1.5s ease;
          background: url(puro.jpg);
+          background-size: 115% auto;
+        background-position: -150px 0px;
         
       }
 
       .color {
-        width: 100%;
+        width: 90px;
         height: 960px;
         background: url(swatch.jpg);
         position: absolute;
-        left: 960px;
+        right: 0px;
+        top: 0px;
         display: none;
         opacity: 0;
         -webkit-transition: all 3.5s ease;
@@ -108,6 +144,10 @@
         -webkit-transition: all 3.5s ease;
       }
 
+      .display {
+        display: block!important;
+      }
+
       .hide {
         opacity: 0;
         -webkit-transition: all 6.5s ease;
@@ -120,6 +160,7 @@
 
     <div class="type">l<br>o<br>o<br>k<br>i<br>n<br>g<br><br>d<br>i<br>r<br>e<br>c<br>t<br>l<br>y<br><br>a<br>t<br><br>t<br>h<br>e<br><br>s<br>u<br>n</div>
     <div id="action" class="obj" onclick="sun();"></div>
+    <div id="chap"><div class="chap"></div></div>
     <div class="color" onmouseover="swatch();"></div>
     
 
@@ -129,16 +170,8 @@
 
           function sun () {
             
-            // var state = "gio";
-            // console.log(state);
-           
-            //$("body").empty();
             $("#action").addClass("gio");
             $("#action").removeClass("obj");
-
-            // var $col = $( "<div class='col'/>" );
-            // $( "#action" ).append($col);
-         
 
           }
 
@@ -213,9 +246,14 @@
 
           }
 
-          
+          $(".color").click(function(){
+            $("#chap").show();
+            $("#action").removeClass("gio");
+            $("#action").addClass("hide");
+           
 
-        
+          });
+
          
                     
 
