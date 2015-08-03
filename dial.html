@@ -17,13 +17,68 @@ body {
   background:lightgrey;
 }
 
+.title {
+  position: absolute;
+  width: 650px;
+  font-size: 60px;
+  color: white;
+  font-family: "andale mono";
+  top: 55px;
+  left: 5%;
+}
+
+.title .text {
+  position: absolute;
+ /* top: -30px;*/
+  width: auto;
+  z-index: -1;
+}
+
+.blockout p {
+  width: 34px;
+  height: 55px;
+  background: tomato;
+  position: relative;
+  float: left;
+  margin-top: 12px;
+  margin-right: 3px;
+  /*border: 1px solid tomato;*/
+}
+
+.blockout {
+  width: auto;
+  height: 75px;
+  position: absolute;
+  display: block;
+  opacity: 1;
+  -webkit-transition: all 1s ease;
+  -moz-transition:    all 1s ease;
+  -opera-transition:  all 1s ease;
+}
+
+.blockout:hover {
+  opacity: 0;
+}
+
+.blockout .yi,
+.blockout .jing,
+.blockout .sequence {
+  width: auto;
+  height: 45px;
+  float: left;
+  margin-right: 31px;
+  z-index: 2;
+}
+
+
 .panel {
   width: 400px;
   height: 800px;
   top: 80px;
   float: left;
-  border-left: 1px solid white;
-  background: lightgrey;
+ /* border-left: 1px solid white;*/
+  /*background: lightgrey;*/
+  z-index: -2;
 
 }
 
@@ -37,12 +92,16 @@ body {
 }
 
 .orient {
-  height: 600px;
-  width: 300px;
+  border: 1px solid white;
+  height: 450px;
+  width: 280px;
   float: left;
   margin-left: 5%;
   margin-right: 100px;
-  margin-top: 50px;
+  margin-top: 200px;
+  padding: 110px;
+  position: absolute;
+  left: 35px;
 }
 
 .target {
@@ -60,7 +119,7 @@ body {
   position: absolute;
   width: 250px;
   height: 250px;
-  top: 300px;
+  top: 400px;
 }
 
 .stone {
@@ -80,12 +139,26 @@ background-position: 10px 10px;
 
 }
 
+.panel .hex {
+  position: absolute;
+  margin-left: 8%;
+  left: 600px;
+  margin-top: 195px;
+  width: 30px;
+}
+
+.panel .hex img {
+margin-top: 10px;
+}
+
 .panel .numbers {
   font-family: 'andale mono', sans-serif;
   font-size: 12px;
   color: white;
-  margin-left: 100px;
-  margin-top: 100px;
+  margin-left: 8%;
+  left: 600px;
+  margin-top: 330px;
+  position: absolute;
 }
 
 form {
@@ -124,7 +197,16 @@ label {
   <label><input type="radio" name="dataset" value="oranges"> Oranges</label>
 </form>
 
+<div class="title">
+<div class="blockout">
+<div class="yi"><p></p><p></p></div>
+<div class="jing"><p></p><p></p><p></p><p></p></div>
+<div class="sequence"><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></div>
+</div>
 
+<div class="text">Yi Jing Sequence</div>
+
+</div>
 
 <div class="orient">
 <div class= "target"><svg class="x"></svg></div>
@@ -133,11 +215,15 @@ label {
 
 <div class="panel">
 
-<div class="border"></div>
+<div class="hex">
+<img src="dial/000.png">
+<img src="dial/010.png">
+<img src="dial/3.png">
+</div>
 
  <div class="numbers">
- <div class= "stone"><svg class="z"></svg></div>
-Yi Jing Sequence
+ <!-- <div class= "stone"><svg class="z"></svg></div> -->
+
 </br>
 <p class="ff">0101010101010101010101010101010101010101010101010101010101010101
 </p>
@@ -324,15 +410,11 @@ d3.select(".y")
    //d3.selectAll("#lightgrey") .attr("fill", "black")
    //d3.selectAll("path") .attr("fill", function(d, i) { return color(i); })
    //d3.selectAll(".a1") .attr("fill", "red")
-   d3.selectAll(".a1") .attr("fill", "red")
-   d3.selectAll(".a2") .attr("fill", "magenta")
-
-   d3.selectAll(".b1") .attr("fill", "red")
-   d3.selectAll(".b2") .attr("fill", "magenta")
-   
-   d3.selectAll(".a3") .attr("fill", "yellow")
-   d3.selectAll(".a4") .attr("fill", "cyan")
-   d3.selectAll(".a5") .attr("fill", "blue")
+   d3.selectAll(".a1") .attr("fill", "tomato")
+   d3.selectAll(".a2") .attr("fill", "indianred")
+   d3.selectAll(".a3") .attr("fill", "darkseagreen")
+   d3.selectAll(".a4") .attr("fill", "cadetblue"   )
+   d3.selectAll(".a5") .attr("fill", "lightblue"   )
 })
 
 
