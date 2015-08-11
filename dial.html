@@ -19,8 +19,9 @@ body {
 
 .title {
   position: absolute;
-  width: 650px;
-  font-size: 60px;
+  width: 850px;
+  font-size: 53px;
+  line-height: 70px;
   color: white;
   font-family: "andale mono";
   top: 55px;
@@ -35,8 +36,8 @@ body {
 }
 
 .blockout p {
-  width: 34px;
-  height: 55px;
+  width: 29px;
+  height: 53px;
   background: tomato;
   position: relative;
   float: left;
@@ -120,6 +121,20 @@ body {
   width: 250px;
   height: 250px;
   top: 400px;
+  -webkit-transform: rotate(25deg);
+  -moz-transform:    rotate(25deg);
+  -opera-transform:  rotate(25deg);
+}
+
+.arrow{
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  top:30px;
+  left: 25px;
+  background-image: url(dial/arrow.png);
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
 }
 
 .stone {
@@ -153,7 +168,7 @@ margin-top: 10px;
 
 .panel .numbers {
   font-family: 'andale mono', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: white;
   margin-left: 8%;
   left: 600px;
@@ -199,18 +214,21 @@ label {
 
 <div class="title">
 <div class="blockout">
-<div class="yi"><p></p><p></p></div>
+<div class="yi"><p></p><p></p><p></p><p></p></div>
 <div class="jing"><p></p><p></p><p></p><p></p></div>
 <div class="sequence"><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></div>
 </div>
 
-<div class="text">Yi Jing Sequence</div>
+<div class="text">Shao Yung Sequence</div>
 
 </div>
 
 <div class="orient">
 <div class= "target"><svg class="x"></svg></div>
-<div class= "compass"><svg class="y"></svg></div>
+<div class= "compass"><svg class="y"></svg>
+<div class="arrow"></div>
+</div>
+
 </div>
 
 <div class="panel">

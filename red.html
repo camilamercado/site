@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     </head>
 
     <style type="text/css">
 
       body {
+        -webkit-transition: all 2s ease;
+        -moz-transition:    all 2s ease;
+        -opera-transition:  all 2s ease;
+      }
+
+      .red {
         width: 100%;
         position:absolute;
         background: url(css/redness/1.jpg);
         background-size: 100% auto;
         background-position: 210px -300px;
-        -webkit-transition: all 2s ease;
-        -moz-transition:    all 2s ease;
-        -opera-transition:  all 2s ease;
+        
       }
 
       /*.redness {
@@ -30,7 +35,9 @@
 
       }*/
 
-       body:hover {
+       .red2 {
+        width: 100%;
+        position:absolute;
         background: url(css/redness/2.jpg);
         background-size: 100% auto;
         background-position: 200px 0px;
@@ -58,17 +65,86 @@
         opacity: 0.8;
       }
 
+      .cam1 {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 1200px;
+        width: 1200px;
+        background-size: 1200px auto;
+        background-image: url(css/redness/cammer1.png);
+      }
+       .cam2 {
+         position: absolute;
+        top: 0px;
+        left: 0px;
+         height: 1200px;
+        width: 1200px;
+        background-size: 1200px auto;
+        background-image: url(css/redness/cammer2.png);
+      }
+
+      /*.cam2:hover {
+        left: 10px;
+        top: 10px;
+         -webkit-transition: all 2s ease;
+        -moz-transition:    all 2s ease;
+        -opera-transition:  all 2s ease;
+      }*/
+
+      .moveOut {
+        left: 0px;
+        top: 0px;
+         -webkit-transition: all 2s ease;
+        -moz-transition:    all 2s ease;
+        -opera-transition:  all 2s ease;
+      }
+
 
     </style>
     
-    <body>
+    <body class="red">
 
     <div class="redness"></div>
-    <div class="portrait">
+    <!-- <div class="portrait"></div> -->
+
+    <div class="cam1"></div>
+    <div class="cam2"></div>
      
       <!-- <img src="css/redness/greener.png" width="auto" height="350"> -->
       <!-- <img class="tet" src="css/redness/Tetsuo.jpg" width="110" height="350"> -->
     </div>
+
+    <script type="text/javascript">
+
+    // $( ".cam2" ).mouseout(function() {
+    //      $( ".cam2" ).addClass( "moveOut" );
+    // });
+
+var black = document.querySelector('.cam2');
+
+    window.onmousemove = function (e) {
+        var x = e.clientX,
+            y = e.clientY;
+
+       black.style.top = (y / 50) + 'px';
+       black.style.left = (x / 50) + 'px';
+
+       if (x > 500) {
+         $( "body" ).addClass( "red2" );
+         $( "body" ).removeClass( "red" );
+       };
+
+       if (x < 500) {
+         $( "body" ).removeClass( "red2" );
+         $( "body" ).addClass( "red" );
+       };
+
+       //$( "body" ).toggleClass( "red2" );
+    };
+
+
+    </script>
 
     </body>
 
