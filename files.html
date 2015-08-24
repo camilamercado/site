@@ -31,7 +31,7 @@
         top: 50%;
         transform: translateY(-50%);
         display: inline-block;
-        color: lightblue;
+        color: white;
         text-decoration: none;
         word-wrap:normal;
         padding: 0px;
@@ -54,15 +54,41 @@
 
 <body>
 
-<a class="pdf" href="Digital%20Fabric%20Printing%20Price%20List.pdf"
-data-downloadurl="http://camilamercado.github.io/site/Digital%20Fabric%20Printing%20Price%20List.pdf">
+<!-- <a class="pdf" href="Digital%20Fabric%20Printing%20Price%20List.pdf"
+data-downloadurl="application/octet-stream:Digital%20Fabric%20Printing%20Price%20List.pdf:http://camilamercado.github.io/site/Digital%20Fabric%20Printing%20Price%20List.pdf">
 <img src="pdf.png" width="60px" height="auto">
 <p>Digital Fabric Printing Price List.pdf<p>
 </a>
+ -->
+  <a href="Digital%20Fabric%20Printing%20Price%20List.pdf" id="dragout" class="dragme" draggable="true" data-downloadurl="application/octet-stream:Digital%20Fabric%20Printing%20Price%20List.pdf:http://camilamercado.github.io/site/Digital%20Fabric%20Printing%20Price%20List.pdf"><img src="pdf.png" width="70px" height="auto">
+  <p>Digital Fabric Printing Price List.pdf<p></a>
+
 
 <script type="text/javascript">
   
 //$('.pdf').draggable();
+
+<script type="text/javascript">
+    var files = [document.getElementById("dragout"),document.getElementById("dragout2"),document.getElementById("dragout3")],
+      fileDetails = [];
+    
+    // Some forward thinking, utilise the custom data attribute to extend attributes available.
+    if(typeof files[0].dataset === "undefined") {
+      // Grab it the old way
+      fileDetails[0] = files[0].getAttribute("data-downloadurl");
+      fileDetails[1] = files[1].getAttribute("data-downloadurl");
+    } else {
+      fileDetails[0] = files[0].dataset.downloadurl;
+      fileDetails[1] = files[1].dataset.downloadurl;
+    }
+    
+    files[0].addEventListener("dragstart",function(evt){
+      evt.dataTransfer.setData("DownloadURL",fileDetails[0]);
+    },false);
+    files[1].addEventListener("dragstart",function(evt){
+      evt.dataTransfer.setData("DownloadURL",fileDetails[1]);
+    },false);
+  </script>
 </script>
 </body>
       </html>
