@@ -52,6 +52,8 @@ body {
 }
 
 .power {
+
+  display: block;
   width: 58px;
   height: 80px;
   position: absolute;
@@ -62,6 +64,9 @@ body {
   font-size: 36px;
   padding-left: 22px;
   line-height: 85px;
+  -webkit-transition: all 1s ease;
+  -moz-transition:    all 1s ease;
+  -opera-transition:  all 1s ease;
 }
 
 .of {
@@ -526,6 +531,7 @@ d3.select(".orient")
   .on("mouseover", function(d) {  
    d3.select(".panel") .style("background", "black")
    d3.selectAll("li") .style("background", "black")
+   d3.selectAll(".power") .style("display", "block")
 })
 
 
@@ -533,6 +539,7 @@ d3.select(".orient")
   .on("mouseout", function(d) {  
    d3.select(".panel") .style("background", "none")
    d3.selectAll("li") .style("background", "white")
+   d3.selectAll(".power") .style("display", "none")
 })
 
 </script>
