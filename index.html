@@ -1,135 +1,156 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    </head>
+<html lang="en">
+	<head>
+		
+		<link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+		
+		<link href="css/tester.css" rel="stylesheet" />
+		
 
-    <style type="text/css">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link href="intention/examples/grid/css/responsivegrid.css" rel="stylesheet" />
+		<script src="intention/test/vendor/underscore.js"></script>
+	    <script src="intention/test/vendor/jquery.js"></script>
+	    <script src="intention/intention.js"></script>
+	    <script src="intention/context.js"></script>
+		
+	</head>
 
-      body {
-        -webkit-transition: all 2s ease;
-        -moz-transition:    all 2s ease;
-        -opera-transition:  all 2s ease;
-      }
+	<body in data-in-base-class="" class="standard" data-in-tablet-class="tablet" data-in-standard-class="standard" data-in-mobile-class="mobile">
 
-      .red {
-        width: 100%;
-        position:absolute;
-        background: url(css/redness/1.jpg);
-        background-size: 100% auto;
-        background-position: 210px -300px;
-        
-      }
+		<div class="fullwide ux theme grid col10wide colum" 
+		in
+		data-in-base-class="ux theme grid colum"
+		data-in-mobile-class="col3wide" 
+		data-in-tablet-class="col6wide" 
+		data-in-standard-class="col10wide" 
+		>
 
-       .red2 {
-        width: 100%;
-        position:absolute;
-        background: url(css/redness/2.jpg);
-        background-size: 100% auto;
-        background-position: 200px 0px;
-        background-position: 210px -300px;
-      }
-
-      .portrait {
-        width: 250px;
-        height: 350px;
-        border: 2px solid lightgrey;
-        background: lightgrey;
-        opacity: 0.6;
-        z-index: 3;
-        position: absolute;
-        left: 110px;
-        top: 20px;
-        color: #e3d1c1;
-        -webkit-transition: all 2s ease;
-        -moz-transition:    all 2s ease;
-        -opera-transition:  all 2s ease;
-      }
-
-      .portrait:hover{
-        color: black;
-        opacity: 0.8;
-      }
-
-      .cam1 {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 1200px;
-        width: 100%;
-        background-size: 105% auto;
-        background-position: -50px -50px;
-        background-image: url(css/redness/LayerW.png);
-      }
-       .cam2 {
-         position: absolute;
-        top: 0px;
-        left: 0px;
-         height: 1200px;
-        width: 100%;
-        background-size: 105% auto;
-        background-position: -50px -50px;
-        background-image: url(css/redness/LayerB.png);
-      }
-
-      .moveOut {
-        left: 0px;
-        top: 0px;
-         -webkit-transition: all 2s ease;
-        -moz-transition:    all 2s ease;
-        -opera-transition:  all 2s ease;
-      }
-
-      .linker {
-        width: 500px;
-        z-index: 20;
-        position: absolute;
-        color: grey;
-        font-size: 50px;
-        top: 500px;
-        margin-left: 50%;
-        left: -250px;
-        font-family: "andale mono";
-      }
+		<!-- <div class="header">
+			<div class="box"><p class="count">01</p></div>
+		</div>
+ -->
+		<div class="container">
 
 
-    </style>
-    
-    <body class="red">
-    <div class="redness"></div>
+ 			<div class="title">Camila Mercado 
+ 			<div class="cursor"></div>
+ 			<p class="works"> Works in Code</p></div>
+			
 
-    <div class="cam1"></div>
-    <a class="cam2" href="work.html"></div>
-    
+			<div class="list">
+				<ul>
+					
+					<li id="a"class="gg">
+					<a href="http://camilamercado.github.io/dds/orbit.html" target="_blank">Daphne & Telstar</a>
+					<p>/*In Progress*/</p></li>
 
-      <script type="text/javascript">
+					<li id="b"class="w"><a href="http://camilamercado.github.io/biching/" target="_blank">B1/Ching</a>
+					<p>/*In Progress*/</p>
+					</li>
 
-      console.log("latest");
+					<li id="h"class="gg"><a href="http://camilamercado.github.io/site/dial.html" target="_blank">Binary Dial</a>
+					<p>/*In Progress*/</p>
+					</li>
 
-      var black = document.querySelector('.cam2');
+					<li id="e"class="w"><a href="http://camilamercado.github.io/site/creep.html" target="_blank">Creeping / Patterning</a></li>
+					
+					<li id="d"class="gg"><a href="http://camilamercado.github.io/site/rearwindow.html" target="_blank">Fiction Backdrop No.1</a></li>
 
-      window.onmousemove = function (e) {
-          var x = e.clientX,
-              y = e.clientY;
+					
+					<li id="f"class="w"><a href="http://camilamercado.github.io/site/cat.html" target="_blank">Looking Directly at the Sun</a></li>
 
-         black.style.top = (y / 50) + 'px';
-         black.style.left = (x / 50) + 'px';
+					<li id="c"class="gg"><a href="http://camilamercado.github.io/capoet/" target="_blank">Capoet</a></li>
 
-         if (x > 500) {
-           $( "body" ).addClass( "red2" );
-           $( "body" ).removeClass( "red" );
-         };
+					<li id="g"class="w"><a href="http://cooper-union-idc.github.io/show-of-groundbreaking-work-coming-soon-2014/green-screen/index.html" target="_blank">Chroma Cam</a></li>
 
-         if (x < 500) {
-           $( "body" ).removeClass( "red2" );
-           $( "body" ).addClass( "red" );
-         };
+				</ul>
+			</div>
 
-      };
+			<div class="imgFeild">
+				<div class="imgContent"></div>
+				<div class="textContent"></div>
+				<div class="contact">CamilaMercado11@gmail.com</div>
+			</div>
+
+			</div>
 
 
-      </script>
+		</div>
 
-    </body>
 
-    </html>
+		<script type="text/javascript">
+		
+		$("#a").mouseover(function(){
+		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/orbb.png)";
+		  document.querySelector('.textContent').innerHTML="Across The Flattened Fold. Daphne and Apollo as told through the retroactive meddling of the first commercially broadcasting satellite - Telstar.";
+		});
+
+
+		$("#b").mouseover(function(){
+		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/bcrop2.png)";
+		  document.querySelector('.textContent').innerHTML="Ongoing project to develop a public repository of responses to I Ching readings generated from timestamps. Contains vague attempts at binary to I Ching conversion techniques. Opaque / Abstract, built with Firebase. ";
+
+		});
+
+		// $("#a").mouseover(function(){
+		// 	 document.querySelector('.box').style.border="1px solid cyan";
+		//    document.querySelector('.count').style.color="cyan";
+
+		// });
+
+		$("#c").mouseover(function(){
+		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/capoet2.png)";
+		  document.querySelector('.textContent').innerHTML="Meddling with the identity politics of Captchas";
+		});
+
+		$("#d").mouseover(function(){
+		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/julia.png)";
+		  document.querySelector('.textContent').innerHTML="Baby's got eyes all over.";
+		 
+		});
+
+		$("#e").mouseover(function(){
+		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/creeper.png)";
+		  document.querySelector('.textContent').innerHTML="Playing with live feeds.";
+		  
+		});
+
+		$("#f").mouseover(function(){
+		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/gio.png)";
+		  document.querySelector('.textContent').innerHTML="Experimenting with overlaps of film and code.";
+		  
+		});
+
+		$("#g").mouseover(function(){
+		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/green.png)";
+		  document.querySelector('.textContent').innerHTML="Tool for keying out different RGB values from a web cam feed. Built with @lirtle"; 
+
+		});
+
+		$("#h").mouseover(function(){
+		  document.querySelector('.imgContent').style.backgroundImage="url(css/index/dialM.png)";
+		  document.querySelector('.textContent').innerHTML="D3 representation of the YiJing King Wen sequence, of the 12th Century BC (approximately). Part of ongoing programmatic exploration of the relationship between the I Ching and Binary Code."; 
+
+		});
+
+		$(".gg").mouseover(function(){
+		  document.querySelector('.cursor').style.backgroundImage="url(images/3E.jpg)";
+		 // document.querySelector('.cursor').style.border="1px solid #8bba5e";
+		});
+
+		$(".w").mouseover(function(){
+		  document.querySelector('.cursor').style.backgroundImage="url(images/mask.jpg)";
+		 // document.querySelector('.cursor').style.border="1px solid white";
+		});
+
+
+		</script>
+
+
+
+
+	</body>
+
+</html>

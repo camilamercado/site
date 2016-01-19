@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    </head>
+
+    <style type="text/css">
+
+      body {
+        position: absolute;
+        -webkit-transition: all 2s ease;
+        -moz-transition:    all 2s ease;
+        -opera-transition:  all 2s ease;
+      }
+
+      .red {
+        width: 100%;
+        position:absolute;
+        background: url(css/redness/1.jpg);
+        background-size: 100% auto;
+        background-position: 210px -300px;
+        
+      }
+
+       .red2 {
+        width: 100%;
+        position:absolute;
+        background: url(css/redness/2.jpg);
+        background-size: 100% auto;
+        background-position: 200px 0px;
+        background-position: 210px -300px;
+      }
+
+      .portrait {
+        width: 250px;
+        height: 350px;
+        border: 2px solid lightgrey;
+        background: lightgrey;
+        opacity: 0.6;
+        z-index: 3;
+        position: absolute;
+        left: 110px;
+        top: 20px;
+        color: #e3d1c1;
+        -webkit-transition: all 2s ease;
+        -moz-transition:    all 2s ease;
+        -opera-transition:  all 2s ease;
+      }
+
+      .portrait:hover{
+        color: black;
+        opacity: 0.8;
+      }
+
+      .cam1 {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        height: 1200px;
+        width: 100%;
+        background-size: 105% auto;
+        background-position: -50px -50px;
+        background-image: url(css/redness/LayerW.png);
+      }
+       .cam2 {
+         position: absolute;
+        top: -10px;
+        left: -10px;
+         height: 1200px;
+        width: 100%;
+        background-size: 105% auto;
+        background-position: -50px -50px;
+        background-image: url(css/redness/LayerB.png);
+        
+        IMG_4387.PNG
+      }
+
+      .moveOut {
+        left: 0px;
+        top: 0px;
+         -webkit-transition: all 2s ease;
+        -moz-transition:    all 2s ease;
+        -opera-transition:  all 2s ease;
+      }
+
+      .linker {
+        width: 500px;
+        z-index: 20;
+        position: absolute;
+        color: grey;
+        font-size: 50px;
+        top: 500px;
+        margin-left: 50%;
+        left: -250px;
+        font-family: "andale mono";
+      }
+
+
+    </style>
+    
+    <body class="red">
+    <div class="redness"></div>
+
+    <div class="cam1"></div>
+    <a class="cam2" href="work.html"></div>
+    
+
+      <script type="text/javascript">
+
+      console.log("latest");
+
+      var black = document.querySelector('.cam2');
+
+      window.onmousemove = function (e) {
+          var x = e.clientX,
+              y = e.clientY;
+
+          var offsetX = black.style.left;
+          var offsetY = black.style.top;
+
+         black.style.left = -10 + (y / 50) + 'px';
+         black.style.top = -10 + (x / 50) + 'px';
+
+         console.log(offsetY, offsetX);
+
+         if (x > 500) {
+           $( "body" ).addClass( "red2" );
+           $( "body" ).removeClass( "red" );
+         };
+
+         if (x < 500) {
+           $( "body" ).removeClass( "red2" );
+           $( "body" ).addClass( "red" );
+         };
+
+      };
+
+
+      </script>
+
+    </body>
+
+    </html>
