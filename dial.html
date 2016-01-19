@@ -11,10 +11,12 @@
 body {
   font-family: 'andale mono';
   margin: auto;
-  position: relative;
+  position: absolute;
   background: url(mask.jpg);
   background-size: 100% auto;
   background:lightgrey;
+  -moz-transform: scale(0.8);
+  zoom: 75%
 }
 
 .leftmost {
@@ -22,10 +24,25 @@ body {
   width: 150px;
   /*background: tomato;*/
   /*background: goldenrod;*/
-  background: white;
+  /*background: white;*/
   position: absolute;
   left: 0px;
   top: 0px;
+}
+
+.leftmost p {
+  position: absolute;
+  top: 80px;
+  left: 30px;
+  text-align: right;
+}
+
+.leftmost li {
+  background-color: white;
+  list-style-type: none;
+  line-height: 31px;
+  font-size: 38px;
+  font-style: italic;
 }
 
 
@@ -48,7 +65,7 @@ body {
   margin-top: 50px;
   /*padding: 200px;*/
   position: absolute;
-  left: 200px;
+  left: 150px;
 }
 
 .power {
@@ -136,11 +153,12 @@ background-position: 10px 10px;
 .panel { 
  /* background: grey;*/
   position: absolute;
-  width: 620px;
-  padding-left: 50px;
-  height: 400px;
+  margin-left: 50px;
+  height: 740px;
+  width: 571px;
+  background-color: black;
   top: 50px;
-  left: 820px; 
+  left: 722px; 
   z-index: -2;
   -webkit-transition: all 1s ease;
   -moz-transition:    all 1s ease;
@@ -218,10 +236,14 @@ margin-top: 10px;
 
 .panel .numbers {
   font-family: 'andale mono', sans-serif;
-  font-size: 15px;
-  color: white;
-  margin-top: 130px;
+  font-size: 14px;
+  color: lightgrey;
+  margin-top: 100px;
+  width: 93%;
+  padding: 20px;
+  padding-bottom: 50px;
   position: absolute;
+  border-bottom: 1px solid white;
 }
 
 form {
@@ -235,9 +257,12 @@ label {
 }
 
 #pic {
- /* background-image: url(col.jpg);*/
-  width: 100px;
-  height: 100px;
+  background-image: url("images/xiantian.gif");
+height: 176px;
+width: 200px;
+top: 400px;
+position: absolute;
+left: 100px;
 }
 
 #lightgrey {
@@ -272,6 +297,25 @@ li {
   -opera-transition:  all 1s ease;
 }
 
+#notes  {
+  top:280px;
+  position: absolute;
+  width: 300px;
+  color: black;
+  text-align: left;
+  padding-left: 00px;
+}
+#notes li {
+  color: black;
+  margin-bottom: 50px;
+  text-align: left;
+  list-style-type: none;
+}
+
+#notes a {
+  color: black!important;
+}
+
 </style>
 <form>
   <label><input type="radio" name="dataset" value="apples" checked="" > Apples</label>
@@ -279,15 +323,17 @@ li {
 </form>
 
 <div class="leftmost">
+<!-- <p>
 A brief introduction
+</p> -->
 
 <ul>
-<li class="l6">2^1   2</li>
-<li class="l5">2^2   4</li>
-<li class="l4">2^3   8</li>
-<li class="l3">2^4   16</li>
-<li class="l2">2^5   32</li>
-<li class="l1">2^6   64</li>
+<li class="exp l6">2^1   2</li>
+<li class="exp l5">2^2   4</li>
+<li class="exp l4">2^3   8</li>
+<li class="exp l3">2^4   16</li>
+<li class="exp l2">2^5   32</li>
+<li class="exp l1">2^6   64</li>
 </ul>
 </div>
 
@@ -310,7 +356,7 @@ A brief introduction
     <div class="jing"><p></p><p></p><p></p><p></p></div>
     <div class="sequence"><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></div>
     </div>
-    <div class="text">Shao Yung Sequence</div>
+    <div class="text">King Wen- Sequence</div>
   </div>
 
   <div class="numbers">
@@ -335,6 +381,22 @@ A brief introduction
     </p>
   
   </div>
+  <ul id="notes">
+
+    <li>
+    Find yourself a better hobby, or just more useful math<br>unlike:
+    </li>
+   
+    <li><a href="http://www.levity.com/eschaton/waveexplain.html">
+    Derivation of the Timewave from the King Wen Sequence of Hexagrams
+    </a></li>
+    <li><a href="http://www.fourpillars.net/pdf/kingwen.pdf">
+      The explanation of King Wen’s order of the 64 hexagrams.
+    </a></li>  
+     <li><a href="http://www.biroco.com/yijing/sequence.htm">
+      Yijing hexagram sequences
+    </a></li>
+  </ul>
 </div>
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -445,7 +507,8 @@ function arcTween(a) {
 d3.select("#a")                                     
   .on("mouseover", function(d) {  
    d3.selectAll("#a #lightgrey") .attr("fill", "black")
-   d3.select(".l1") .style("color", "tomato")
+   //d3.select(".l1") .style("color", "tomato")
+   d3.select(".l1") .style("background-color", "black")
    document.querySelector(".of").innerHTML="6";
    d3.select(".aa") .style("color", "tomato")
 })
@@ -453,7 +516,8 @@ d3.select("#a")
 d3.select("#b")                                     
   .on("mouseover", function(d) {  
    d3.selectAll("#b #lightgrey") .attr("fill", "black")
-   d3.select(".l2") .style("color", "tomato")
+   //d3.select(".l2") .style("color", "tomato")
+   d3.select(".l2") .style("background-color", "black")
    document.querySelector(".of").innerHTML="5";
    d3.select(".bb") .style("color", "tomato")
 })
@@ -461,7 +525,8 @@ d3.select("#b")
 d3.select("#c")                                     
   .on("mouseover", function(d) {  
    d3.selectAll("#c #lightgrey") .attr("fill", "black")
-   d3.select(".l3") .style("color", "tomato")
+   //d3.select(".l3") .style("color", "tomato")
+   d3.select(".l3") .style("background-color", "black")
    document.querySelector(".of").innerHTML="4";
    d3.select(".cc") .style("color", "tomato")
 })
@@ -469,7 +534,8 @@ d3.select("#c")
 d3.select("#d")                                     
   .on("mouseover", function(d) {  
    d3.selectAll("#d #lightgrey") .attr("fill", "black")
-   d3.select(".l4") .style("color", "tomato")
+   //d3.select(".l4") .style("color", "tomato")
+   d3.select(".l4") .style("background-color", "black")
    document.querySelector(".of").innerHTML="3";
    d3.select(".dd") .style("color", "tomato")
 })
@@ -477,7 +543,8 @@ d3.select("#d")
 d3.select("#e")                                     
   .on("mouseover", function(d) {  
    d3.selectAll("#e #lightgrey") .attr("fill", "black")
-   d3.select(".l5") .style("color", "tomato")
+  // d3.select(".l5") .style("color", "tomato")
+   d3.select(".l5") .style("background-color", "black")
    document.querySelector(".of").innerHTML="2";
    d3.select(".ee") .style("color", "tomato")
 })
@@ -485,7 +552,8 @@ d3.select("#e")
 d3.select("#f")                                     
   .on("mouseover", function(d) {  
    d3.selectAll("#f #lightgrey") .attr("fill", "black")
-   d3.select(".l6") .style("color", "tomato")
+  // d3.select(".l6") .style("color", "tomato")
+   d3.select(".l6") .style("background-color", "black")
    document.querySelector(".of").innerHTML="1";
    d3.select(".ff") .style("color", "tomato")
 
@@ -496,8 +564,9 @@ d3.selectAll("g")
   .on("mouseout", function(d) {  
    d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
    d3.selectAll("#white") .attr("fill", "white")
-   d3.selectAll("p") .style("color", "white")
-   d3.selectAll("li") .style("color", "white")
+   d3.selectAll(".exp") .style("background-color", "white")
+   d3.selectAll(".exp") .style("color", "white")
+   d3.selectAll("p") .style("color", "lightgrey")
    document.querySelector(".of").innerHTML="^";
 }) 
 
@@ -530,7 +599,7 @@ d3.select(".y")
 d3.select(".orient")                                     
   .on("mouseover", function(d) {  
    d3.select(".panel") .style("background", "black")
-   d3.selectAll("li") .style("background", "black")
+   //d3.selectAll("li") .style("background", "black")
    d3.selectAll(".power") .style("display", "block")
 })
 
@@ -538,7 +607,7 @@ d3.select(".orient")
 d3.select(".orient")                                     
   .on("mouseout", function(d) {  
    d3.select(".panel") .style("background", "none")
-   d3.selectAll("li") .style("background", "white")
+   //d3.selectAll("li") .style("background", "white")
    d3.selectAll(".power") .style("display", "none")
 })
 
