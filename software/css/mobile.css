@@ -1,7 +1,7 @@
 @media only screen and (max-width: 400px){
 
 body{
-	background-color: cornflowerblue;
+	background-color: black;
 	-moz-transform: scale(0.7);
   	-webkit-transform: scale(0.7);
  	zoom: 0.7;
