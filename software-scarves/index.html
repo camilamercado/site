@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	
+<link href="css/index.css" rel="stylesheet" />
+<link href="css/mobile.css" rel="stylesheet" />
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+
+<body onload="softFinder()" onkeypress="backgroundSet()">
+
+<div class="logo">
+  <div class="circle" id="A"></div>
+  <div class="circle" id="B"></div>
+</div>
+<div class="container">
+  <p class="s">s</p>
+  <p class="o">o</p>
+  <p class="f">f</p>
+  <p class="t">t</p>
+  <p class="w">w</p>
+  <p class="a">a</p>
+  <p class="r">r</p>
+  <p class="e">e</p>
+</div>
+
+<a href="email">info@softwareee.com</a>
+<!-- <h1 class="info">located in brooklyn ny</h3>-->
+<h1 class="info">BROOKLYN</h3>
+
+<h2 class="info">DIGITAL FABRIC PRINTING</h2>
+<h3 class="info">ARCHIVAL PHOTO PRINTING</h3>
+
+
+
+<div class="effector" onmouseout="softFinder()" onmouseover="rectify()"></div>
+
+<script type="text/javascript">
+
+var height = 600;
+var width = $(window).width;
+
+function softFinder(){
+$("p").each(function(){
+     moveRandom($(this));
+  });
+}
+
+function moveRandom(e){
+    var randomT = Math.floor((Math.random()* height)) + "px";
+    var randomW = Math.floor((Math.random()* width)) + "px";
+    $(e).css({"position": "absolute", "top": randomT, "left": randomW, "color":"white"});
+   }
+
+function rectify(){
+  console.log("rectify")
+  $("p").each(function(){
+      $(this).css({"top": "50%"});
+  });
+}
+
+var colors = ["blue", "red", "black", "orange", "tomato", "lightgrey"];
+
+function backgroundSet(){
+document.body.style.background = colors[Math.floor(Math.random()*colors.length)];
+}
+
+$(function(){
+    $("body").click(function() {  
+        var iteration=$(this).data('iteration')||1
+        switch ( iteration) {
+            case 1:
+            $("a").css({"display": "block"});
+            $("p").css({"display": "none"});
+            $("h1").addClass("translate1");
+            $("h2").addClass("translate2");
+            $("h3").addClass("translate3");
+
+            break;  
+            case 2:
+            $("a").css({"display": "none"});
+            $("p").css({"display": "block"});
+            $("h1").removeClass("translate1");
+            $("h2").removeClass("translate2");
+            $("h3").removeClass("translate3");
+            break;
+          }
+        iteration++;
+        if (iteration>2) iteration=1
+        $(this).data('iteration',iteration)
+    })
+})
+
+
+
+</script>
+
+</body>
+
+</html>

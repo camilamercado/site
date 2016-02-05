@@ -1,0 +1,26 @@
+@media only screen and (max-width: 400px){
+
+body{
+	background-color: cornflowerblue;
+	-moz-transform: scale(0.7);
+  	-webkit-transform: scale(0.7);
+ 	zoom: 0.7;
+}
+
+.logo {
+	top:60vh;
+}
+
+.effector{
+	top: 60vh;
+}
+
+.container {
+	top: 45vh;
+}
+
+a {
+	top: 85vh;
+}
+
+}
