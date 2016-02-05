@@ -36,14 +36,17 @@
 <h3 class="info">ARCHIVAL PHOTO PRINTING</h3>
 
 <div class="mobile-info">
-<a href="mailto:info@softwareee.com">*CONTACT US*</a>
-DIGITAL FABRIC PRINTING<br>
-ARCHIVAL PHOTO PRINTING<br>
+
+DIGITAL FABRIC & PHOTO PRINTING<br>
+TEXTILE DESIGN STUDIO<br>
 BROOKLYN, NY<br>
+<a href="mailto:info@softwareee.com">*CONTACT US*</a>
+
 </div>
 
 
 <div class="effector" onmouseout="softFinder()" onmouseover="rectify()"></div>
+<div class="mobile-effector"></div>
 
 <script type="text/javascript">
 
@@ -76,24 +79,6 @@ document.body.style.background = colors[Math.floor(Math.random()*colors.length)]
 }
 
 $(function(){
-    $(".mobile-info").click(function() {  
-        var iteration=$(this).data('iteration')||1
-        switch ( iteration) {
-            case 1:
-            softFinder();
-
-            break;  
-            case 2:
-            rectify();
-            break;
-          }
-        iteration++;
-        if (iteration>2) iteration=1
-        $(this).data('iteration',iteration)
-    })
-})
-
-$(function(){
     $(".effector").click(function() {  
         var iteration=$(this).data('iteration')||1
         switch ( iteration) {
@@ -111,6 +96,28 @@ $(function(){
             $("h1").removeClass("translate1");
             $("h2").removeClass("translate2");
             $("h3").removeClass("translate3");
+            break;
+          }
+        iteration++;
+        if (iteration>2) iteration=1
+        $(this).data('iteration',iteration)
+    })
+})
+
+$(function(){
+    $(".mobile-effector").click(function() {  
+        var iteration=$(this).data('iteration')||1
+        switch ( iteration) {
+            case 1:
+              
+              softFinder();
+
+            break;  
+            case 2:
+
+              rectify();
+
+           
             break;
           }
         iteration++;

@@ -23,6 +23,22 @@ h4 {
 	top: 50vh;
 }
 
+.effector {
+	display: none;
+}
+
+.mobile-effector{
+	top: 0vh;
+/*	background: red;
+*/	position: absolute;
+	display: block;
+	width: 120vh;
+	height: 150vh;
+	opacity: 0.6;
+	z-index: 2;
+	left: -20vh;
+}
+
 .mobile-info {
 	width: 100%;
 	position: absolute;
