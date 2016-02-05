@@ -39,7 +39,7 @@
 <a href="mailto:info@softwareee.com">*CONTACT US*</a>
 DIGITAL FABRIC PRINTING<br>
 ARCHIVAL PHOTO PRINTING<br>
-BROOKLYN NY<br>
+BROOKLYN, NY<br>
 </div>
 
 
@@ -76,7 +76,25 @@ document.body.style.background = colors[Math.floor(Math.random()*colors.length)]
 }
 
 $(function(){
-    $("body").click(function() {  
+    $(".mobile-info").click(function() {  
+        var iteration=$(this).data('iteration')||1
+        switch ( iteration) {
+            case 1:
+            softFinder();
+
+            break;  
+            case 2:
+            rectify();
+            break;
+          }
+        iteration++;
+        if (iteration>2) iteration=1
+        $(this).data('iteration',iteration)
+    })
+})
+
+$(function(){
+    $(".effector").click(function() {  
         var iteration=$(this).data('iteration')||1
         switch ( iteration) {
             case 1:
