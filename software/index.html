@@ -29,16 +29,17 @@
   <p class="e">e</p>
 </div>
 
-<a href="email">info@softwareee.com</a>
+<h4>info@softwareee.com</h4>
 <!-- <h1 class="info">located in brooklyn ny</h3>-->
 <h1 class="info">BROOKLYN</h3>
 <h2 class="info">DIGITAL FABRIC PRINTING</h2>
 <h3 class="info">ARCHIVAL PHOTO PRINTING</h3>
 
 <div class="mobile-info">
-BROOKLYN<br>
+<a href="mailto:info@softwareee.com">*CONTACT US*</a>
 DIGITAL FABRIC PRINTING<br>
 ARCHIVAL PHOTO PRINTING<br>
+BROOKLYN NY<br>
 </div>
 
 
@@ -79,7 +80,7 @@ $(function(){
         var iteration=$(this).data('iteration')||1
         switch ( iteration) {
             case 1:
-            $("a").css({"display": "block"});
+            $("h4").css({"display": "block"});
             $("p").css({"display": "none"});
             $("h1").addClass("translate1");
             $("h2").addClass("translate2");
@@ -87,7 +88,7 @@ $(function(){
 
             break;  
             case 2:
-            $("a").css({"display": "none"});
+            $("h4").css({"display": "none"});
             $("p").css({"display": "block"});
             $("h1").removeClass("translate1");
             $("h2").removeClass("translate2");

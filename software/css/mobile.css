@@ -19,8 +19,8 @@ body{
 	top: 15vh;
 }
 
-a {
-	top: 65vh;
+h4 {
+	top: 50vh;
 }
 
 .mobile-info {
@@ -33,6 +33,15 @@ a {
 	font-family: "Chalet Book";
 	color: white;
 	line-height: 70px;
+}
+
+a  {
+	display: block;
+	width: 100%;
+	height: 70px;
+	color: blue;
+	position: relative;
+	text-decoration: none;
 }
 
 .info {
