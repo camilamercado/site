@@ -147,6 +147,10 @@ a {
 	-opera-transition:  display 3s ease;
 }
 
+.mobile-info {
+	display: none;
+}
+
 .info {
 	font-family: "Chalet Book";
 	color: white;

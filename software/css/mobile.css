@@ -8,19 +8,35 @@ body{
 }
 
 .logo {
-	top:60vh;
+	top:40vh;
 }
 
 .effector{
-	top: 60vh;
+	top: 40vh;
 }
 
 .container {
-	top: 45vh;
+	top: 25vh;
 }
 
 a {
-	top: 85vh;
+	top: 65vh;
+}
+
+.mobile-info {
+	width: 100%;
+	position: absolute;
+	top: 120vh;
+	display: block;
+	text-align: center;
+	font-size: 30px;
+	font-family: "Chalet Book";
+	color: white;
+	line-height: 70px;
+}
+
+.info {
+	display: none;
 }
 
 }
