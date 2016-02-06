@@ -52,10 +52,11 @@ h4 {
 }
 
 a  {
+	font-family: "Chalet-Book-Bold-Italic";
 	display: block;
 	width: 100%;
 	height: 70px;
-	color: blue;
+	color: cyan;
 	position: relative;
 	text-decoration: none;
 }

@@ -9,7 +9,12 @@ src:url("fonts/san-marco/cae943c3-78bd-42be-9d70-31e443c79dd2.eot?#iefix") forma
 font-family:"Chalet Book";
 /*src:url("fonts/chalet-book/ChaletBookBold.ttf") format("truetype");
 */src:url("fonts/chalet-book/ChaletBook-Italic.otf") format("truetype");
+}
 
+@font-face{
+font-family:"Chalet-Book-Bold-Italic";
+/*src:url("fonts/chalet-book/ChaletBookBold.ttf") format("truetype");
+*/src:url("fonts/chalet-book/ChaletBook-BoldItalic.otf") format("truetype");
 }
 
 body {
