@@ -1,0 +1,215 @@
+@import url("http://fast.fonts.net/lt/1.css?apiType=css&c=f8e3a4fd-d468-4fb9-8f81-e9e9e8515f2b&fontids=san-marco");
+@font-face{
+font-family:"San Marco";
+src:url("fonts/san-marco/cae943c3-78bd-42be-9d70-31e443c79dd2.eot?#iefix");
+src:url("fonts/san-marco/cae943c3-78bd-42be-9d70-31e443c79dd2.eot?#iefix") format("eot"),url("fonts/san-marco/36412afb-938c-4b77-97e6-56e8c4e1653c.woff2") format("woff2"),url("fonts/san-marco/30b179ed-71fe-4084-a58f-fddb0df1faba.woff") format("woff"),url("fonts/san-marco/ff91d907-9052-4eca-b625-f4f06481f6d2.ttf") format("truetype"),url("fonts/san-marco/94b79448-7b99-4410-8884-1473c998ea93.svg#94b79448-7b99-4410-8884-1473c998ea93") format("svg");
+}
+
+@font-face{
+font-family:"Chalet Book";
+/*src:url("fonts/chalet-book/ChaletBookBold.ttf") format("truetype");
+*/src:url("fonts/chalet-book/ChaletBook-Italic.otf") format("truetype");
+}
+
+@font-face{
+font-family:"Chalet-Book-Bold-Italic";
+/*src:url("fonts/chalet-book/ChaletBookBold.ttf") format("truetype");
+*/src:url("fonts/chalet-book/ChaletBook-BoldItalic.otf") format("truetype");
+}
+
+body {
+	background: lightgrey;
+	/*background-color: blue;*/
+	-webkit-transition: all 2s ease;
+	-moz-transition:    all 2s ease;
+	-opera-transition:  all 2s ease;
+	overflow: hidden;
+
+}
+
+.logo {
+	position: absolute;
+	background-image: transparent;
+	opacity: 0.4;
+	width: 420px;
+	height: 420px;
+	margin-left: 50%;
+	left: -210px;
+	top: 20%;
+	-webkit-transition: all 2s ease;
+	-moz-transition:    all 2s ease;
+	-opera-transition:  all 2s ease;
+}
+
+.circle {
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	border: 15px solid white;
+	-ms-transform: skew(5deg); /* IE 9 */
+    -webkit-transform: skew(5deg); /* Safari */
+    transform: skew(5deg);
+    -webkit-transition: all 2s ease;
+	-moz-transition:    all 2s ease;
+	-opera-transition:  all 2s ease;
+}
+
+.circle:hover {
+	opacity: 1;
+	-webkit-transition: all 2s ease;
+	-moz-transition:    all 2s ease;
+	-opera-transition:  all 2s ease;
+}
+
+#A {
+	position: absolute;
+	top: 10px;
+	left: 70px;
+}
+
+#B {
+	position: absolute;
+	top: 70px;
+	left: 10px;
+	/*opacity: 0.6;*/
+
+}
+
+.effector {
+	position: absolute;
+	display: block;
+	width: 400px;
+	height: 400px;
+	margin-left: 50%;
+	left: -200px;
+	top: 20%;
+	z-index: 2;
+}
+
+.mobile-effector {
+	display: none;
+}
+
+.container {
+	margin-left: 50%;
+	left: -325px;
+	width: 650px;
+	top: 20px;
+	height: 90vh;
+	position: absolute;
+	
+	font-family: "San Marco";
+	color: white;
+	opacity: 0.8;
+	z-index: 1;
+	
+}
+
+p {	display: block;
+	-webkit-transition: all 3s ease;
+	-moz-transition:    all 3s ease;
+	-opera-transition:  all 3s ease;
+	font-size:150px;
+	margin-top: 0px;
+	margin-left: 0px;
+	width: 100px;
+	margin: 0px;
+	float: left;
+	text-align: center;
+	position: absolute;
+  	top: 50%;
+  	transform: translateY(-50%);
+
+}
+
+.s{left: 0px;}
+
+.o{left: 90px;}
+
+.f{left: 170px;}
+
+.t{left: 240px;}
+
+.w{left: 330px;}
+
+.a{left: 420px;}
+
+.r{left: 500px;}
+
+.e{left: 570px;}
+
+h4 {
+	top: 30%;
+	position: absolute;
+	font-family: "Chalet Book";
+	color: white;
+	margin-left: 50%;
+	left: -325px;
+	width: 650px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 70px;
+	display: none;
+	-webkit-transition: display 3s ease;
+	-moz-transition:    display 3s ease;
+	-opera-transition:  display 3s ease;
+}
+
+.mobile-info {
+	display: none;
+}
+
+.info {
+	font-family: "Chalet Book";
+	color: white;
+	position: absolute;
+	font-size: 30px;
+	padding:0px;
+	padding-top: 0px;
+	margin: 0px;
+}
+
+h1 {
+	left: -120vh;
+	top: 50px;
+}
+
+h2 {
+	left: -80vh;
+	top: 50px;
+}
+
+h3 {
+	bottom:40px;
+	left: 200vh;
+	width: 400px;
+}
+
+.translate1 {
+-ms-transform: translate(200vw); /* IE 9 */
+-webkit-transform: translate(200vw); /* Safari */
+transform: translate(200vw);
+-webkit-transition: all 20s;
+-moz-transition:    all 20s;
+-opera-transition:  all 20s;
+}
+
+.translate2 {
+-ms-transform: translate(180vw); /* IE 9 */
+-webkit-transform: translate(180vw); /* Safari */
+transform: translate(200vw);
+-webkit-transition: all 20s;
+-moz-transition:    all 20s;
+-opera-transition:  all 20s;
+}
+
+.translate3 {
+-ms-transform: translate(-210vw); /* IE 9 */
+-webkit-transform: translate(-210vw); /* Safari */
+transform: translate(-310vh);
+-webkit-transition: all 25s;
+-moz-transition:    all 25s;
+-opera-transition:  all 25s;
+}
+
+
