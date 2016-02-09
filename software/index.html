@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	
+<link href="css/index.css" rel="stylesheet" />
+<link href="css/mobile.css" rel="stylesheet" />
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+
+<body onload="softFinder()" onkeypress="backgroundSet()">
+
+    <div class="softHome">
+
+        <div class="logo">
+          <div class="circle" id="A"></div>
+          <div class="circle" id="B"></div>
+        </div>
+
+        <div class="container">
+          <p class="s">s</p>
+          <p class="o">o</p>
+          <p class="f">f</p>
+          <p class="t">t</p>
+          <p class="w">w</p>
+          <p class="a">a</p>
+          <p class="r">r</p>
+          <p class="e">e</p>
+        </div>
+
+        <div class="mobile-info">
+            TEXTILE DESIGN STUDIO<br>
+            DIGITAL FABRIC & PHOTO PRINTING<br>
+            BROOKLYN NY<br>
+            <a href="mailto:info@softwareee.com">*CONTACT US*</a>
+        </div>
+
+        <ul class="ring">
+            <li>FABRIC PRINTING</li>
+            <li>PHOTO PRINTING</li>
+            <li>DESIGN STUDIO</li>
+            <li>NEW YORK</li>
+            </br>
+        </ul>
+
+        <div class="link">
+            <a href="mailto:info@softwareee.com">info@softwareee.com</a>
+        </div>
+
+        <div class="effectorHalf" onmouseout="softFinder()" onmouseover="rectify()"></div>
+        <div class="effectorHalfB" onmouseout="softFinder()" onmouseover="rectify()"></div>
+
+       <!-- >>>>>>>>>>>>> MOBILE CONTENT <<<<<<<<<<<<<<-->
+        <div class="mobile-effector"></div>
+        
+
+    </div>
+
+<script src="CircleType-master/js/plugins.js"></script>
+<script src="CircleType-master/js/circletype.js"></script>
+
+<script type="text/javascript">
+
+var height = document.body.clientHeight;
+var containerHeight = document.querySelector(".container").clientHeight;
+
+var topExcess = ((containerHeight - height) / 2) + 50 ;
+padding = topExcess + 80;
+console.log(topExcess);
+
+var max = (height - 100);
+
+var width = $(window).width;
+
+function softFinder(){
+$("p").each(function(){
+     moveRandom($(this));
+  });
+}
+
+function moveRandom(e){
+    
+  var randomT = Math.floor((Math.random()* (height - topExcess))) +topExcess + "px";
+  $(e).css({"position": "absolute", "top": randomT, "color":"white"});
+  console.log(topExcess, height, randomT)
+}
+
+
+function rectify(){
+  console.log("rectify")
+  $("p").each(function(){
+      $(this).css({"top": "50%"});
+  });
+}
+
+var colors = ["blue", "red", "black", "orange", "tomato", "lightgrey"];
+
+function backgroundSet(){
+document.body.style.background = colors[Math.floor(Math.random()*colors.length)];
+}
+
+$('.ring').circleType();
+
+$(function(){
+    $(".effectorHalf, .effectorHalfB ").click(function() {  
+        var iteration=$(this).data('iteration')||1
+        switch ( iteration) {
+            case 1:
+                $("a").css({"display": "block"});
+                $("p").css({"display": "none"});
+                $("ul").css({"opacity": "1"});
+                $(".effectorHalf").css({"height": "200"});
+            break;  
+            case 2:
+                $("a").css({"display": "none"});
+                $("p").css({"display": "block"});
+                $("ul").css({"opacity": "0"});
+                $(".effectorHalf").css({"height": "280"});
+            break;
+          }
+        iteration++;
+        if (iteration>2) iteration=1
+        $(this).data('iteration',iteration)
+    })
+})
+
+$(function(){
+    $(".mobile-effector").click(function() {  
+        var iteration=$(this).data('iteration')||1
+        switch ( iteration) {
+            case 1:
+                softFinder();
+            break;  
+            case 2:
+                rectify();          
+            break;
+          }
+        iteration++;
+        if (iteration>2) iteration=1
+        $(this).data('iteration',iteration)
+    })
+})
+
+
+</script>
+
+
+
+</body>
+
+</html>
