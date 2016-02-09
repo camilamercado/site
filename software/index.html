@@ -68,13 +68,9 @@
 var height = document.body.clientHeight;
 var containerHeight = document.querySelector(".container").clientHeight;
 
-var maxHeight = 650;
-var topExcess = ((containerHeight - maxHeight) / 2) + 50 ;
+var maxHeight = (height - 200);
+var topExcess = ((containerHeight - maxHeight) / 2);
 console.log(topExcess);
-
-var max = (height - 100);
-
-var width = $(window).width;
 
 function softFinder(){
 $("p").each(function(){
@@ -83,7 +79,7 @@ $("p").each(function(){
 }
 
 function moveRandom(e){
-    
+  
   var randomT = Math.floor((Math.random()* (maxHeight - topExcess))) +topExcess + "px";
   $(e).css({"position": "absolute", "top": randomT, "color":"white"});
   console.log(topExcess, height, randomT)
