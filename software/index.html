@@ -100,6 +100,10 @@ function backgroundSet(){
 document.body.style.background = colors[Math.floor(Math.random()*colors.length)];
 }
 
+$(".mobile-effector").on("swipe",function(){
+  backgroundSet();
+});
+
 $('.ring').circleType();
 
 $(function(){
