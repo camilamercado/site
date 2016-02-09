@@ -18,6 +18,7 @@
   <div class="circle" id="A"></div>
   <div class="circle" id="B"></div>
 </div>
+
 <div class="container">
   <p class="s">s</p>
   <p class="o">o</p>
@@ -30,13 +31,19 @@
 </div>
 
 <h4>info@softwareee.com</h4>
-<!-- <h1 class="info">located in brooklyn ny</h3>-->
-<h1 class="info">BROOKLYN</h3>
-<h2 class="info">DIGITAL FABRIC PRINTING</h2>
-<h3 class="info">ARCHIVAL PHOTO PRINTING</h3>
+
+
+<ul class="ring">
+    <li>BROOKLYN  NY</li>
+    <li>DIGITAL FABRIC PRINTING</li>
+    <li>ARCHIVAL PHOTO PRINTING</li>
+    </br>
+</ul>
+
+
+</div>
 
 <div class="mobile-info">
-
 TEXTILE DESIGN STUDIO<br>
 DIGITAL FABRIC & PHOTO PRINTING<br>
 BROOKLYN, NY<br>
@@ -47,6 +54,9 @@ BROOKLYN, NY<br>
 
 <div class="effector" onmouseout="softFinder()" onmouseover="rectify()"></div>
 <div class="mobile-effector"></div>
+
+<script src="CircleType-master/js/plugins.js"></script>
+<script src="CircleType-master/js/circletype.js"></script>
 
 <script type="text/javascript">
 
@@ -78,6 +88,9 @@ function backgroundSet(){
 document.body.style.background = colors[Math.floor(Math.random()*colors.length)];
 }
 
+$('.ring').circleType();
+
+
 $(function(){
     $(".effector").click(function() {  
         var iteration=$(this).data('iteration')||1
@@ -85,17 +98,12 @@ $(function(){
             case 1:
             $("h4").css({"display": "block"});
             $("p").css({"display": "none"});
-            $("h1").addClass("translate1");
-            $("h2").addClass("translate2");
-            $("h3").addClass("translate3");
-
+            $("ul").css({"opacity": "1"});
             break;  
             case 2:
             $("h4").css({"display": "none"});
             $("p").css({"display": "block"});
-            $("h1").removeClass("translate1");
-            $("h2").removeClass("translate2");
-            $("h3").removeClass("translate3");
+             $("ul").css({"opacity": "0"});
             break;
           }
         iteration++;
@@ -109,15 +117,10 @@ $(function(){
         var iteration=$(this).data('iteration')||1
         switch ( iteration) {
             case 1:
-              
               softFinder();
-
             break;  
             case 2:
-
-              rectify();
-
-           
+              rectify();          
             break;
           }
         iteration++;
@@ -127,8 +130,9 @@ $(function(){
 })
 
 
-
 </script>
+
+
 
 </body>
 
