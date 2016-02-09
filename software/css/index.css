@@ -75,7 +75,7 @@ body {
 	height: 300px;
 	
 	border-radius: 50%;
-	border: 15px solid white;
+	border: 15px solid violet;
 	
 	-ms-transform: skew(5deg); /* IE 9 */
     -webkit-transform: skew(5deg); /* Safari */
