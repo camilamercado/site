@@ -10,7 +10,7 @@ body{
 	margin: 0px;
 
     overflow: hidden;
-    background-color:  grey;
+    background-color:  black;
 }
 
 .softHome{
@@ -34,11 +34,9 @@ body{
 .container {
 	margin-top: -9vh;
 	height: 600px;
-	background-color: yellow;	
 }
 
 .container p {
-	background-color: blue;
 	display: block!important;
 }
 
