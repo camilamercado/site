@@ -29,12 +29,13 @@ body{
 
 .logo {
 /*	position: fixed;
-*/	margin-top:50px;
+*/	margin-top:0px;
 }
 
 .container {
-/*	position: fixed;
-*/	height: 500px;	
+	margin-top: -50px;
+	background-color: yellow;
+	height: 500px;	
 }
 
 .container p {
