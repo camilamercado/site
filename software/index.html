@@ -68,10 +68,11 @@
 var height = document.body.clientHeight;
 var containerHeight = document.querySelector(".container").clientHeight;
 
-var maxHeight = height - (height/4);
-var topExcess = ((containerHeight - maxHeight) / 2);
+var maxHeightB = height - (height/4);
+var maxHeightA = height - 100;
+
+var topExcess = ((containerHeight - maxHeightB) / 2);
 var padding = topExcess + 50;
-console.log(topExcess);
 
 function softFinder(){
 $("p").each(function(){
@@ -81,9 +82,15 @@ $("p").each(function(){
 
 function moveRandom(e){
   
-  var randomT = Math.floor((Math.random()* (maxHeight - topExcess))) +padding + "px";
+  if (height <= 800){
+    var randomT = Math.floor((Math.random()* (maxHeightA - 150))) +padding + "px";
+      console.log(">>>>>>>>>LAPTOP")
+  }else if (height > 800){
+    var randomT = Math.floor((Math.random()* (maxHeightB - topExcess))) +padding + "px";
+       console.log(">>>>>>>>>DESKTOP")
+  }
+
   $(e).css({"position": "absolute", "top": randomT, "color":"white"});
-  console.log(topExcess, height, randomT)
 }
 
 

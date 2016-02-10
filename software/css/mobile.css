@@ -1,4 +1,6 @@
-@media only screen and (max-width: 400px){
+
+
+@media only screen and (min-width: 400px) and (max-width : 667px){
 
 body{
 	-moz-transform: scale(0.7);
@@ -101,3 +103,4 @@ ul {
 }
 
 }
+
