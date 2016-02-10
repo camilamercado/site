@@ -32,13 +32,16 @@ body{
 }
 
 .container {
-	background-color: yellow;
-	margin-top: -5vh;
+	margin-top: -9vh;
 	height: 600px;	
 }
 
 .container p {
 	display: block!important;
+	-ms-transform: translateY (0%);
+	-webkit-transform: translateY (0%);
+	-moz-transform: translateY (0%);
+  	transform: translateY(-50%);
 }
 
 .mobile-effector{
