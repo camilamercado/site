@@ -3,15 +3,12 @@
 @media only screen and (max-width: 736px){
 
 body{
-	-moz-transform: scale(0.7);
-  	-webkit-transform: scale(0.7);
- 	zoom: 0.7;
- 	
+ 	transform: scale(0.5);
 	width: 100%;
 	
 	position: absolute;
 	left: 0px;
-	top: 0px;
+	top: -100px;
 
 	background-color: black;
 }
@@ -19,10 +16,9 @@ body{
 .softHome{
 	width: 100%;
 	height: 75vh;
-	
+	margin-left: 0px;
 	position: absolute;
 	left: 0px;
-	top: 0px;
 }
 
 .logo {
@@ -89,7 +85,7 @@ a  {
 }
 
 .link {
-	display: none;
+	display: none!important;
 }
 
 .effectorHalf,
@@ -99,7 +95,13 @@ a  {
 
 ul {
 	opacity: 0!important;
-	-webkit-animation-name: none; 
+	-webkit-animation-name: none;
+	-moz-animation-name: none;
+	-opera-animation-name: none;
+
+	-webkit-transition: none;
+	-moz-transition:    none;
+	-opera-transition:  none; 
 }
 
 }

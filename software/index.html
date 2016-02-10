@@ -33,17 +33,18 @@
         </div>
 
         <div class="mobile-info">
-            TEXTILE DESIGN STUDIO<br>
-            DIGITAL FABRIC & PHOTO PRINTING<br>
-            BROOKLYN NY<br>
             <a href="mailto:info@softwareee.com">*CONTACT US*</a>
+            DESIGN STUDIO<br>
+            FABRIC PRINTING<br>
+            PHOTO PRINTING<br>
+            BROOKLYN NY<br>
         </div>
 
         <ul class="ring">
             <li>FABRIC PRINTING</li>
+            <li>NEW YORK</li>
             <li>PHOTO PRINTING</li>
             <li>DESIGN STUDIO</li>
-            <li>NEW YORK</li>
             </br>
         </ul>
 
@@ -108,17 +109,17 @@ document.body.style.background = colors[Math.floor(Math.random()*colors.length)]
 $('.ring').circleType();
 
 $(function(){
-    $(".effectorHalf, .effectorHalfB ").click(function() {  
+    $("body").click(function() {  
         var iteration=$(this).data('iteration')||1
         switch ( iteration) {
             case 1:
-                $("a").css({"display": "block"});
+                $(".link").css({"display": "block"});
                 $("p").css({"display": "none"});
                 $("ul").css({"opacity": "1"});
                 $(".effectorHalf").css({"height": "200"});
             break;  
             case 2:
-                $("a").css({"display": "none"});
+                $(".link").css({"display": "none"});
                 $("p").css({"display": "block"});
                 $("ul").css({"opacity": "0"});
                 $(".effectorHalf").css({"height": "280"});
