@@ -4,16 +4,17 @@
   width: device-width;
 }
 
-
 body{
  	transform: scale(0.5);
 	width: 100%;
+	height: 150vh;
+
 	
 	position: absolute;
 	left: 0px;
 	top: -100px;
 
-	background-color: black;
+	background-color: blue;
 }
 
 .softHome{
