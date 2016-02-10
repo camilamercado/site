@@ -163,6 +163,9 @@ p {
 	/*margin-top: 50%;*/
 	top:50%;
 	position: absolute;
+  	-ms-transform: translateY (-50%);
+	-webkit-transform: translateY (-50%);
+	-moz-transform: translateY (-50%);
   	transform: translateY(-50%);
   	height: 150px;
 	font-size:150px;
