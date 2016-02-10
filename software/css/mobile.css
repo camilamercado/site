@@ -3,7 +3,8 @@
 @media only screen and (max-width: 736px){
 
 body{
-	background-color: darkblue;
+	background-color: black;
+	width: 100%;
 }
 
 .softHome{
@@ -17,7 +18,7 @@ body{
 	margin-left: 0px;
 	position: absolute;
 	left: 0px;
-	top: 0vh;
+	top: -10vh;
 }
 
 .logo {
@@ -33,8 +34,7 @@ body{
 }
 
 .container p {
-/*	margin-top: -100px;
-*/	display: block!important;
+   display: block!important;
 }
 
 h4 {
