@@ -141,9 +141,11 @@ a:hover{
 .container {
 	width: 650px;
 	height: 1200px;
-
+	background-color: yellow;
 	position: absolute;
-	margin-left: 275px;
+	margin-left: 50%;
+	left: -325px;
+
 	z-index: 2;
 
 	font-family: "San Marco";
