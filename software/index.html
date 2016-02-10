@@ -42,13 +42,15 @@
             BROOKLYN NY<br>
         </div>
 
-        <ul class="ring">
-            <li>FABRIC PRINTING</li>
-            <li>NEW YORK</li>
-            <li>PHOTO PRINTING</li>
-            <li>DESIGN STUDIO</li>
-            </br>
-        </ul>
+        <div class="ring-container">
+          <ul class="ring">
+              <li>FABRIC PRINTING</li>
+              <li>NEW YORK</li>
+              <li>PHOTO PRINTING</li>
+              <li>DESIGN STUDIO</li>
+              </br>
+          </ul>
+        </div>
 
         <div class="link">
             <a href="mailto:info@softwareee.com">info@softwareee.com</a>
@@ -66,16 +68,6 @@
 
 <script type="text/javascript">
 
-var height = document.body.clientHeight;
-var containerHeight = document.querySelector(".container").clientHeight;
-
-var maxHeightB = height - (height/4);
-var maxHeightA = height - 100;
-
-var topExcess = ((containerHeight - maxHeightB) / 2);
-var padding = topExcess + 50;
-console.log(height, containerHeight)
-
 function softFinder(){
 $("p").each(function(){
      moveRandom($(this));
@@ -84,6 +76,12 @@ $("p").each(function(){
 
 function moveRandom(e){
   
+  var height = document.body.clientHeight,
+  containerHeight = document.querySelector(".container").clientHeight,
+  maxHeightB = height - (height/4),
+  maxHeightA = height - 100,
+  topExcess = ((containerHeight - maxHeightB) / 2),
+  padding = topExcess + 50;
 
   if (height <= 800){
     var randomT = Math.floor((Math.random()* (maxHeightA - 150))) +padding + "px";
@@ -91,12 +89,12 @@ function moveRandom(e){
   } else if (height > 800){
     var randomT = Math.floor((Math.random()* (maxHeightB - topExcess))) +padding + "px";
   }
+  
   $(e).css({"position": "absolute", "top": randomT, "color":"white"});
 }
 
 
 function rectify(){
-  console.log("rectify")
   $("p").each(function(){
       $(this).css({"top": "50%"});
   });
@@ -134,7 +132,7 @@ $(function(){
 })
 
 $(function(){
-    $(".mobile-effector").click(function() {  
+    $(".mobile-effector, .mobile-info").click(function() {  
         var iteration=$(this).data('iteration')||1
         switch ( iteration) {
             case 1:
