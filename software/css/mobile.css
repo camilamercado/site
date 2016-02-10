@@ -10,11 +10,10 @@ body{
 	margin: 0px;
 
     overflow: hidden;
-    background-color: navy;
+    background-color: red;
 }
 
 .softHome{
-   	position: relative;
    	width: 100%;
    	margin-left: 0px;
    	left: 0px;
@@ -29,6 +28,7 @@ body{
  	}
 
 .logo {
+	position: fixed;
 	margin-top:50px;
 }
 
@@ -58,7 +58,7 @@ body{
 	width: 100%;
 	top: 600px;
 	
-	position: absolute;
+	position: fixed;
 	z-index: 3;
 
 	font-family: "Chalet Book";
