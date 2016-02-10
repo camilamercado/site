@@ -12,7 +12,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </head>
 
-<body onload="softFinder()" onkeypress="backgroundSet()">
+<!-- <body onload="softFinder()" onkeypress="backgroundSet()">
+ -->
+<body  onkeypress="backgroundSet()">
 
     <div class="softHome">
 
@@ -89,7 +91,7 @@ function moveRandom(e){
     var randomT = Math.floor((Math.random()* (maxHeightB - topExcess))) +padding + "px";
   }
   
-  $(e).css({"position": "absolute", "top": randomT, "color":"white"});
+  $(e).css({"top": randomT, "color":"white"});
 }
 
 

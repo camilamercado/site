@@ -38,9 +38,11 @@ body{
 }
 
 .container p {
-	background-color: blue;
+	background-color: pink;
 	display: block!important;
 	top: 50%;
+
+
 	-ms-transform: translateY (-50%);
 	-webkit-transform: translateY (-50%);
 	-moz-transform: translateY (-50%);
