@@ -4,7 +4,7 @@
 
 body{
 	background-color: black;
-	width: 90%;
+	width: 100%;
 }
 
 .softHome{
@@ -22,15 +22,16 @@ body{
 }
 
 .logo {
-/*	background-color: blue;
-*/	margin-top:50px;
+	margin-top:50px;
+	width: 650px;
+	height: 553px;
 }
 
 .container {
-/*	background-color: yellow;
-*/	width: 650px;
-	height: 553px;
-	top: 0vh;
+	background-color: yellow;
+	width: 650px;
+	height: 400px;
+	margin-top:50px;
 	margin-left: 50%;
     left: -325px;
 }
