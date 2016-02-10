@@ -23,7 +23,7 @@ body {
 	-moz-transition:    background 2s ease;
 	-opera-transition:  background 2s ease;
 	overflow: hidden;
-	height: 150vh;
+	height: 100vh;
 }
 
 .softHome{
