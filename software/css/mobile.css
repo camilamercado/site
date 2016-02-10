@@ -10,7 +10,7 @@ body{
 	margin: 0px;
 
     overflow: hidden;
-    background-color: red;
+    background-color: black;
 }
 
 .softHome{
@@ -33,6 +33,7 @@ body{
 }
 
 .container {
+	position: fixed;
 	height: 500px;	
 }
 
@@ -56,7 +57,7 @@ body{
 .mobile-info {
 	display: block;
 	width: 100%;
-	top: 600px;
+	top: 500px;
 	
 	position: fixed;
 	z-index: 3;
