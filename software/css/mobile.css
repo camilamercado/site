@@ -5,21 +5,23 @@ body{
 	-webkit-transform: scale(0.7);
     zoom: 0.7;
     margin: 0px;
-    width: 100%;
-    height: 100vh;
-    /* position: absolute; */
-    /* left: 0px; */
-    /* top: 0vh; */
+
     overflow: hidden;
     background-color: black;
 }
 
 .softHome{
-	background-color: blue;
-    top: -22vh;
-    padding-top: 200px;
-    transform: translateY(0%);
-    overflow: hidden;
+   	position: relative;
+   	width: 100%;
+   	margin-left: 0px;
+   	left: 0px;
+
+   	top: 0vh;
+	-ms-transform: translateY (0%);
+	-webkit-transform: translateY (0%);
+	-moz-transform: translateY (0%);
+	-o-transform: translateY (0%);
+	transform: translateY(0%);
 
  	}
 
@@ -28,26 +30,20 @@ body{
 }
 
 .container {
-	width: 650px;
-	height: 553px;
-	
-	margin-left: 50%;
-    left: -325px;
+	height: 500px;	
 }
 
 .container p {
-	margin-top: -100px;
 	display: block!important;
 }
 
 .mobile-effector{
 	display: block;
 	width: 100%;
-	background-color: red;
-	height: 150vh;
+	height: 100%;
 
 	position: absolute;
-	left: -20vh;
+	
 	top: 0vh;
 	z-index: 2;
 	
@@ -58,7 +54,7 @@ body{
 .mobile-info {
 	display: block;
 	width: 100%;
-	top: 800px;
+	top: 600px;
 	
 	position: absolute;
 	z-index: 3;
@@ -99,6 +95,7 @@ ul {
 	opacity: 0!important;
 	-webkit-animation-name: none; 
 	width: 0px;
+	display: none;
 }
 
 }
