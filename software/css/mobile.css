@@ -1,6 +1,9 @@
-
-
 @media only screen and (max-width: 736px){
+
+@-ms-viewport{
+  width: device-width;
+}
+
 
 body{
  	transform: scale(0.5);
