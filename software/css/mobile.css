@@ -10,7 +10,7 @@ body{
 	margin: 0px;
 
     overflow: hidden;
-    background-color: black;
+    background-color: red;
 }
 
 .softHome{
@@ -28,8 +28,8 @@ body{
  	}
 
 .logo {
-	position: fixed;
-	margin-top:50px;
+/*	position: fixed;
+*/	margin-top:50px;
 }
 
 .container {
@@ -59,7 +59,7 @@ body{
 	width: 100%;
 	top: 500px;
 	
-	position: fixed;
+	position: absolute;
 	z-index: 3;
 
 	font-family: "Chalet Book";
