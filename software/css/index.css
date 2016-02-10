@@ -163,7 +163,7 @@ p {
 	margin-top: 0px;
 	top: 50%;
   	transform: translateY(-50%);
-
+  	height: 150px;
 	font-size:150px;
 	text-align: center;
 
