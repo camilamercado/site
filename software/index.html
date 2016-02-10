@@ -5,6 +5,7 @@
 	
 <link href="css/index.css" rel="stylesheet" />
 <link href="css/mobile.css" rel="stylesheet" />
+<link href="css/mobile_landscape.css" rel="stylesheet" />
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -84,10 +85,8 @@ function moveRandom(e){
   
   if (height <= 800){
     var randomT = Math.floor((Math.random()* (maxHeightA - 150))) +padding + "px";
-      console.log(">>>>>>>>>LAPTOP")
-  }else if (height > 800){
+  } else if (height > 800){
     var randomT = Math.floor((Math.random()* (maxHeightB - topExcess))) +padding + "px";
-       console.log(">>>>>>>>>DESKTOP")
   }
 
   $(e).css({"position": "absolute", "top": randomT, "color":"white"});
