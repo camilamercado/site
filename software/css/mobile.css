@@ -3,18 +3,18 @@
 @media only screen and (max-width: 736px){
 
 body{
-	background-color: red;
-	width: 100%;
+	background-color: darkgrey;
+	width: 90%;
 }
 
 .softHome{
-	-webkit-transform: scale(0.5);
-  	-ms-transform: scale(0.5);
-	-moz-transform: scale(0.5);
-	-o-transform: scale(0.5); 
- 	transform: scale(0.5);
+	-webkit-transform: scale(0.55);
+  	-ms-transform: scale(0.55);
+	-moz-transform: scale(0.55);
+	-o-transform: scale(0.55); 
+ 	transform: scale(0.55);
 	width: 100%;
-	height: 120vh;
+	height: 100vh;
 	margin-left: 0px;
 	position: absolute;
 	left: 0px;
@@ -22,11 +22,13 @@ body{
 }
 
 .logo {
-	margin-top:50px;
+/*	background-color: blue;
+*/	margin-top:50px;
 }
 
 .container {
-	width: 650px;
+/*	background-color: yellow;
+*/	width: 650px;
 	height: 553px;
 	top: 0vh;
 	margin-left: 50%;
