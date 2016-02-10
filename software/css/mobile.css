@@ -10,7 +10,7 @@ body{
 	margin: 0px;
 
     overflow: hidden;
-    background-color:  black;
+    background-color:  red;
 }
 
 .softHome{
@@ -38,9 +38,10 @@ body{
 
 .container p {
 	display: block!important;
-	-ms-transform: translateY (0%);
-	-webkit-transform: translateY (0%);
-	-moz-transform: translateY (0%);
+	top: 50%;
+	-ms-transform: translateY (-50%);
+	-webkit-transform: translateY (-50%);
+	-moz-transform: translateY (-50%);
   	transform: translateY(-50%);
 }
 
