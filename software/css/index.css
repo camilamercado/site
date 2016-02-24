@@ -18,7 +18,7 @@ font-family:"Chalet-Book-Bold-Italic";
 }
 
 body {
-	background: lightgrey;
+	background: black;
 	-webkit-transition: background 2s ease;
 	-moz-transition:    background 2s ease;
 	-opera-transition:  background 2s ease;
@@ -222,17 +222,18 @@ h4 {
 
 ul {
 	display: block;
-	width: 1080px;
-    height: 1080px!important;
+	width: 1000px;
+    height: 1000px!important;
+   /* background: cornflowerblue;*/
 	
 	position: absolute;
-	margin-left: 75px;
-	margin-top: 75px;
+	margin-left: 100px;
+	margin-top: 100px;
 	padding-left: 0px;
 	padding: 0px;
 	z-index: -2;
 
-	font-size: 65px;
+	font-size: 58px;
     font-family: "Chalet-Book-Bold-Italic";
     color: white;
 

@@ -1,0 +1,20 @@
+
+body{
+	-webkit-transform: scale(0.45)!important;
+	-moz-transform: scale(0.45)!important;
+	-ms-transform: scale(0.45)!important;
+	-o-transform: scale(0.45)!important;
+    background-color: blue!important;
+
+}
+
+.softHome {
+	top: -40vh!important;
+}
+
+.mobile-info {
+  
+   width: 120%!important;
+   margin-left: -40px;
+}
+

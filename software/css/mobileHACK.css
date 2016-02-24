@@ -1,3 +1,16 @@
+body{
+	-webkit-transform: scale(0.5)!important;
+	-moz-transform: scale(0.5)!important;
+	-ms-transform: scale(0.5)!important;
+	-o-transform: scale(0.5)!important;
+	background-color: red!important;
+}
+
 .container p {
 	margin-top: -80px;
+}
+
+ul {
+	display: none;
+	width: 0px!important;
 }

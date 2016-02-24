@@ -95,9 +95,15 @@ a  {
 
 
 .ring-container {
-	display: none;
-	-webkit-animation-name: none; 
+	opacity: 0;
 
+}
+
+ul {
+	-webkit-animation:  none;
+	-moz-animation: 	none; 
+	-o-animation: 		none; 
+	animation: 			none; 
 }
 
 }
