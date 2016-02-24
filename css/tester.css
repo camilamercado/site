@@ -13,12 +13,10 @@ body {
 
 .container {
 	min-width: 300px;
+	max-width: 700px;
 	width: 58%;
 	height: 600px;
 	background: white;
-	/*padding-top: 20px;*/
-	/*margin-left: 21%;*/
-
 	position: absolute;
 	margin-top: 3%;
 	left: 50%;
