@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <title>software studios</title>
-<link type="text/css" rel="stylesheet" media="only screen and (max-device-width: 736px)" href="css/mobileHACK.css" />
+<!-- <link type="text/css" rel="stylesheet" media="only screen and (max-device-width: 736px)" href="css/mobileHACK.css" />
 <link type="text/css" rel="stylesheet" media="only screen and (max-device-width: 480px)" href="css/mobile4HACK.css" />
-
-<link href="css/index.css" rel="stylesheet" />
-<link href="css/mobile.css" rel="stylesheet" />
+ -->
+<link href="css/dupe.css" rel="stylesheet" />
+<link href="css/mobile_dupe.css" rel="stylesheet" />
 <link href="css/img/logo.png" rel="icon" type="image/png">
 
 <meta charset="utf-8" />
@@ -21,11 +21,28 @@
     <div class="softHome">
 
         <div class="logo">
-          <div class="circle" id="A"></div>
-          <div class="circle" id="B"></div>
+          <div class="diamond"></div>
         </div>
 
         <div class="container">
+
+        <div class="info A">
+         <span class="a1">DIGITAL FABRIC PRINTING</span>
+         <span class="a2">DIGITAL PHOTO PRINTING</span>
+         <span class="a3">DIGITAL DESIGN SERVICES</span>
+        </div>
+
+        
+          <img class="mobile_icon" src="css/img/large_logo.png"/>
+      
+
+        <div class="info B">
+         <span class="b1">SOFTWARE-STUDIOS.COM</span>
+         <span class="b2">INFO@SOFTWAREEE.COM</span>
+         <span class="b3">NEW YORK, 2016</span>
+        </div>
+
+        <div class="title">
           <p class="s">s</p>
           <p class="o">o</p>
           <p class="f">f</p>
@@ -34,64 +51,38 @@
           <p class="a">a</p>
           <p class="r">r</p>
           <p class="e">e</p>
+          
+          <p class="ss">s</p>
+          <p class="tt">t</p>
+          <p class="uu">u</p>
+          <p class="dd">d</p>
+          <p class="ii">i</p>
+          <p class="oo">o </p>
+          <p class="sss"> s,</p>
+
+          <p class="l">l</p>
+          <p class="ll">l</p>
+          <p class="c">c</p>
         </div>
 
-        <div class="mobile-effector"></div>
-
-        <div class="mobile-info">
-            <a href="mailto:info@softwareee.com">*CONTACT US*</a>
-            FABRIC & PHOTO PRINTING<br>
-            DESIGN STUDIO<br>
-            NEW YORK<br>
+        <div class="mobile_title">
+          software studios, llc
         </div>
-
-        <div class="ring-container standard">
-          <ul class="ring">
-              <li>FABRIC PRINTING</li>
-              <li>NEW YORK</li>
-              <li>PHOTO PRINTING</li>
-              <li>DESIGN STUDIO</li>
-              </br>
-          </ul>
-        </div>
-
   
+        </div>
+
         <div class="link">
             <a href="mailto:info@softwareee.com">info@softwareee.com</a>
         </div>
 
-        
-        <div class="menu left">
-        <div class="transparent"></div>
-          <span>
-            P<br>
-            O<br>
-            R<br>
-            T<br>
-            F<br>
-            O<br>
-            L<br>
-            I<br>
-            O
-          </span>
-        </div>
-        <div class="menu right">
-        <div class="transparent"></div>
-         <span>
-            C<br>
-            O<br>
-            N<br>
-            T<br>
-            A<br>
-            C<br>
-            T<br>    
-          </span>
-        </div>
+        <a href="portfolio/index.html" class="nav A" onmouseover="rectify();" onmouseout="softFinder()">
+        portfolio</a>
+
+        <div class="nav B" onmouseover="rectify();" onmouseout="softFinder()">contact</div>
 
 
-        <div class="effectorHalf" onmouseout="softFinder()" onmouseover="rectify()"></div>
-        <div class="effectorHalfB" onmouseout="softFinder()" onmouseover="rectify()"></div>
-
+        <div class="effector" onmouseout="softFinder()" onmouseover="rectify()"></div>
+       
     </div>
 
 <script src="CircleType-master/js/plugins.js"></script>
@@ -99,33 +90,47 @@
 
 <script type="text/javascript">
 
+var timer = setInterval(softFinder, 30000);
+//var fixTimer = setInterval(rectify,  6000);
+
 function softFinder(){
-$("p").each(function(){
-     moveRandom($(this));
-  });
+  var width = document.body.clientWidth;
+  if (width > 736){
+          console.log("firing:",width)
+
+    $("p").each(function(){
+       moveRandom($(this));
+    });
+  }else if (width < 736){
+    console.log("width:", width)
+  }
 }
 
+
 function moveRandom(e){
-  
   var height = document.body.clientHeight,
   containerHeight = document.querySelector(".container").clientHeight,
-  maxHeightB = height - (height/4),
-  maxHeightA = height - 100,
+  maxHeightB =height/ 1.5,
+  maxHeightA = height - 400,
   topExcess = ((containerHeight - maxHeightB) / 2),
   padding = topExcess + 50;
 
   if (height <= 800){
-    var randomT = Math.floor((Math.random()* (maxHeightA - 150))) +padding + "px";
+    var randomT = Math.floor((Math.random()* (maxHeightB - 150))) +padding + "px";
+console.log("mr")
 
   } else if (height > 800){
-    var randomT = Math.floor((Math.random()* (maxHeightB - topExcess))) +padding + "px";
-  
+    var randomT = Math.floor((Math.random()* 2000 ) + 700) +padding + "px";
+ console.log("mr")
+
   }else if (width < 736){
     var randomT = Math.floor((Math.random()* (maxHeightA - 150))) +padding + "px";
+  console.log("mr")
 
   }
-  
   $(e).css({"top": randomT, "color":"white"});
+  timeoutID = setTimeout(rectify, 15000);
+
 }
 
 
@@ -147,20 +152,20 @@ $('.ring').circleType();
 
 
 $(function(){
-    $("body").click(function() {  
+    $(".B").click(function() {  
         var iteration=$(this).data('iteration')||1
         switch ( iteration) {
             case 1:
                 $(".link").css({"display": "block"});
                 $("p").css({"display": "none"});
-                $("ul").css({"opacity": "1"});
-                $(".effectorHalf").css({"height": "200"});
+                $("img").css({"display": "none"});
+               
             break;  
             case 2:
                 $(".link").css({"display": "none"});
                 $("p").css({"display": "block"});
-                $("ul").css({"opacity": "0"});
-                $(".effectorHalf").css({"height": "280"});
+                 $("img").css({"display": "block"});
+               
             break;
           }
         iteration++;

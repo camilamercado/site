@@ -1,0 +1,120 @@
+@media only screen and (max-width: 736px){
+
+@import url("http://fast.fonts.net/lt/1.css?apiType=css&c=f8e3a4fd-d468-4fb9-8f81-e9e9e8515f2b&fontids=san-marco");
+@font-face{
+font-family:"San Marco";
+src:url("fonts/san-marco/cae943c3-78bd-42be-9d70-31e443c79dd2.eot?#iefix");
+src:url("fonts/san-marco/cae943c3-78bd-42be-9d70-31e443c79dd2.eot?#iefix") format("eot"),url("fonts/san-marco/36412afb-938c-4b77-97e6-56e8c4e1653c.woff2") format("woff2"),url("fonts/san-marco/30b179ed-71fe-4084-a58f-fddb0df1faba.woff") format("woff"),url("fonts/san-marco/ff91d907-9052-4eca-b625-f4f06481f6d2.ttf") format("truetype"),url("fonts/san-marco/94b79448-7b99-4410-8884-1473c998ea93.svg#94b79448-7b99-4410-8884-1473c998ea93") format("svg");
+}
+
+@font-face{
+font-family:"Chalet Book";
+/*src:url("fonts/chalet-book/ChaletBookBold.ttf") format("truetype");
+*/src:url("fonts/chalet-book/ChaletBook-Italic.otf") format("truetype");
+}
+
+@font-face{
+font-family:"Chalet-Book-Bold-Italic";
+/*src:url("fonts/chalet-book/ChaletBookBold.ttf") format("truetype");
+*/src:url("fonts/chalet-book/ChaletBook-BoldItalic.otf") format("truetype");
+}
+
+@font-face{
+font-family:"Chalet-Book-Bold-Italic";
+/*src:url("fonts/chalet-book/ChaletBookBold.ttf") format("truetype");
+*/src:url("fonts/chalet-book/ChaletBook-BoldItalic.otf") format("truetype");
+}
+
+
+
+.container {
+	font-family: "Chalet Book";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.container .nav {
+	width: 100%;
+	height: 40px;
+	background: white!important;
+	border-bottom: 1px dashed black;
+	position: fixed;
+	z-index: 10;
+}
+
+.container .nav .title {
+	margin-left: 25px;
+	line-height: 40px;
+	font-family: "Chalet Book";
+    font-size: 14px;
+
+}
+
+.container .nav .title span {
+	font-size: 20px;
+	font-family: "San Marco";
+	letter-spacing: 1px;
+}
+
+.container .nav .links {
+	position: absolute;
+	right: 25px;
+	line-height: 48px;
+	top: 0px;
+}
+
+.container .nav .links a{
+	width: 50px;
+	margin-left: 10px;
+}
+
+.container .nav .links a.selected {
+	background: yellow;
+
+}
+
+.container .nav .links a:hover {
+	color: blue;
+
+}
+
+
+.container .portfolio {
+	position: absolute;
+	top: 100px;
+	width: 100%;
+	height: auto;
+	top: 20px;
+
+}
+
+.container .portfolio .slide {
+	width: 95%;
+	min-height: 50vh;
+	position: relative;
+	height: auto;
+	padding-top: 25px;
+	padding-left: 25px;
+	margin-top: 25px;
+	overflow: auto;
+}
+
+.container .portfolio img {
+	width: 93%;
+	height: auto;
+	background: lavender;
+	float: left;
+}
+.container .portfolio .detail {
+	width: 100%;
+	height: auto;
+	float: left;
+	padding-left: 0px;
+	padding-top: 20px;
+	line-height: 20px;
+}
+
+}
