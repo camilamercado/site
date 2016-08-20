@@ -2,30 +2,92 @@
 <html lang="en">
 <head>
 <title>software studios</title>
-<link type="text/css" rel="stylesheet" media="only screen and (max-device-width: 736px)" href="css/mobileHACK.css" />
+<!-- <link type="text/css" rel="stylesheet" media="only screen and (max-device-width: 736px)" href="css/mobileHACK.css" />
 <link type="text/css" rel="stylesheet" media="only screen and (max-device-width: 480px)" href="css/mobile4HACK.css" />
+ -->
 
-<link href="css/index.css" rel="stylesheet" />
-<link href="css/mobile.css" rel="stylesheet" />
+<script src="http://sdks.shopifycdn.com/js-buy-sdk/latest/shopify-buy.polyfilled.globals.min.js"></script>
+<script type="text/javascript">
+
+var shopClient = ShopifyBuy.buildClient({
+  apiKey: 'c1da9d37442a134deb14ca7a57b3eebb ',
+  myShopifyDomain: 'software-studios-2015',
+  appId: '6'
+});
+
+
+shopClient.fetchQueryProducts({collection_id: 234915905})
+  .then(function(products) {
+    var generator = renderProducts(products);
+    $('.silk').html(generator)
+});
+
+shopClient.fetchQueryProducts({collection_id: 234808705})
+  .then(function(products) {
+    var generator = renderProducts(products);
+    $('.cotton').html(generator)
+});
+
+function renderProducts(products){
+  var elems = products.map(function(products){
+    console.log(products)
+    return '<div class="gridItem" id="'+ products.attrs.product_id +'"><div class="image"></div>' + products.title + '</div>'; 
+})
+
+return elems;
+
+}
+
+
+</script>
+
+ <link href="css/1999.css" rel="stylesheet" />
+
+<link href="css/test.css" rel="stylesheet" />
+<link href="css/mobile_dupe.css" rel="stylesheet" />
 <link href="css/img/logo.png" rel="icon" type="image/png">
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
 </head>
 
 
-<body onload="softFinder()" onkeypress="backgroundSet()">
+<body onload="softFinder()" onkeydown="backgroundSet()" onkeyup="unSet()">
 
     <div class="softHome">
 
-        <div class="logo">
-          <div class="circle" id="A"></div>
-          <div class="circle" id="B"></div>
+        <div class="logo" onmouseover="backgroundSet()" onmouseout="unSet()">
+          <div class="diamond_shadow"></div>
+          <div class="diamond"></div>
         </div>
 
         <div class="container">
+
+        <div class="info A" >
+         <span class="a1">DIGITAL FABRIC PRINTING</span>
+         <span class="a2">DIGITAL PHOTO PRINTING</span>
+         <span class="a3">DIGITAL DESIGN SERVICES</span>
+        </div>
+
+        
+        <a class="mobile_nav A" href="portfolio/" onmouseover="rectify();" onmouseout="softFinder()">
+        portfolio</a>
+
+        <div class="mobile_nav B" onmouseover="rectify();" onmouseout="softFinder()">contact</div>
+      
+
+        <div class="info B">
+         <span class="b1">SOFTWARE-STUDIOS.COM</span>
+         <span class="b2">INFO@SOFTWAREEE.COM</span>
+         <span class="b3"> NEW YORK, 2016</span>
+        </div>
+
+
+
+        <div class="title">
           <p class="s">s</p>
           <p class="o">o</p>
           <p class="f">f</p>
@@ -34,100 +96,166 @@
           <p class="a">a</p>
           <p class="r">r</p>
           <p class="e">e</p>
+          
+          <p class="ss">s</p>
+          <p class="tt">t</p>
+          <p class="uu">u</p>
+          <p class="dd">d</p>
+          <p class="ii">i</p>
+          <p class="oo">o </p>
+          <p class="sss"> s,</p>
+
+          <p class="l">l</p>
+          <p class="ll">l</p>
+          <p class="c">c</p>
+      </div>
+
+        <div class="mobile_title">
+          software studios, llc
         </div>
 
-        <div class="mobile-effector"></div>
-
-        <div class="mobile-info">
-            <a href="mailto:info@softwareee.com">*CONTACT US*</a>
-            FABRIC & PHOTO PRINTING<br>
-            DESIGN STUDIO<br>
-            NEW YORK<br>
+        <div class="mobile_link">
+            <a href="mailto:info@softwareee.com?subject=web contact/&body=business name:%0D%0Aname:%0D%0Aphone number:%0D%0Acountry:%0D%0Astate:%0D%0A">info@softwareee.com</a>
         </div>
-
-        <div class="ring-container standard">
-          <ul class="ring">
-              <li>FABRIC PRINTING</li>
-              <li>NEW YORK</li>
-              <li>PHOTO PRINTING</li>
-              <li>DESIGN STUDIO</li>
-              </br>
-          </ul>
-        </div>
-
   
+        </div>
+
         <div class="link">
-            <a href="mailto:info@softwareee.com">info@softwareee.com</a>
+            <a href="mailto:info@softwareee.com?subject=software inquiry:&body=please provide the following information%0D%0A%0D%0Abusiness name:%0D%0Aname:%0D%0Aphone number:%0D%0Acountry:%0D%0Astate:%0D%0A%0D%0Aproject description:%0D%0Afabric type:%0D%0Aquantity:">info@softwareee.com</a>
         </div>
 
-        
-        <div class="menu left">
-        <div class="transparent"></div>
-          <span>
-            P<br>
-            O<br>
-            R<br>
-            T<br>
-            F<br>
-            O<br>
-            L<br>
-            I<br>
-            O
-          </span>
-        </div>
-        <div class="menu right">
-        <div class="transparent"></div>
-         <span>
-            C<br>
-            O<br>
-            N<br>
-            T<br>
-            A<br>
-            C<br>
-            T<br>    
-          </span>
-        </div>
+        <a href="portfolio/index.html" class="nav A" onmouseover="rectify();" onmouseout="softFinder()">
+        portfolio</a>
+
+        <div class="nav B" onmouseover="rectify();" onmouseout="softFinder()">contact</div>
+
+        <div class="nav C" onmouseover="rectify();" onmouseout="softFinder()">printing</div>
+
+        <div class="nav D" onmouseover="rectify();" onmouseout="softFinder()">shop</div>
 
 
-        <div class="effectorHalf" onmouseout="softFinder()" onmouseover="rectify()"></div>
-        <div class="effectorHalfB" onmouseout="softFinder()" onmouseover="rectify()"></div>
+        <div class="effector" onmouseover="rectify()">
+          
+        </div>
+       
+    </div>
+
+
+  <div class="content-container"> 
+  <div class="top fold"></div>
+  <div class="main">  
+
+  <div class="nav">
+    <div class="title">
+      <a class="x">software studios, llc </a>
+      
+      <div class="options">
+        <ul>
+          <!-- <li>design services</li>
+          <li>fabric printing</li>
+          <li>scarf printing</li>
+          <li>photo printing</li> -->
+          <li class="option_silk"   onclick="scrollerA();" style="text-decoration: underline;">Silk</li>
+          <li class="option_cotton" onclick="scrollerB();">Cotton</li>
+          <li class="option_custom" onclick="scrollerC();">Custom</li>
+          <li>Paper</li>
+        </ul>
+      </div>
+
 
     </div>
+  </div>
+
+  <div class="fabric-printing">
+
+  <div class="fabric-options">
+  <!-- <ul>
+    <li class="option_silk"   onclick="scrollerA();" style="text-decoration: underline;">Silk</li>
+    <li class="option_cotton" onclick="scrollerB();">Cotton</li>
+    <li class="option_custom" onclick="scrollerC();">Custom</li>
+
+  </ul> -->
+    
+  </div>
+
+  <div class="grid">
+  <div class="silk">
+    <div class="gridItem"><div class="image"></div>Habotai<br><span>                 SLK-01</span></div>
+    <div class="gridItem"><div class="image"></div>Crepe De Chine<br><span>          SLK-02</span></div>
+    <div class="gridItem"><div class="image"></div>Charmesue<br><span>               SLK-03</span></div>
+    <div class="gridItem"><div class="image"></div>Silk Satin<br><span>              SLK-04</span></div>
+    <div class="gridItem"><div class="image"></div>Silk Satin Twill<br><span>        SLK-05</span></div>
+    <div class="gridItem"><div class="image"></div>Chiffon<br><span>                 SLK-06</span></div>
+    <div class="gridItem"><div class="image"></div>Chinese Crinkled Chiffon<br><span>SLK-07</span></div>
+    <div class="gridItem"><div class="image"></div>Organza<br><span>                 SLK-08</span></div>
+    <div class="gridItem"><div class="image"></div>Crepe Georgette<br><span>         SLK-09</span></div>
+    <div class="gridItem"><div class="image"></div>Gauze<br><span>                   SLK-10</span></div>
+    <div class="gridItem"><div class="image"></div>Indian Dupion White<br><span>     SLK-11</span></div>
+    <div class="gridItem"><div class="image"></div>Chinese Dupion<br><span>          SLK-12</span></div>
+    <div class="gridItem"><div class="image"></div>Bleached Fuji Broadcloth<br><span>SLK-13</span></div>
+  </div>  
+  <div class="cotton">
+    <div class="gridItem"><div class="image"></div>Cotton Twill<br><span>             COT-01</span></div>
+    <div class="gridItem"><div class="image"></div>Cotton Duck<br><span>              COT-02</span></div>
+    <div class="gridItem"><div class="image"></div>Cotton Percale<br><span>           COT-03</span></div>
+    <div class="gridItem"><div class="image"></div>Cotton Sateen<br><span>            COT-04</span></div>
+    <div class="gridItem"><div class="image"></div>Cotton Sheeting<br><span>          COT-05</span></div>
+    <div class="gridItem"><div class="image"></div>High Quality Single Knit<br><span> COT-06</span></div>
+    <div class="gridItem"><div class="image"></div>Spun Viscose Challis <br><span>    COT-07</span></div>
+    <div class="gridItem"><div class="image"></div>HTC Cotton Broadcloth<br><span>    COT-08</span></div>
+    <div class="gridItem"><div class="image"></div>Artist Canvas<br><span>            COT-09</span></div>
+    <div class="gridItem"><div class="image"></div>Cotton Lawn<br><span>              COT-10</span></div>
+    <div class="gridItem"><div class="image"></div>Belgian Linen<br><span>            COT-11</span></div>
+  </div>
+
+  <div class="custom">
+    <div class="gridItem"><div class="image"></div>Custom Fabric<br><span>01</span></div>
+
+  </div>
+
+  </div>
+  </div>
+
+
+  </div>
+
+  <div class="bottom fold"></div>
+
+</div>
+
+
 
 <script src="CircleType-master/js/plugins.js"></script>
 <script src="CircleType-master/js/circletype.js"></script>
 
 <script type="text/javascript">
 
+var timer = setInterval(softFinder, 30000);
+
 function softFinder(){
-$("p").each(function(){
-     moveRandom($(this));
-  });
+  var width = document.body.clientWidth;
+  if (width > 736){
+    $("p").each(function(){
+       moveRandom($(this));
+    });
+  }else if (width < 736){
+  }
 }
+
 
 function moveRandom(e){
+  var height = document.body.clientHeight;
   
-  var height = document.body.clientHeight,
-  containerHeight = document.querySelector(".container").clientHeight,
-  maxHeightB = height - (height/4),
-  maxHeightA = height - 100,
-  topExcess = ((containerHeight - maxHeightB) / 2),
-  padding = topExcess + 50;
-
   if (height <= 800){
-    var randomT = Math.floor((Math.random()* (maxHeightA - 150))) +padding + "px";
-
+    var randomT = Math.floor((Math.random() * (470)) + (100))+ "px";
   } else if (height > 800){
-    var randomT = Math.floor((Math.random()* (maxHeightB - topExcess))) +padding + "px";
-  
-  }else if (width < 736){
-    var randomT = Math.floor((Math.random()* (maxHeightA - 150))) +padding + "px";
+    var randomT = Math.floor((Math.random() * (470)) + (100))+ "px";
 
   }
-  
   $(e).css({"top": randomT, "color":"white"});
-}
+  timeoutID = setTimeout(rectify, 15000);
 
+}
 
 function rectify(){
   $("p").each(function(){
@@ -138,29 +266,32 @@ function rectify(){
 var colors = ["blue", "red", "black", "orange", "tomato", "lightgrey"];
 
 function backgroundSet(){
-document.body.style.background = colors[Math.floor(Math.random()*colors.length)];
-    
+//document.body.style.background = colors[Math.floor(Math.random()*colors.length)];
+ $(".diamond_shadow").css({"opacity": 1});   
 }
 
-$('.ring').circleType();
-
-
+function unSet(){
+//document.body.style.background = colors[Math.floor(Math.random()*colors.length)];
+ $(".diamond_shadow").css({"opacity": 0});   
+}
 
 $(function(){
-    $("body").click(function() {  
+    $(".B").click(function() {  
         var iteration=$(this).data('iteration')||1
         switch ( iteration) {
             case 1:
                 $(".link").css({"display": "block"});
+                $(".mobile_link").css({"display": "block"});
                 $("p").css({"display": "none"});
-                $("ul").css({"opacity": "1"});
-                $(".effectorHalf").css({"height": "200"});
+                $(".mobile_title").css({"display": "none"});
+               
             break;  
             case 2:
                 $(".link").css({"display": "none"});
+                $(".mobile_link").css({"display": "none"});
                 $("p").css({"display": "block"});
-                $("ul").css({"opacity": "0"});
-                $(".effectorHalf").css({"height": "280"});
+                $(".mobile_title").css({"display": "block"});
+               
             break;
           }
         iteration++;
@@ -169,22 +300,18 @@ $(function(){
     })
 })
 
-$(function(){
-    $(".mobile-effector, .mobile-info").click(function() {  
-        var iteration=$(this).data('iteration')||1
-        switch ( iteration) {
-            case 1:
-                softFinder();
-            break;  
-            case 2:
-                rectify();          
-            break;
-          }
-        iteration++;
-        if (iteration>2) iteration=1
-        $(this).data('iteration',iteration)
+
+    $(".C").click(function() {  
+       $(".content-container").css({"top": "0vh"});
+        $(".softHome").css({"opacity": "0"});
     })
-})
+
+     $(".x").click(function() {  
+       $(".content-container").css({"top": "110vh"});
+       $(".softHome").css({"opacity": "1"});
+    })
+
+
 
 $(function(){
     $("body").keypress(function() {  
@@ -204,6 +331,32 @@ $(function(){
         $(this).data('iteration',iteration)
     })
 })
+
+function scrollerA(){
+       $(".grid").css({"margin-top": "0px"});
+       $(".option_silk").css({"text-decoration": "underline"});
+       $(".option_cotton").css({"text-decoration": "none"});
+       $(".option_custom").css({"text-decoration": "none"});
+  }
+
+  function scrollerB(){
+    var silk   = document.querySelector(".silk");   
+    var newPos = - silk.scrollHeight + "px" ;
+      $(".grid").css({"margin-top": newPos});
+      $(".option_cotton").css({"text-decoration": "underline"});
+      $(".option_silk").css({"text-decoration": "none"});
+      $(".option_custom").css({"text-decoration": "none"});
+  }
+
+  function scrollerC(){
+    var silk   = document.querySelector(".silk");   
+    var cotton = document.querySelector(".cotton");
+    var newPos = - (silk.scrollHeight + cotton.scrollHeight) + "px" ;
+      $(".grid").css({"margin-top": newPos});
+      $(".option_custom").css({"text-decoration": "underline"});
+      $(".option_silk").css({"text-decoration": "none"});
+      $(".option_cotton").css({"text-decoration": "none"});
+  }
 
 
 

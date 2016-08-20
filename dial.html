@@ -394,7 +394,7 @@ A brief introduction
     <li><a href="http://www.fourpillars.net/pdf/kingwen.pdf">
       The explanation of King Wen’s order of the 64 hexagrams.
     </a></li>  
-     <li><a href="http://www.biroco.com/yijing/sequence.htm">
+     <li onMouseOver="loadDial()"><a href="http://www.biroco.com/yijing/sequence.htm">
       Yijing hexagram sequences
     </a></li>
   </ul>
@@ -413,6 +413,11 @@ var fC  = ["lightgrey","white"];
 var fC2 = ["white"];
 var fC3 = ["red"];
 
+//setTimeout()
+
+
+function loadDial(){
+
 dial( 140, [32,0], fC,  "data/d5.tsv", ".x", "f", 64  );
 dial( 120, [16,0], fC,  "data/d4.tsv", ".x", "e", 32  );
 dial( 100, [8, 0], fC,  "data/d3.tsv", ".x", "d", 16  );
@@ -425,6 +430,10 @@ dial( 60,  [3, 0], fC,  "data/d2.tsv", ".y", "j", 0  );
 dial( 50,  [1, 1], fC,  "data/d1.tsv", ".y", "i", 0  );
 dial( 40,  [0, 0], fC,  "data/d0.tsv", ".y", "h", 0  );
 dial( 30,  [8, 0], fC2, "data/d0.tsv", ".y", "g", 0  );
+
+}
+
+
 
 function dial (oR, dR, fillColor, dataChart, dC, id, C) {
 

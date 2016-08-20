@@ -1,0 +1,296 @@
+@import url("http://fast.fonts.net/lt/1.css?apiType=css&c=f8e3a4fd-d468-4fb9-8f81-e9e9e8515f2b&fontids=san-marco");
+@font-face{
+font-family:"San Marco";
+src:url("fonts/san-marco/cae943c3-78bd-42be-9d70-31e443c79dd2.eot?#iefix");
+src:url("fonts/san-marco/cae943c3-78bd-42be-9d70-31e443c79dd2.eot?#iefix") format("eot"),url("fonts/san-marco/36412afb-938c-4b77-97e6-56e8c4e1653c.woff2") format("woff2"),url("fonts/san-marco/30b179ed-71fe-4084-a58f-fddb0df1faba.woff") format("woff"),url("fonts/san-marco/ff91d907-9052-4eca-b625-f4f06481f6d2.ttf") format("truetype"),url("fonts/san-marco/94b79448-7b99-4410-8884-1473c998ea93.svg#94b79448-7b99-4410-8884-1473c998ea93") format("svg");
+}
+
+@font-face{
+font-family:"Chalet Book";
+/*src:url("fonts/chalet-book/ChaletBookBold.ttf") format("truetype");
+*/src:url("fonts/chalet-book/ChaletBook-Italic.otf") format("truetype");
+}
+
+@font-face{
+font-family:"Chalet-Book-Bold-Italic";
+/*src:url("fonts/chalet-book/ChaletBookBold.ttf") format("truetype");
+*/src:url("fonts/chalet-book/ChaletBook-BoldItalic.otf") format("truetype");
+}
+
+@font-face{
+font-family:"Chalet-Book-Bold-Italic";
+/*src:url("fonts/chalet-book/ChaletBookBold.ttf") format("truetype");
+*/src:url("fonts/chalet-book/ChaletBook-BoldItalic.otf") format("truetype");
+}
+
+
+@font-face{
+font-family:"Chalet-Bold";
+src:url("fonts/chalet-book/ChaletBook-Bold.otf") format("truetype");
+}
+
+
+body {
+	background: lightgrey;
+}
+
+.content-container {
+	font-family: "Chalet Book"!important;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 110vh;
+
+	-webkit-transition: all 2s ease;
+	-moz-transition:    all 2s ease;
+	-opera-transition:  all 2s ease;
+}
+
+.content-container .fold {
+	width: 90%;
+/*	max-width: 1100px;
+*/	min-width: 700px;
+	height: 30px;
+	left: 5%;
+	background-color: white;
+	position: absolute;
+	z-index: 0;
+	-webkit-transform: skew(20deg);
+
+}
+
+.content-container .top {
+	margin-left: -5px;
+	top: 0px;
+}
+
+.content-container .bottom {
+	margin-left: 5px;
+	top: 90vh;
+	margin-top: 28px;
+}
+
+.content-container .main {
+/*	max-width: 1100px;
+*/	min-width: 700px;
+	width: 90%;
+	height: 90vh;
+	position: absolute;
+	left: 5%;
+	top: 29px;
+	background: white;
+	overflow: hidden;
+}
+
+.content-container .main .nav {
+	width: 100%;	
+/*	max-width: 1100px;
+*/	min-width: 700px;
+	height: 80px;
+	top: -40px;
+	position: absolute;
+	background: 
+}
+
+
+.content-container .main .nav .title {
+	width: 100%;
+	background: transparent;
+	line-height: 100px;
+	font-family: "Chalet Book";
+    margin-top: 0px;
+
+}
+
+.content-container .main .nav .title a {
+	font-size: 28px;
+	width: 100%;
+	height: 70px;
+	font-family: "San Marco";
+	letter-spacing: 1px;
+	position: absolute;
+	text-align: center;
+	margin-top: 5px;
+	background: transparent;
+	z-index: 5;
+	color: black;
+	text-decoration: none;
+	left: 0px;
+}
+
+.content-container .main .nav .title a:hover {
+	color: blue;
+}
+
+.content-container .main .nav .options {
+	width: 100%;
+	height: 80px;
+		top: 50px;
+
+	position: absolute;
+	border-bottom: 1px solid black; 
+
+}
+
+.content-container .main .nav .options ul {
+	font-family: "Chalet-Bold";
+	font-size: 13px;
+	width: 100%;
+	height: 80px;
+	position: absolute;
+	left: 0px;
+	list-style-type: none;
+	margin: 0px;
+	padding-left: 0px;
+	text-align: center;
+	text-transform: uppercase;
+
+
+}
+
+.content-container .main .nav .options ul li {
+	display: inline;
+	line-height: 80px;
+	width: 100%!important;
+	height: 50px!important;
+	margin-right: 30px;
+}
+
+.content-container .main .nav .options ul li:hover {
+	color: blue;
+}
+
+
+.content-container .main .fabric-printing {
+	width: 100%;
+	left: 0px;
+	height: 90%;
+	position: absolute;
+	overflow: scroll;
+	top: 120px;
+}
+
+.content-container .main .fabric-printing .fabric-options {
+    /*font-family:"Chalet-Book-Bold-Italic";
+	width: 16%;
+	position: absolute;
+	top: 0px;*/
+}
+
+.content-container .main .fabric-printing .fabric-options ul{
+	list-style-type: none;
+	margin-top: 10px;
+
+}
+
+.content-container .main .fabric-printing .fabric-options li{
+    font-family:"Chalet-Bold";
+	margin-top: 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: right
+
+
+}
+
+.content-container .main .fabric-printing .fabric-options li:hover{
+    color: blue;
+
+}
+
+
+.content-container .main .fabric-printing .grid {
+	width: 75%;
+	max-width: 850px;
+	height: 100%;
+	left: 15%;
+	top: 0px;
+	position: absolute;
+
+	-webkit-transition: all 2.5s ease;
+	-moz-transition:    all 2.5s ease;
+	-opera-transition:  all 2.5s ease;
+
+}
+
+.content-container .main .fabric-printing .grid h1 {
+	font-size: 20px;
+	margin-left: 10px;
+	font-family: "Chalet-Bold";
+}
+
+.content-container .main .fabric-printing .grid .silk{
+	position: relative;
+	top: 0px;
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.content-container .main .fabric-printing .grid .cotton{
+	position: relative;
+	width: 100%;
+	height: auto;
+	float: left;
+}
+
+.content-container .main .fabric-printing .grid .custom{
+	position: relative;
+	width: 100%;
+	height: auto;
+	float: left;
+
+}
+
+.content-container .main .fabric-printing .gridItem {
+	padding-left: 10px;
+	width: 140px;
+	height: 200px;
+    position: relative;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.content-container .main .fabric-printing .gridItem .image{
+	margin-top: 8px;
+	width: 130px;
+	height: 130px;
+	border: 1px solid black;
+	position: relative;
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	background: white;
+}
+
+.content-container .main .fabric-printing .gridItem:hover {
+	background: lightsteelblue;
+}
+
+.content-container .main .fabric-printing .gridItem span{
+	font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

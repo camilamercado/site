@@ -1,24 +1,38 @@
 
-@media only screen and (max-width: 736px){
+@media only screen and (max-width: 500px){
 
 
 @font-face{
 font-family:"Chalet-Bold";
 src:url("fonts/chalet-book/ChaletBook-Bold.otf") format("truetype");
 }
+
+body {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+	overflow: hidden;
+}
+
 .softHome{
 	width: 100%;
     height: 100vh;
 	position: absolute;
-	top: 0px;
-	left:0px;
-	-ms-transform: translateY (0%);
-	-webkit-transform: translateY (0%);
-	-moz-transform: translateY (0%);
-	-o-transform: translateY (0%);
-	transform: translateY(0%);
+	top: -10px;
+	left:-8px;
+	margin-left: 0px!important;
+	-webkit-transform: translateY(0%);
+	   -moz-transform: translateY(0%);
+	    -ms-transform: translateY(0%);
+  	        transform: translateY(0%);	
+}
+
+.logo {
+	width: 100%;
+	height: 500px;
+	left: 0px;
 	margin-left: 0px;
-	
 }
 
 .container .title {
@@ -26,128 +40,188 @@ src:url("fonts/chalet-book/ChaletBook-Bold.otf") format("truetype");
 }
 
 .container {
-/*	background-color: blue;
-*/	top: 0px;
-	height: 100vh;
+	left: -150px;
+	margin-left: 50%;
+	height: 360px!important;
+	width: 300px!important;
 	opacity: 1;
+	background: white;
+	
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+  	        transform: translateY(-50%);	
 }
 
 .container .mobile_title {
 	display: block;
-	font-size: 30px;
-	letter-spacing: 3px;
+	font-size: 24px;
+	letter-spacing: 1px;
 	width: 100%;
-	height: 100px;
+	height: 70px;
 	margin-left: 0px;
 	left: 0px;
-	top: 0px;
+	top: 145px;
 	position: absolute;
 	background-color: white;
 	text-align: center;
 	opacity: 1;
-	line-height: 80px;
+	line-height: 70px;
 }
 
 .container .info {
 	position: absolute;
 	top: -30px;
-	margin-left: 275px;
+	margin-left: 0px;
+	left: 0px;
 	font-family: "Chalet-Bold";
 	text-align: center;
 	font-size: 14px;
-	line-height: 20px;
-    width: 175px;
+	line-height: 30px;
+    width: 100%;
 	height: auto;
-	/*background-color: red;*/
+	text-align: center;
 }
 
+.container .info span {
+	width: 100%;
+}
+
+
 .container .info.A {
-	margin-top: 300px;
+	margin-top: 70px;
 }
 
 .container .info.B {
-	margin-top: 500px;
+	margin-top: 260px;
+}
+
+.container .info span.a2 {
+	letter-spacing: 0.4px;
+}
+
+.container .info span.b2 {
+	letter-spacing: 0.5px;
 }
 
 .container .info span.b3 {
-	letter-spacing: 4.74px;
+	letter-spacing: 5.1px;
 }
 
 .diamond{
-	width: 350px;
-	height: 350px;
-	top: -400px;
-	left: 225px;
+	width: 300px;
+	height: 300px;
+	top: -360px;
+	left: -150px!important;
+	margin-left: 50%;
 	position: absolute;
-	-webkit-transform: rotate(45deg);
 	background-color: white;
 	z-index: 2;
+	display: none;
+
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		 -o-transform: rotate(45deg);
+	
 }
 
+.diamond_shadow {
+	display: none;
+}
 
 .nav {
+	display: none;
+}
+
+.mobile_nav {
+	display: block;
 	position: absolute;
-	width: 50%;
+	width: 100%;
 	height: 50px;
 	text-align: center;
 	line-height: 50px;
+	letter-spacing: 1.4px;
 	border-radius: 0%;
 	z-index: 4;
-	/*font-family: "Chalet-Bold";*/
+	font-family: "Chalet Book";
 	text-transform: uppercase;
-	background-color: red;
-	/*font-size: 30px;*/
-	color: white;
-	border-bottom: 5px solid white;
-
+	left: -20px;
+	font-size: 18px;
+	top: 50px;
 }
 
-a.nav {
+a.mobile_nav {
 	text-decoration: none;
 	color:white!important;
+
 }
 
-a.nav:hover {
+a.mobile_nav:hover {
 	background-color: black;
 	color: white!important;
 }
 
-.nav.A {
-	background-color: lightgrey;
-	top: 80px;
-	left: 0px;
-	border-right: 5px solid white;
+.mobile_nav.A {
+	background-color: white;
+	border-bottom: 1px solid black!important;
+
+	color: black!important;
+	top: -50px;
+	left: -9px;
+	border: 0px;
+	-webkit-transform: skew(20deg);
+
 }
 
-.nav.B {
-	background-color: lightgrey;
-	color: white;
-	top: 80px;
-	left: 51%;
+.mobile_nav.B {
+	/*border: 1px solid blue!important;*/
+	background-color: white;
+	color: black!important;
+	border-top: 1px solid black!important;
+	top: 360px;
+	left: 9px;
+	border: 0px;
+    -webkit-transform: skew(20deg);
+
 }
 
-.nav.B:hover {
-	background-color: black;
-	color: white!important;
+.mobile_nav.A:hover {
+	background-color: ghostwhite;
+	color: black!important;
+}
+
+.mobile_nav.B:hover {
+	background-color: ghostwhite;
+	color: black!important;
+
 }
 
 .link {
 	display: none;
+	opacity: 0;
+}
+
+.mobile_link {
+	opacity: 1!important;
+	display: none;
 	width: 500px;
     height: 40px;
     position: absolute;
-    top: 380px;
+    top: 175px;
     margin-left: 50%;
     left: -250px;
     z-index: 6;
     text-align: center;
+    font-size: 16px;
     /*background-color: red;*/
 
 }
 
-.link a {
+.mobile_link a {
 	font-family: "Chalet Book";
-	font-size: 28px;
+	font-size: 16px;
 	width: 500px;
     height: 100px;
 	color: black;
@@ -168,8 +242,282 @@ img {
 	position: absolute;
 	left: -25px;
 	margin-left: 50%;
-	top: 370px;
+	top: 330px;
 	opacity: 1;
+	display: none;
+}
+
+.effector {
+	display: none;
+}
+
+}
+
+@media only screen and (min-width: 500px ) and (max-width: 736px){
+
+@media only screen and (max-height: 750px){ 
+
+body {
+	-webkit-transform: scale(0.85)!important;
+	   -moz-transform: scale(0.85)!important;
+	    -ms-transform: scale(0.85)!important;
+	     -o-transform: scale(0.85)!important;
+	overflow: hidden;
+}
+
+}
+
+@font-face{
+font-family:"Chalet-Bold";
+src:url("fonts/chalet-book/ChaletBook-Bold.otf") format("truetype");
+}
+
+body {
+	-webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	     -o-transform: scale(1);
+	overflow: hidden;
+}
+
+.softHome{
+	width: 100%;
+    height: 100vh;
+	position: absolute;
+	top: -10px;
+	left:-8px;
+	-webkit-transform: translateY(0%);
+	   -moz-transform: translateY(0%);
+	    -ms-transform: translateY(0%);
+  	        transform: translateY(0%);
+	margin-left: 0px!important;
+	
+}
+
+.logo {
+	width: 100%;
+	height: 500px;
+	left: 0px;
+	margin-left: 0px;
+}
+
+.container .title {
+	display: none;
+}
+
+.container {
+	/*top: 50px;*/
+	left: -200px;
+	margin-left: 50%;
+	height: 600px;
+	width: 400px!important;
+	opacity: 1;
+	background: white;
+	top: 50vh;
+	-webkit-transform: translateY (-50%);
+	   -moz-transform: translateY (-50%);
+	    -ms-transform: translateY (-50%);
+  	        transform: translateY(-50%);
+}
+
+.container .mobile_title {
+	display: block;
+	opacity: 1;
+	font-size: 28px;
+	letter-spacing: 1.5px;
+	width: 100%;
+	height: 70px;
+	margin-left: 0px;
+	left: 0px;
+	top: 270px;
+	position: absolute;
+	/*background-color: white;*/
+	text-align: center;
+	opacity: 1;
+	line-height: 70px;
+}
+
+.container .info {
+	position: absolute;
+	top: 0px;
+	margin-left: 0px;
+	left: 0px;
+	font-family: "Chalet-Bold";
+	text-align: center;
+	font-size: 16px;
+	line-height: 30px;
+    width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+.container .info span {
+	width: 100%;
+}
+
+
+.container .info.A {
+	margin-top: 130px;
+}
+
+.container .info.B {
+	margin-top: 390px;
+}
+
+.container .info span.a2 {
+	letter-spacing: 0.4px;
+}
+
+.container .info span.b2 {
+	letter-spacing: 0.5px;
+}
+
+.container .info span.b3 {
+	letter-spacing: 5.7px;
+	margin-left: 2px;
+}
+
+.diamond{
+	width: 300px;
+	height: 300px;
+	top: -360px;
+	left: -150px!important;
+	margin-left: 50%;
+	position: absolute;
+	background-color: white;
+	z-index: 2;
+	display: none;
+
+	-webkit-transform: rotate(45deg);
+	   -moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		 -o-transform: rotate(45deg);
+	
+}
+
+.diamond_shadow {
+	display: none;
+}
+
+.nav {
+	display: none;
+}     
+
+
+.mobile_nav {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	letter-spacing: 1.4px;
+	border-radius: 0%;
+	z-index: 4;
+	font-family: "Chalet Book";
+	text-transform: uppercase;
+	left: -20px;
+	font-size: 18px;
+	top: -100px;
+}
+
+a.mobile_nav {
+	text-decoration: none;
+	color:white!important;
+
+}
+
+a.mobile_nav:hover {
+	background-color: black;
+	color: white!important;
+}
+
+.mobile_nav.A {
+	background-color: white;
+	border-bottom: 1px solid black!important;
+
+	color: black!important;
+	top: -50px;
+	left: -9px;
+	border: 0px;
+	-webkit-transform: skew(20deg);
+
+}
+
+.mobile_nav.B {
+	/*border: 1px solid blue!important;*/
+	background-color: white;
+	color: black!important;
+	border-top: 1px solid black!important;
+	top: 600px;
+	left: 9px;
+	border: 0px;
+    -webkit-transform: skew(20deg);
+
+}
+
+.mobile_nav.A:hover {
+	background-color: ghostwhite;
+	color: black!important;
+}
+
+.mobile_nav.B:hover {
+	background-color: ghostwhite;
+	color: black!important;
+
+}
+
+.link {
+	display: none;
+	opacity: 0;
+}
+
+.mobile_link {
+	opacity: 1!important;
+	display: none;
+	width: 500px;
+    height: 40px;
+    position: absolute;
+    top: 295px;
+    margin-left: 50%;
+    left: -250px;
+    z-index: 6;
+    text-align: center;
+    font-size: 16px;
+    /*background-color: red;*/
+
+}
+
+.mobile_link a {
+	font-family: "Chalet Book";
+	font-size: 24px;
+	width: 500px;
+    height: 100px;
+	color: black;
+	letter-spacing: 5px;
+	text-decoration: none;
+	/*background-color: blue;*/
+	
+}
+
+a:hover{
+	color: blue;
+}
+
+img {
+	display: block;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: -25px;
+	margin-left: 50%;
+	top: 330px;
+	opacity: 1;
+	display: none;
+}
+
+.effector {
+	display: none;
 }
 
 }

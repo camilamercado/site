@@ -255,9 +255,55 @@ body {
 }
 
 .container .portfolio {
-	/*background: red;*/
+	background: white;
+	padding-top: 50px;
+	padding-left: 50px;
 }
 
+.container .portfolio .section {
+	/*position: absolute;*/
+	width: 300px;
+	height: 300px;
+	top: 0px;
+	left: 300px;
+	background: pink;
+	float: left;
+	margin-left: 25px;
+}
+
+.container .portfolio .section  button {
+	width: 300px;
+	height: 300px;
+	background-image: url("http://res.cloudinary.com/software-studios/image/upload/v1461275300/swsc_lwoqws.jpg");
+	background-size: auto 100%;
+	background-position: 49%;
+	border-width: 10px;
+
+	/*-webkit-transition: background-image 1s ease;
+	-moz-transition:    background-image 1s ease;
+	-opera-transition:  background-image 1s ease;*/
+}
+
+.container .portfolio .section button:hover {
+	width: 300px;
+	height: 300px;
+	background-image: url("http://res.cloudinary.com/software-studios/image/upload/v1461275300/sws_ij6f4l.jpg");
+	border-width: 10px;
+	background-size: auto 100%;
+	background-position: 49%;
+}
+
+
+.product-embed__title {
+	font-family: "Chalet Book"!important;
+	background: pink!important;
+}
+
+.embed_item {
+font-family: "Chalet Book"!important;
+	background: pink!important;
+	float: left;
+}
 
 .container .portfolio .slide {
 	width: 95%;

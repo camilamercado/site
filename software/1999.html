@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>portfolio</title>
+<link type="text/css" rel="stylesheet" href="css/1999.css" />
+<link href="../cssubl .s/img/logo.png" rel="icon" type="image/png">
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body>
+<div class="content-container"> 
+	<div class="top fold"></div>
+	<div class="main">	
+
+	<div class="nav">
+		<div class="title">
+			<a href="dupe.html">software studios, llc </a>
+			
+			<div class="options">
+				<ul>
+					<li>design services</li>
+					<li>fabric printing</li>
+					<li>scarf printing</li>
+					<li>photo printing</li>
+				</ul>
+			</div>
+
+
+		</div>
+	</div>
+
+	<div class="fabric-printing">
+
+	<div class="fabric-options">
+	<ul>
+		<li class="option_silk"   onclick="scrollerA();" style="text-decoration: underline;">Silk</li>
+		<li class="option_cotton" onclick="scrollerB();">Cotton</li>
+		<li class="option_custom" onclick="scrollerC();">Custom</li>
+
+	</ul>
+		
+	</div>
+
+	<div class="grid">
+	<div class="silk">
+		<div class="gridItem"><div class="image"></div>Habotai<br><span>                 SLK-01</span></div>
+		<div class="gridItem"><div class="image"></div>Crepe De Chine<br><span>          SLK-02</span></div>
+		<div class="gridItem"><div class="image"></div>Charmesue<br><span>               SLK-03</span></div>
+		<div class="gridItem"><div class="image"></div>Silk Satin<br><span>              SLK-04</span></div>
+		<div class="gridItem"><div class="image"></div>Silk Satin Twill<br><span>        SLK-05</span></div>
+		<div class="gridItem"><div class="image"></div>Chiffon<br><span>                 SLK-06</span></div>
+		<div class="gridItem"><div class="image"></div>Chinese Crinkled Chiffon<br><span>SLK-07</span></div>
+		<div class="gridItem"><div class="image"></div>Organza<br><span>                 SLK-08</span></div>
+		<div class="gridItem"><div class="image"></div>Crepe Georgette<br><span>         SLK-09</span></div>
+		<div class="gridItem"><div class="image"></div>Gauze<br><span>                   SLK-10</span></div>
+		<div class="gridItem"><div class="image"></div>Indian Dupion White<br><span>     SLK-11</span></div>
+		<div class="gridItem"><div class="image"></div>Chinese Dupion<br><span>          SLK-12</span></div>
+		<div class="gridItem"><div class="image"></div>Bleached Fuji Broadcloth<br><span>SLK-13</span></div>
+	</div>	
+	<div class="cotton">
+		<div class="gridItem"><div class="image"></div>Cotton Twill<br><span>             COT-01</span></div>
+		<div class="gridItem"><div class="image"></div>Cotton Duck<br><span>              COT-02</span></div>
+		<div class="gridItem"><div class="image"></div>Cotton Percale<br><span>           COT-03</span></div>
+		<div class="gridItem"><div class="image"></div>Cotton Sateen<br><span>            COT-04</span></div>
+		<div class="gridItem"><div class="image"></div>Cotton Sheeting<br><span>          COT-05</span></div>
+		<div class="gridItem"><div class="image"></div>High Quality Single Knit<br><span> COT-06</span></div>
+		<div class="gridItem"><div class="image"></div>Spun Viscose Challis <br><span>    COT-07</span></div>
+		<div class="gridItem"><div class="image"></div>HTC Cotton Broadcloth<br><span>    COT-08</span></div>
+		<div class="gridItem"><div class="image"></div>Artist Canvas<br><span>            COT-09</span></div>
+		<div class="gridItem"><div class="image"></div>Cotton Lawn<br><span>              COT-10</span></div>
+		<div class="gridItem"><div class="image"></div>Belgian Linen<br><span>            COT-11</span></div>
+	</div>
+
+	<div class="custom">
+		<div class="gridItem"><div class="image"></div>Custom Fabric<br><span>01</span></div>
+
+	</div>
+
+	</div>
+	</div>
+
+
+	</div>
+
+	<div class="bottom fold"></div>
+
+</div>
+
+<script type="text/javascript">
+
+	function selected(){
+	}
+
+	function scrollerA(){
+	     $(".grid").css({"margin-top": "0px"});
+	     $(".option_silk").css({"text-decoration": "underline"});
+	     $(".option_cotton").css({"text-decoration": "none"});
+	     $(".option_custom").css({"text-decoration": "none"});
+	}
+
+	function scrollerB(){
+		var silk   = document.querySelector(".silk");		
+		var newPos = - silk.scrollHeight + "px" ;
+		$(".grid").css({"margin-top": newPos});
+		$(".option_cotton").css({"text-decoration": "underline"});
+	    $(".option_silk").css({"text-decoration": "none"});
+	    $(".option_custom").css({"text-decoration": "none"});
+	}
+
+	function scrollerC(){
+		var silk   = document.querySelector(".silk");		
+	    var cotton = document.querySelector(".cotton");
+		var newPos = - (silk.scrollHeight + cotton.scrollHeight) + "px" ;
+		$(".grid").css({"margin-top": newPos});
+		$(".option_custom").css({"text-decoration": "underline"});
+	    $(".option_silk").css({"text-decoration": "none"});
+	    $(".option_cotton").css({"text-decoration": "none"});
+	}
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

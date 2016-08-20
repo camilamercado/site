@@ -1,0 +1,278 @@
+body {
+	background: white;
+}
+
+.container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left:0px;
+	top:0px;
+	background: white;
+	overflow-x: hidden;
+	font-family:Helvetica,Arial,sans-serif;
+}
+
+.container .nav {
+	width: 100%;
+	height: 200px;
+	border-bottom: 0px solid blue;
+	line-height: 300px;
+	text-align: center;
+}
+
+.container .shop {
+	/*display: none;*/
+	position: absolute;
+	width: 100%;
+	height: 800px;
+	background: ;
+}
+
+.container .shop .viewer{
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	margin-left: -495px;
+	width: 970px;
+	height: 500px;
+	background: ;
+	padding-left: 50px;
+}
+
+.container .shop .product {
+	position: relative;
+	float: left;
+	margin-right: 50px;
+	background: white;
+	border: 1px solid black;
+	width: 240px;
+	height: 460px;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+
+.container .shop .product:hover {
+	border: 1px solid black;
+}
+
+.container .shop .product img {
+	width: 220px;
+	height: 270px;
+	margin-bottom: 20px;
+	position: relative;
+	float: left;
+}
+
+.container .shop .product span.title {
+	position: relative;
+	float: left;
+	background: ;
+	width: 70%;
+	height: auto;
+	margin-bottom: 120px;
+	line-height: 20px;
+}
+
+.container .shop .product span.price{
+	height: auto;
+	width: 21.5%;
+	line-height: 30px;
+	position: relative;
+	float: left;
+	text-align: right;
+}
+
+
+.container .shop .product .variant {
+	font-size: 12px;
+	position: relative;
+	float: left;
+	background: ;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 50%;
+	border: 1px solid lightgrey;
+	margin-right: 5px;
+	margin-bottom: 40px;
+
+}
+
+.container .shop .product .variant:hover {
+	background: lightgrey;
+}
+
+.container .shop .product .size {
+	position: relative;
+	float: left;
+	width: 100px;
+	height: 30px;
+	margin-bottom: 20px;
+}
+
+.container .shop .product .size .option{
+	position: relative;
+	font-size: 12px;
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	line-height: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	border-radius: 50%;
+	border: 1px solid lightgrey;
+}
+
+.container .shop .product .size .option:hover{
+	background: lightgrey;
+}
+
+.container .shop .product .size .option.selected {
+	background: lightgrey;
+}
+
+
+.container .shop .product select {
+	position: relative;
+	float: left;
+	width: 100px;
+	height: 25px;
+	background: white;
+	margin-bottom: 10px;
+	margin-right: 23px;
+	text-transform: uppercase;
+	border: 1px solid lightgrey;
+	font-family:Helvetica,Arial,sans-serif;
+
+}
+
+
+
+.container .product .quantity {
+	position: relative;
+	float: left;
+	background: ;
+	width: auto;
+	height: 25px;
+	margin-bottom: 30px;
+	line-height: 25px;
+	font-size: 12px;
+}
+
+.container .product .quantity input{
+	background: ;
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    margin-left: 45px;
+    margin-top: -25px;
+    border: 1px solid lightgrey;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 5px;
+
+}
+
+.container .shop .product .buyButton {
+	position: relative;
+	text-align: center;
+	float: left;
+	background: ;
+	width: 220px;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.container .shop .product .buyButton:hover {
+	color: red;
+}
+
+.container .cart {
+	position: absolute;
+	top: 830px;
+	width: 100%;
+	height: auto;
+}
+
+.container .cart .cartOpen {
+	position: relative;
+	float: left;
+	width: 49.5%;
+	height: 50px;
+	background: white;
+	text-align: right;
+
+	-webkit-transition: height 2s ease;
+	-moz-transition:    height 2s ease;
+	-opera-transition:  height 2s ease;
+}
+
+.container .cart .cartOpen:hover {
+	color:red;
+}
+
+.container .cart .clearCart {
+	position: relative;
+	float: left;
+	width: 40%;
+	padding-left: 10px;
+	height: 50px;
+	background: white;
+	text-align: left;
+
+
+	-webkit-transition: height 2s ease;
+	-moz-transition:    height 2s ease;
+	-opera-transition:  height 2s ease;
+}
+
+.container .cart .clearCart:hover {
+	color:red;
+	text-decoration: line-through;
+}
+
+.container .cart .cartItems {
+	margin-top: 20px;
+	text-transform: uppercase;
+	opacity: 0;
+	width: 100%;
+	height: 0px;
+	overflow-y: hidden; 
+	text-align: center;
+
+	-webkit-transition: all 2s ease;
+	-moz-transition:    all 2s ease;
+	-opera-transition:  all 2s ease;
+}
+
+.container .cart .cartItems .item {
+	position: relative;
+	float: left;
+	margin-bottom: 15px;
+	width: 100%;
+	text-align: center;
+}
+
+.container .cart .cartItems .item:hover {
+	color:red;
+	text-decoration: line-through;
+}
+
+.container .cart .checkout {
+	margin-top: 20px;
+	position: relative;
+	float: left;
+	width: 100%;
+	border: 0px solid blue;
+	text-align: center;
+}
+
+
+.container .cart .checkout:hover {
+	color:red;
+}
+
+
