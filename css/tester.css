@@ -34,18 +34,20 @@ body {
 .title {
 	position: absolute;
 	width: 200px;
-	height: 100px;
-	top: 40px;
+	height: 60px;
+	top: 60px;
 	left: 25px;
 	font-family: 'EB Garamond', serif;
-	font-size: 28px;
-	line-height: 28px;
+	font-size: 18px;
+	line-height: 20px;
 	z-index: 2;
+	letter-spacing: 1.5px;
+	color: dimgrey;
 }
 
 .cursor {
 	width: 24px;
-	height: 52px;
+	height: 35px;
 	/*background: tomato;*/
 	border: 1px solid white;
 	background-image: url(index/greeney.jpg);
@@ -98,6 +100,7 @@ li p {
 }
 
 a {
+	letter-spacing: 1px;
 	color: black;
 	-webkit-transition: all 1s ease;
 	-moz-transition:    all 1s ease;
@@ -153,6 +156,8 @@ a:hover {
 
 
 .textContent {
+		letter-spacing: 1px;
+
 	position: relative;
 	top: 0px;
 	float: right;
