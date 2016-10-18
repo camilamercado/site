@@ -3,6 +3,7 @@
 <meta content="utf-8" http-equiv="encoding">
 <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 <link href="dial/red_fav.png" rel="icon" type="image/png">
+<title>DIAL - 64</title>
 <style>
 
 
@@ -83,9 +84,9 @@ body {
   font-size: 36px;
   padding-left: 22px;
   line-height: 85px;
-  -webkit-transition: all 1s ease;
-  -moz-transition:    all 1s ease;
-  -opera-transition:  all 1s ease;
+  -webkit-transition: color 1s ease;
+  -moz-transition:    color 1s ease;
+  -opera-transition:  color 1s ease;
 }
 
 .of {
@@ -162,9 +163,9 @@ background-position: 10px 10px;
   top: 50px;
   left: 722px; 
   z-index: -2;
-  -webkit-transition: all 1s ease;
-  -moz-transition:    all 1s ease;
-  -opera-transition:  all 1s ease;
+  -webkit-transition: background 1s ease;
+  -moz-transition:    background 1s ease;
+  -opera-transition:  background 1s ease;
 }
 
 .title {
@@ -205,9 +206,9 @@ background-position: 10px 10px;
   display: block;
   opacity: 1;
   z-index: 2;
-  -webkit-transition: all 1s ease;
-  -moz-transition:    all 1s ease;
-  -opera-transition:  all 1s ease;
+  -webkit-transition: display 1s ease;
+  -moz-transition:    display 1s ease;
+  -opera-transition:  display 1s ease;
 }
 
 .blockout:hover {
@@ -245,7 +246,16 @@ margin-top: 10px;
   padding: 20px;
   padding-bottom: 50px;
   position: absolute;
-  border-bottom: 1px solid white;
+}
+
+.panel .numbers .quote {
+  width: 90%;
+  margin-top: 50px;
+  font-size: 17px;
+  line-height: 25px;
+  z-index: 12;
+  position: absolute;
+
 }
 
 form {
@@ -294,9 +304,9 @@ li {
   height: 30px;
   color: white;
   text-align: right;
-   -webkit-transition: all 1s ease;
-  -moz-transition:    all 1s ease;
-  -opera-transition:  all 1s ease;
+  -webkit-transition: color 1s ease;
+  -moz-transition:    color 1s ease;
+  -opera-transition:  color 1s ease;
 }
 
 #notes  {
@@ -359,7 +369,7 @@ A brief introduction
     <div class="jing"><p></p><p></p><p></p><p></p></div>
     <div class="sequence"><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></div>
     </div>
-    <div class="text">King Wen- Sequence</div>
+    <div class="text">Shao Yong Sequence</div>
   </div>
 
   <div class="numbers">
@@ -382,13 +392,20 @@ A brief introduction
     <p class="aa">
     0000000000000000000000000000000011111111111111111111111111111111
     </p>
+
+
+    <div class="quote">
+    "Shao Yung's schema has led to one of the most extraordinary episodes in the history of the human mind, and upto this day it has never been satisfactorily cleared up. More than six hundred years after its origin, Shao's diagram fell into the hands of Leibniz through the agency of Jesuit missionaries, and he recognized in it a system that had previously sprung from his own mathematical genius"</br></br>
+    The Later History of the Book of Changes, Hellmut Wilhelm, Richard Wilhelm </br> Princeton University Press, 1960
+    </div>
   
   </div>
+
+
+
   <ul id="notes">
 
-    <li>
-    Find yourself a better hobby, or just more useful math<br>unlike:
-    </li>
+
    
     <li><a href="http://www.levity.com/eschaton/waveexplain.html">
     Derivation of the Timewave from the King Wen Sequence of Hexagrams
@@ -516,13 +533,24 @@ function arcTween(a) {
 }
 };
 
+d3.select(".x")                                     
+  .on("mouseover", function(d) { 
+
 d3.select("#a")                                     
-  .on("mouseover", function(d) {  
-   d3.selectAll("#a #lightgrey") .attr("fill", "black")
+  .on("mouseover", function(d) { 
+   d3.selectAll("#a #lightgrey").attr("fill", "black")
    //d3.select(".l1") .style("color", "tomato")
    d3.select(".l1") .style("background-color", "black")
    document.querySelector(".of").innerHTML="6";
    d3.select(".aa") .style("color", "tomato")
+})
+
+  d3.select("#a")                                     
+  .on("mouseout", function(d) { 
+   d3.selectAll("#a #lightgrey").attr("fill", "lightgrey")
+   d3.select(".l1") .style("background-color", "white")
+   document.querySelector(".of").innerHTML="6";
+   d3.select(".aa") .style("color", "white")
 })
 
 d3.select("#b")                                     
@@ -534,6 +562,15 @@ d3.select("#b")
    d3.select(".bb") .style("color", "tomato")
 })
 
+  d3.select("#b")                                     
+  .on("mouseout", function(d) {  
+   d3.selectAll("#b #lightgrey") .attr("fill", "lightgrey")
+   //d3.select(".l2") .style("color", "tomato")
+   d3.select(".l2") .style("background-color", "white")
+   document.querySelector(".of").innerHTML="5";
+   d3.select(".bb") .style("color", "white")
+})
+
 d3.select("#c")                                     
   .on("mouseover", function(d) {  
    d3.selectAll("#c #lightgrey") .attr("fill", "black")
@@ -541,6 +578,15 @@ d3.select("#c")
    d3.select(".l3") .style("background-color", "black")
    document.querySelector(".of").innerHTML="4";
    d3.select(".cc") .style("color", "tomato")
+})
+
+  d3.select("#c")                                     
+  .on("mouseout", function(d) {  
+   d3.selectAll("#c #lightgrey") .attr("fill", "lightgrey")
+   //d3.select(".l3") .style("color", "tomato")
+   d3.select(".l3") .style("background-color", "white")
+   document.querySelector(".of").innerHTML="4";
+   d3.select(".cc") .style("color", "white")
 })
 
 d3.select("#d")                                     
@@ -552,6 +598,15 @@ d3.select("#d")
    d3.select(".dd") .style("color", "tomato")
 })
 
+d3.select("#d")                                     
+  .on("mouseout", function(d) {  
+   d3.selectAll("#d #lightgrey") .attr("fill", "lightgrey")
+   //d3.select(".l4") .style("color", "tomato")
+   d3.select(".l4") .style("background-color", "white")
+   document.querySelector(".of").innerHTML="3";
+   d3.select(".dd") .style("color", "white")
+})
+
 d3.select("#e")                                     
   .on("mouseover", function(d) {  
    d3.selectAll("#e #lightgrey") .attr("fill", "black")
@@ -559,6 +614,15 @@ d3.select("#e")
    d3.select(".l5") .style("background-color", "black")
    document.querySelector(".of").innerHTML="2";
    d3.select(".ee") .style("color", "tomato")
+})
+
+  d3.select("#e")                                     
+  .on("mouseout", function(d) {  
+   d3.selectAll("#e #lightgrey") .attr("fill", "lightgrey")
+  // d3.select(".l5") .style("color", "tomato")
+   d3.select(".l5") .style("background-color", "white")
+   document.querySelector(".of").innerHTML="2";
+   d3.select(".ee") .style("color", "white")
 })
 
 d3.select("#f")                                     
@@ -571,8 +635,18 @@ d3.select("#f")
 
 })
 
+  d3.select("#f")                                     
+  .on("mouseout", function(d) {  
+   d3.selectAll("#f #lightgrey") .attr("fill", "lightgrey")
+  // d3.select(".l6") .style("color", "tomato")
+   d3.select(".l6") .style("background-color", "white")
+   document.querySelector(".of").innerHTML="1";
+   d3.select(".ff") .style("color", "white")
 
-d3.selectAll("g")                                     
+})
+
+
+d3.selectAll("#g")                                     
   .on("mouseout", function(d) {  
    d3.selectAll("#lightgrey") .attr("fill", "lightgrey")
    d3.selectAll("#white") .attr("fill", "white")
@@ -582,6 +656,8 @@ d3.selectAll("g")
    document.querySelector(".of").innerHTML="^";
 }) 
 
+})
+
 var color = d3.scale.ordinal().domain([0,0]).range(["red","blue"]);
 
 // var aL = d3.selectAll(".a1");
@@ -589,7 +665,8 @@ var color = d3.scale.ordinal().domain([0,0]).range(["red","blue"]);
 
 d3.select(".y")                                     
   .on("mouseover", function(d) {  
-   //d3.selectAll("#lightgrey") .attr("fill", "black")
+    console.log("wtf")
+  // d3.selectAll("#lightgrey") .attr("fill", "black")
    //d3.selectAll("path") .attr("fill", function(d, i) { return color(i); })
    //d3.selectAll(".a1") .attr("fill", "red")
    d3.selectAll(".a1") .attr("fill", "tomato")
@@ -605,7 +682,7 @@ d3.select(".y")
   .on("mouseout", function(d) {  
    d3.selectAll("#lightgrey") .attr("fill", "black")
    d3.selectAll("#white") .attr("fill", "white")
-   d3.select(".panel") .style("background", "none")
+   //d3.select(".panel") .style("background", "none")
 })
 
 d3.select(".orient")                                     
@@ -618,7 +695,7 @@ d3.select(".orient")
 
 d3.select(".orient")                                     
   .on("mouseout", function(d) {  
-   d3.select(".panel") .style("background", "none")
+   //d3.select(".panel") .style("background", "none")
    //d3.selectAll("li") .style("background", "white")
    d3.selectAll(".power") .style("display", "none")
 })
